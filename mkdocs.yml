@@ -1,0 +1,17 @@
+site_name: Waste Service Standards
+site_description: Technical standards for local waste services.
+# repo_url:
+
+# theme: mkdocs
+# theme: readthedocs
+theme: bootstrap
+
+extra_css:
+- css/custom.css
+
+
+pages:
+- Home: index.md
+- Codelists: codelists/index.md
+- API: api/index.md
+

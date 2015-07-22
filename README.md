@@ -1,2 +1,4 @@
-# waste-service-standards
-DLCG Local Waste Service Standards Project
+
+# Introduction
+
+This is the documentation project for the [Local Waste Service Standards Project](http://www.localdirect.gov.uk/product/local-waste-service-standards-project/).

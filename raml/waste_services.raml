@@ -1,0 +1,25 @@
+#%RAML 0.8
+---
+title: Waste Services API
+version: v0.1
+baseUri: http://api.council.gov.uk/waste
+/services:
+  description: A Service is what a council offers to citizens. There are a number of waste and recycling related services offered by most councils.
+  get:
+    description: Get a list of waste services.
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                {
+                  "id": 1,
+                  "name": "Recycling service",
+                  "frequency": "weekly",
+                  "esd_id": "http://id.esd.org.uk/service/524",
+                  "description": "Please put your recycling box on the street."
+                }
+              ]
+
+
