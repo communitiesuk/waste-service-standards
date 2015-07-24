@@ -134,6 +134,8 @@
         
             <li><a href="#serialisation">Serialisation</a></li>
         
+            <li><a href="#codelists">Codelists</a></li>
+        
     
     </ul>
 </div></div>
@@ -150,6 +152,22 @@
 <blockquote>
 <p>An indication of typically how often the collection is run.</p>
 </blockquote>
+<p><strong>description</strong></p>
+<blockquote>
+<p>For specific instructions about the service, such as when and where to put containers out, that bin lids must be closed, etc.</p>
+</blockquote>
+<p><strong>next collections</strong></p>
+<blockquote>
+<p>To know upcoming dates of when upcoming collections will happen.</p>
+</blockquote>
+<p><strong>previous collections</strong></p>
+<blockquote>
+<p>To know when the last few collections have taken place.</p>
+</blockquote>
+<p><strong>material stream</strong></p>
+<blockquote>
+<p>What kinds of materials are handled by this service.</p>
+</blockquote>
 <h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -159,7 +177,38 @@
 <th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>name</td>
+<td>Text</td>
+<td>Name of the service.</td>
+</tr>
+<tr>
+<td>frequency</td>
+<td>Text</td>
+<td>How often it runs, e.g. weekly.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Text</td>
+<td>Additional descriptive text.</td>
+</tr>
+<tr>
+<td>next collections</td>
+<td>Date</td>
+<td>List of dates of next collections.</td>
+</tr>
+<tr>
+<td>previous collections</td>
+<td>Date</td>
+<td>List of dates of previous collections.</td>
+</tr>
+<tr>
+<td>material stream</td>
+<td>?</td>
+<td>The material stream that is collected.</td>
+</tr>
+</tbody>
 </table>
 <h2 id="serialisation">Serialisation</h2>
 <div>
@@ -182,7 +231,11 @@
     </div>
   </div>
 
-</div></div>
+</div>
+
+<h2 id="codelists">Codelists</h2>
+<h3 id="freqency">Freqency</h3>
+<p>TBD</p></div>
         </div>
 
 	<footer class="col-md-12">

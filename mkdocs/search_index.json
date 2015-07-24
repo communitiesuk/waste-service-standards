@@ -12,7 +12,7 @@
         }, 
         {
             "location": "/models/service/", 
-            "text": "Service\n\n\nUse cases and requirements\n\n\nThe Service model should have properties for:\n\n\nname\n\n\n\n\nFor identification.\n\n\n\n\nfrequency\n\n\n\n\nAn indication of typically how often the collection is run.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"name\": \"Recycling\"\n}", 
+            "text": "Service\n\n\nUse cases and requirements\n\n\nThe Service model should have properties for:\n\n\nname\n\n\n\n\nFor identification.\n\n\n\n\nfrequency\n\n\n\n\nAn indication of typically how often the collection is run.\n\n\n\n\ndescription\n\n\n\n\nFor specific instructions about the service, such as when and where to put containers out, that bin lids must be closed, etc.\n\n\n\n\nnext collections\n\n\n\n\nTo know upcoming dates of when upcoming collections will happen.\n\n\n\n\nprevious collections\n\n\n\n\nTo know when the last few collections have taken place.\n\n\n\n\nmaterial stream\n\n\n\n\nWhat kinds of materials are handled by this service.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nname\n\n\nText\n\n\nName of the service.\n\n\n\n\n\n\nfrequency\n\n\nText\n\n\nHow often it runs, e.g. weekly.\n\n\n\n\n\n\ndescription\n\n\nText\n\n\nAdditional descriptive text.\n\n\n\n\n\n\nnext collections\n\n\nDate\n\n\nList of dates of next collections.\n\n\n\n\n\n\nprevious collections\n\n\nDate\n\n\nList of dates of previous collections.\n\n\n\n\n\n\nmaterial stream\n\n\n?\n\n\nThe material stream that is collected.\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"name\": \"Recycling\"\n}\n\n\n    \n\n  \n\n\n\n\n\n\nCodelists\n\n\nFreqency\n\n\nTBD", 
             "title": "Service"
         }, 
         {
@@ -22,18 +22,23 @@
         }, 
         {
             "location": "/models/service/#use-cases-and-requirements", 
-            "text": "The Service model should have properties for:  name   For identification.   frequency   An indication of typically how often the collection is run.", 
+            "text": "The Service model should have properties for:  name   For identification.   frequency   An indication of typically how often the collection is run.   description   For specific instructions about the service, such as when and where to put containers out, that bin lids must be closed, etc.   next collections   To know upcoming dates of when upcoming collections will happen.   previous collections   To know when the last few collections have taken place.   material stream   What kinds of materials are handled by this service.", 
             "title": "Use cases and requirements"
         }, 
         {
             "location": "/models/service/#properties", 
-            "text": "Term  Mapping  Description", 
+            "text": "Term  Mapping  Description      name  Text  Name of the service.    frequency  Text  How often it runs, e.g. weekly.    description  Text  Additional descriptive text.    next collections  Date  List of dates of next collections.    previous collections  Date  List of dates of previous collections.    material stream  ?  The material stream that is collected.", 
             "title": "Properties"
         }, 
         {
             "location": "/models/service/#serialisation", 
             "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n  \"name\": \"Recycling\"\n}", 
             "title": "Serialisation"
+        }, 
+        {
+            "location": "/models/service/#codelists", 
+            "text": "Freqency  TBD", 
+            "title": "Codelists"
         }, 
         {
             "location": "/models/event/", 
