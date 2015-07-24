@@ -138,7 +138,6 @@
 
 <p>Waste Services API</p>
 <h2 id="services">Services</h2>
-<p><code>/services</code></p>
 <hr />
 <p>Get a list of waste services</p>
 <div class="api-call">
@@ -159,12 +158,49 @@
 </code></pre>
 
 <h2 id="events">Events</h2>
-<p><code>/events</code></p>
 <hr />
 <p>Get a list of events</p>
 <div class="api-call">
   <span class="rest-method get">get</span>
   <span>/events</span>
+</div>
+
+<p><strong>Query parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><tt>uprn</tt></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><tt>usrn</tt></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><tt>eventType</tt></td>
+<td>string</td>
+<td>The short name of an event type, e.g. "Not presented".</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Response</strong></p>
+<pre><code>{}
+</code></pre>
+
+<hr />
+<p>Get a single event</p>
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/events/{eventId}</span>
 </div>
 
 <p><strong>Response</strong></p>
