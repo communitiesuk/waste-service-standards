@@ -1,9 +1,5 @@
 
-# Codelists
-
-These codelists define standard terms that can be shared.
-
-## Missed collection reasons
+# Missed collection reasons
 
 <table>
 <tr>

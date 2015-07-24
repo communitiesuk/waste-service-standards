@@ -7,3 +7,37 @@
 .navbar-default .navbar-nav>li>a {
   color: #fff;
 }
+
+.api-call {
+  height: 30px;
+  margin-bottom: 20px;
+  /*padding: 5px;*/
+
+  background-color: #eee;
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+.rest-method {
+  height: 100%;
+  display: inline-block;
+  padding: 0 5px 0;
+  /*float: right;*/
+
+  /*background-color: #eee;*/
+  color: #fff;
+  font-size: 14pt;
+  text-transform: uppercase;
+}
+
+.rest-method.get {
+  background-color: #0f6ab4;
+}
+.rest-method.post {
+  background-color: #10a54a;
+}
+.rest-method.put {
+  background-color: #c5862b;
+}
+.rest-method.delete {
+  background-color: #a41e22;
+}

@@ -1,9 +1,5 @@
 
-# Codelists
-
-These codelists define standard terms that can be shared.
-
-## Missed collection reasons
+# Missed collection reasons
 
 <table>
 <tr>
@@ -15,7 +11,7 @@ These codelists define standard terms that can be shared.
 <tr>
   <td>1</td>
   <td>Not presented</td>
-  <td>The containers is not presented at the curbside.</td>
+  <td>The container is not presented at the curbside.</td>
 </tr>
 
 <tr>

@@ -5,6 +5,7 @@ import os
 import ramlfications
 import time
 
+from livereload import Server, shell
 from shovel import task
 
 RAML_FILE = 'raml/waste_services.raml'
@@ -14,7 +15,7 @@ def parse_raml(template_path):
 
     data = {}
     data['collection_event_types'] = []
-    with open('codelists/collection_event_types.csv', 'rb') as csvfile:
+    with open('taxonomies/collection_event_types.csv', 'rb') as csvfile:
         spamreader = csv.DictReader(csvfile)
         # header = spamreader.read()
         for row in spamreader:
@@ -29,12 +30,8 @@ def parse_raml(template_path):
     f.write(template.render(api=api, data=data))
     f.close()
 
-
-@task
-def raml():
-    '''Converts RAML to Markdown'''
-    # parse_raml()
-
+def scan_files():
+    print 'Scanning files...'
     for root, subdirs, files in os.walk('templates'):
         for f in files:
             templates_sub_path = root.replace('templates/', '')
@@ -42,6 +39,12 @@ def raml():
             if f == '.DS_Store':
                 continue
             parse_raml(template)
+
+@task
+def raml():
+    '''Converts RAML to Markdown'''
+    scan_files()
+
 
 @task
 def raml_watch():
@@ -63,6 +66,17 @@ def raml_watch():
         props = os.stat(RAML_FILE)
         this = props.st_mtime
         time.sleep(0.2)
+
+@task
+def watch():
+    server = Server()
+
+    server.watch('templates/**/*', scan_files)
+    server.watch('raml/*', scan_files)
+    server.watch('examples/*.json', scan_files)
+    server.serve()
+
+
 
 @task
 def hello(name):

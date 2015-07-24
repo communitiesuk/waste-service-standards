@@ -4,9 +4,10 @@ title: Waste Services API
 version: v0.1
 baseUri: http://api.council.gov.uk/waste
 /services:
+  displayName: Services
   description: A Service is what a council offers to citizens. There are a number of waste and recycling related services offered by most councils.
   get:
-    description: Get a list of waste services.
+    description: Get a list of waste services
     responses:
       200:
         body:
@@ -22,4 +23,12 @@ baseUri: http://api.council.gov.uk/waste
                 }
               ]
 
-
+/events:
+  displayName: Events
+  get:
+    description: Get a list of events
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include ../examples/event-example.json
