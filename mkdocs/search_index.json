@@ -1,0 +1,89 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Introduction\n\n\nThese are the specifications developed by the \nLocal Waste Service Standards Project\n.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#introduction", 
+            "text": "These are the specifications developed by the  Local Waste Service Standards Project .", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/models/service/", 
+            "text": "Service\n\n\nUse cases and requirements\n\n\nThe Service model should have properties for:\n\n\nname\n\n\n\n\nFor identification.\n\n\n\n\nfrequency\n\n\n\n\nAn indication of typically how often the collection is run.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"name\": \"Recycling\"\n}", 
+            "title": "Service"
+        }, 
+        {
+            "location": "/models/service/#service", 
+            "text": "", 
+            "title": "Service"
+        }, 
+        {
+            "location": "/models/service/#use-cases-and-requirements", 
+            "text": "The Service model should have properties for:  name   For identification.   frequency   An indication of typically how often the collection is run.", 
+            "title": "Use cases and requirements"
+        }, 
+        {
+            "location": "/models/service/#properties", 
+            "text": "Term  Mapping  Description", 
+            "title": "Properties"
+        }, 
+        {
+            "location": "/models/service/#serialisation", 
+            "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n  \"name\": \"Recycling\"\n}", 
+            "title": "Serialisation"
+        }, 
+        {
+            "location": "/models/event/", 
+            "text": "Event\n\n\nUse cases and requirements\n\n\nThe Event model should have properties for:\n\n\nevent type\n\n\n\n\nWhat kind of event it is.\n\n\n\n\ndate created\n\n\n\n\n1 Jan 2015\n\n\n\n\nUPRN\n\n\n\n\nFor recording against specific properties.\n\n\n\n\nUSRN\n\n\n\n\nFor recording street-level information.\n\n\n\n\ncoordinates\n\n\n\n\nFor easy geolocation of where the event was recorded.\n\n\n\n\nimage\n\n\n\n\nVisual evidence of an issue.\n\n\n\n\ncomments\n\n\n\n\nFor any additional information useful to record.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nevent type\n\n\nstring\n\n\nA categorisation of the event.\n\n\n\n\n\n\ndate created\n\n\nstring\n\n\nTimestamp.\n\n\n\n\n\n\nuprn\n\n\nstring\n\n\nA unique identifier for a property.\n\n\n\n\n\n\nusrn\n\n\nstring\n\n\nA unique identifier for a street.\n\n\n\n\n\n\ngeo\n\n\nGeoCoordinates\n\n\nThe location in WGS84 datum.\n\n\n\n\n\n\nimage\n\n\nURL\n\n\nA URL to an related image.\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"event_type\": \"Not presented\",\n  \"date_created\": \"2014-05-23T20:00\",\n  \"uprn\": \"123456789012\",\n  \"usrn\": \"123456789012\",\n  \"image\": \"http://example.com/images/123.png\",\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": \"40.75\",\n    \"longitude\": \"73.98\"\n  }\n}", 
+            "title": "Event"
+        }, 
+        {
+            "location": "/models/event/#event", 
+            "text": "", 
+            "title": "Event"
+        }, 
+        {
+            "location": "/models/event/#use-cases-and-requirements", 
+            "text": "The Event model should have properties for:  event type   What kind of event it is.   date created   1 Jan 2015   UPRN   For recording against specific properties.   USRN   For recording street-level information.   coordinates   For easy geolocation of where the event was recorded.   image   Visual evidence of an issue.   comments   For any additional information useful to record.", 
+            "title": "Use cases and requirements"
+        }, 
+        {
+            "location": "/models/event/#properties", 
+            "text": "Term  Mapping  Description      event type  string  A categorisation of the event.    date created  string  Timestamp.    uprn  string  A unique identifier for a property.    usrn  string  A unique identifier for a street.    geo  GeoCoordinates  The location in WGS84 datum.    image  URL  A URL to an related image.", 
+            "title": "Properties"
+        }, 
+        {
+            "location": "/models/event/#serialisation", 
+            "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n  \"event_type\": \"Not presented\",\n  \"date_created\": \"2014-05-23T20:00\",\n  \"uprn\": \"123456789012\",\n  \"usrn\": \"123456789012\",\n  \"image\": \"http://example.com/images/123.png\",\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": \"40.75\",\n    \"longitude\": \"73.98\"\n  }\n}", 
+            "title": "Serialisation"
+        }, 
+        {
+            "location": "/taxonomies/missed-collections/", 
+            "text": "Missed collection reasons\n\n\n\n\n\n  \nID\n\n  \nName\n\n  \nDescription\n\n\n\n\n\n\n  \n1\n\n  \nNot presented\n\n  \nThe container is not presented at the curbside.\n\n\n\n\n\n\n  \n2\n\n  \nContaminated\n\n  \nThe contents of the container is contaminated with waste not suitable for that collection.\n\n\n\n\n\n\n  \n3\n\n  \nToo heavy\n\n  \nThe container contents is too heavy for safe collection.", 
+            "title": "Missed collections"
+        }, 
+        {
+            "location": "/taxonomies/missed-collections/#missed-collection-reasons", 
+            "text": "ID \n   Name \n   Description   \n   1 \n   Not presented \n   The container is not presented at the curbside.   \n   2 \n   Contaminated \n   The contents of the container is contaminated with waste not suitable for that collection.   \n   3 \n   Too heavy \n   The container contents is too heavy for safe collection.", 
+            "title": "Missed collection reasons"
+        }, 
+        {
+            "location": "/api/", 
+            "text": "Waste Services API\n\n\nServices\n\n\n/services\n\n\n\n\nGet a list of waste services\n\n\n\n  \nget\n\n  \n/services\n\n\n\n\n\nResponse\n\n\n[\n  {\n    \ndescription\n: \nPlease put your recycling box on the street.\n,\n    \nfrequency\n: \nweekly\n,\n    \nid\n: 1,\n    \nesd_id\n: \nhttp://id.esd.org.uk/service/524\n,\n    \nname\n: \nRecycling service\n\n  }\n]\n\n\n\n\nEvents\n\n\n/events\n\n\n\n\nGet a list of events\n\n\n\n  \nget\n\n  \n/events\n\n\n\n\n\nResponse\n\n\n{\n  \nevent_type\n: \nNot presented\n,\n  \ndate_created\n: \n2014-05-23T20:00\n,\n  \nuprn\n: \n123456789012\n,\n  \nusrn\n: \n123456789012\n,\n  \nimage\n: \nhttp://example.com/images/123.png\n,\n  \ngeo\n: {\n    \n@type\n: \nGeoCoordinates\n,\n    \nlatitude\n: \n40.75\n,\n    \nlongitude\n: \n73.98\n\n  }\n}", 
+            "title": "API"
+        }, 
+        {
+            "location": "/api/#services", 
+            "text": "/services   Get a list of waste services  \n   get \n   /services   Response  [\n  {\n     description :  Please put your recycling box on the street. ,\n     frequency :  weekly ,\n     id : 1,\n     esd_id :  http://id.esd.org.uk/service/524 ,\n     name :  Recycling service \n  }\n]", 
+            "title": "Services"
+        }, 
+        {
+            "location": "/api/#events", 
+            "text": "/events   Get a list of events  \n   get \n   /events   Response  {\n   event_type :  Not presented ,\n   date_created :  2014-05-23T20:00 ,\n   uprn :  123456789012 ,\n   usrn :  123456789012 ,\n   image :  http://example.com/images/123.png ,\n   geo : {\n     @type :  GeoCoordinates ,\n     latitude :  40.75 ,\n     longitude :  73.98 \n  }\n}", 
+            "title": "Events"
+        }
+    ]
+}
