@@ -3,9 +3,9 @@ Waste Services API
 
 
 
+
 ## Services
 
-`/services`
 
 ---
 Get a list of waste services
@@ -20,7 +20,6 @@ Get a list of waste services
 
 
 **Response**
-
 ```
 [
   {
@@ -39,9 +38,9 @@ Get a list of waste services
 
 
 
+
 ## Events
 
-`/events`
 
 ---
 Get a list of events
@@ -52,11 +51,44 @@ Get a list of events
 </div>
 
 
+**Query parameters**
+
+Name | Type | Description
+-----|------|------------
+<tt>uprn</tt> | string | 
+<tt>usrn</tt> | string | 
+<tt>eventType</tt> | string | The short name of an event type, e.g. "Not presented".
+
+
 
 
 
 **Response**
+```
+{}
+```
 
+
+
+
+
+
+
+
+
+---
+Get a single event
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/events/{eventId}</span>
+</div>
+
+
+
+
+
+**Response**
 ```
 {
   "event_type": "Not presented",

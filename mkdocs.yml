@@ -1,6 +1,7 @@
 site_name: Waste Service Standards
 site_description: Technical standards for local waste services.
-# repo_url:
+site_favicon: favicon.ico
+repo_url: https://github.com/communitiesuk/waste-service-standards
 
 # theme: mkdocs
 # theme: readthedocs

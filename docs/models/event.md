@@ -11,7 +11,7 @@ The Event model should have properties for:
 
 **date created**
 
-> 1 Jan 2015
+> Know when an event happened.
 
 **UPRN**
 
@@ -37,14 +37,14 @@ The Event model should have properties for:
 
 ## Properties
 
-Term     | Mapping | Description
----------|---------|------------
+Term     | Mapping | Definition
+---------|---------|-----------
 event type | string | A categorisation of the event.
-date created | string | Timestamp.
+date created | string | When the event was created.
 uprn | string | A unique identifier for a property.
 usrn | string | A unique identifier for a street.
 geo | [GeoCoordinates](https://schema.org/GeoCoordinates) | The location in WGS84 datum.
-image | [URL](https://schema.org/URL) | A URL to an related image.
+image | [schema:image](https://schema.org/image) | A URL to a related image.
 
 ## Serialisation
 
