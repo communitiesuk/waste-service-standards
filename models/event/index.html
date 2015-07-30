@@ -63,11 +63,35 @@
                     <ul class="dropdown-menu">
                     
                         <li >
+                            <a href="../">Introduction</a>
+                        </li>
+                    
+                        <li >
                             <a href="../service/">Service</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../round/">Round</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../round-plan/">Round plan</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../container/">Container</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../container-type/">Container type</a>
                         </li>
                     
                         <li class="active">
                             <a href="./">Event</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../material-stream/">Material stream</a>
                         </li>
                     
                     </ul>
@@ -81,6 +105,10 @@
                     
                         <li >
                             <a href="../../taxonomies/missed-collections/">Missed collections</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../taxonomies/material-streams/">Material streams</a>
                         </li>
                     
                     </ul>
@@ -98,12 +126,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../service/">
+                    <a rel="next" href="../container-type/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../../taxonomies/missed-collections/">
+                    <a rel="prev" href="../material-stream/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -156,7 +184,7 @@
 </blockquote>
 <p><strong>USRN</strong></p>
 <blockquote>
-<p>For recording street-level information.</p>
+<p>For recording street-level events.</p>
 </blockquote>
 <p><strong>coordinates</strong></p>
 <blockquote>
@@ -170,6 +198,10 @@
 <blockquote>
 <p>For any additional information useful to record.</p>
 </blockquote>
+<p><strong>round</strong></p>
+<blockquote>
+<p>The round where this event happened.</p>
+</blockquote>
 <h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -181,7 +213,7 @@
 </thead>
 <tbody>
 <tr>
-<td>event type</td>
+<td>type</td>
 <td>string</td>
 <td>A categorisation of the event.</td>
 </tr>
@@ -202,13 +234,18 @@
 </tr>
 <tr>
 <td>geo</td>
-<td><a href="https://schema.org/GeoCoordinates">GeoCoordinates</a></td>
+<td><a href="https://schema.org/geo">schema:geo</a></td>
 <td>The location in WGS84 datum.</td>
 </tr>
 <tr>
 <td>image</td>
 <td><a href="https://schema.org/image">schema:image</a></td>
 <td>A URL to a related image.</td>
+</tr>
+<tr>
+<td>round</td>
+<td>URL</td>
+<td>The URL of the round where this event was recorded.</td>
 </tr>
 </tbody>
 </table>
@@ -227,7 +264,8 @@
     </div>
     <div role="tabpanel" class="tab-pane active" id="json">
       <pre><code class="hljs json">{
-  "event_type": "Not presented",
+  "@id": "/api/events/1",
+  "type": "Not presented",
   "date_created": "2014-05-23T20:00",
   "uprn": "123456789012",
   "usrn": "123456789012",
@@ -236,7 +274,8 @@
     "@type": "GeoCoordinates",
     "latitude": "40.75",
     "longitude": "73.98"
-  }
+  },
+  "round": "/rounds/123"
 }
 </code></pre>
     </div>

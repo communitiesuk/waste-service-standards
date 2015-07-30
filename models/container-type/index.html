@@ -10,7 +10,7 @@
         <link rel="shortcut icon" href="../../favicon.ico">
         
 
-	<title>Service - Waste Service Standards</title>
+	<title>Container type - Waste Service Standards</title>
 
         <link href="../../css/bootstrap-3.0.3.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -66,8 +66,8 @@
                             <a href="../">Introduction</a>
                         </li>
                     
-                        <li class="active">
-                            <a href="./">Service</a>
+                        <li >
+                            <a href="../service/">Service</a>
                         </li>
                     
                         <li >
@@ -82,8 +82,8 @@
                             <a href="../container/">Container</a>
                         </li>
                     
-                        <li >
-                            <a href="../container-type/">Container type</a>
+                        <li class="active">
+                            <a href="./">Container type</a>
                         </li>
                     
                         <li >
@@ -126,12 +126,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../">
+                    <a rel="next" href="../container/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../round/">
+                    <a rel="prev" href="../event/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -154,7 +154,7 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#service">Service</a></li>
+        <li class="main active"><a href="#container-type">Container type</a></li>
         
             <li><a href="#use-cases-and-requirements">Use cases and requirements</a></li>
         
@@ -169,36 +169,28 @@
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="service">Service</h1>
+<h1 id="container-type">Container type</h1>
 <h2 id="use-cases-and-requirements">Use cases and requirements</h2>
-<p>The Service model should have properties for:</p>
-<p><strong>name</strong></p>
+<p>The Container type model should have properties for:</p>
+<p><strong>color</strong></p>
 <blockquote>
-<p>For identification.</p>
+<p>The general color.</p>
 </blockquote>
-<p><strong>frequency</strong></p>
+<p><strong>size</strong></p>
 <blockquote>
-<p>An indication of typically how often the collection is run.</p>
+<p>Typically in litres.</p>
 </blockquote>
-<p><strong>description</strong></p>
+<p><strong>shape</strong></p>
 <blockquote>
-<p>For specific instructions about the service, such as when and where to put containers out, that bin lids must be closed, etc.</p>
+<p>Wheelie bin, box, caddy, etc.</p>
 </blockquote>
-<p><strong>next collections</strong></p>
+<p><strong>lid color</strong></p>
 <blockquote>
-<p>To know upcoming dates of when upcoming collections will happen, when filtered by property.</p>
-</blockquote>
-<p><strong>previous collections</strong></p>
-<blockquote>
-<p>To know when the last few collections have taken place, when filtered by property.</p>
+<p>In case its different to the body color.</p>
 </blockquote>
 <p><strong>material stream</strong></p>
 <blockquote>
-<p>What kinds of materials are handled by this service.</p>
-</blockquote>
-<p><strong>rounds</strong></p>
-<blockquote>
-<p>The schedules and routes of trucks collecting the materials handled by this service.</p>
+<p>What kind of waste the container is used for.</p>
 </blockquote>
 <h2 id="properties">Properties</h2>
 <table>
@@ -211,34 +203,34 @@
 </thead>
 <tbody>
 <tr>
-<td>name</td>
-<td>Text</td>
-<td>Name of the service.</td>
+<td>id</td>
+<td></td>
+<td>Unique identifer.</td>
 </tr>
 <tr>
-<td>frequency</td>
-<td>Text</td>
-<td>How often it runs, e.g. weekly.</td>
+<td>color</td>
+<td><a href="https://schema.org/color">schema:color</a></td>
+<td>General color as a hex value.</td>
 </tr>
 <tr>
-<td>description</td>
-<td><a href="https://schema.org/description">schema:description</a></td>
-<td>A short description of the service.</td>
+<td>size</td>
+<td>integer</td>
+<td>Size in litres.</td>
 </tr>
 <tr>
-<td>next collections</td>
-<td>Date</td>
-<td>List of dates of next collections.</td>
+<td>shape</td>
+<td>text</td>
+<td>The shape or type of the container.</td>
 </tr>
 <tr>
-<td>previous collections</td>
-<td>Date</td>
-<td>List of dates of previous collections.</td>
+<td>lid color</td>
+<td><a href="https://schema.org/color">schema:color</a></td>
+<td>Lid-specific color as a hex value.</td>
 </tr>
 <tr>
 <td>material stream</td>
-<td>?</td>
-<td>The material stream that is collected.</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -257,20 +249,19 @@
     </div>
     <div role="tabpanel" class="tab-pane active" id="json">
       <pre><code class="hljs json">{
-  "id": 1,
-  "name": "Recycling service",
-  "frequency": "weekly",
-  "esd_url": "http://id.esd.org.uk/service/1130",
-  "description": "Please put your recycling box on the street."
+  "color": "#fff",
+  "shape": "wheelie bin",
+  "size": "240",
+
 }</code></pre>
     </div>
-  </div>
+
+</div>
 
 </div>
 
 <h2 id="codelists">Codelists</h2>
-<h3 id="freqency">Freqency</h3>
-<p>TBD</p></div>
+<h3 id="container-shape">Container shape</h3></div>
         </div>
 
 	<footer class="col-md-12">

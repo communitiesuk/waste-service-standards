@@ -4,19 +4,19 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Technical standards for local waste services.">
         
         
-        <link rel="shortcut icon" href="favicon.ico">
+        
+        <link rel="shortcut icon" href="../favicon.ico">
         
 
-	<title>Waste Service Standards</title>
+	<title>Introduction - Waste Service Standards</title>
 
-        <link href="./css/bootstrap-3.0.3.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
-        <link href="./css/base.css" rel="stylesheet">
-        <link href="./css/custom.css" rel="stylesheet">
+        <link href="../css/bootstrap-3.0.3.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/base.css" rel="stylesheet">
+        <link href="../css/custom.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -43,7 +43,7 @@
             </button>
 
             <!-- Main title -->
-            <a class="navbar-brand" href=".">Waste Service Standards</a>
+            <a class="navbar-brand" href="..">Waste Service Standards</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -52,46 +52,46 @@
             <ul class="nav navbar-nav">
             
             
-                <li class="active">
-                    <a href=".">Home</a>
+                <li >
+                    <a href="..">Home</a>
                 </li>
             
             
             
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Models <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
-                        <li >
-                            <a href="models/">Introduction</a>
+                        <li class="active">
+                            <a href="./">Introduction</a>
                         </li>
                     
                         <li >
-                            <a href="models/service/">Service</a>
+                            <a href="service/">Service</a>
                         </li>
                     
                         <li >
-                            <a href="models/round/">Round</a>
+                            <a href="round/">Round</a>
                         </li>
                     
                         <li >
-                            <a href="models/round-plan/">Round plan</a>
+                            <a href="round-plan/">Round plan</a>
                         </li>
                     
                         <li >
-                            <a href="models/container/">Container</a>
+                            <a href="container/">Container</a>
                         </li>
                     
                         <li >
-                            <a href="models/container-type/">Container type</a>
+                            <a href="container-type/">Container type</a>
                         </li>
                     
                         <li >
-                            <a href="models/event/">Event</a>
+                            <a href="event/">Event</a>
                         </li>
                     
                         <li >
-                            <a href="models/material-stream/">Material stream</a>
+                            <a href="material-stream/">Material stream</a>
                         </li>
                     
                     </ul>
@@ -104,11 +104,11 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="taxonomies/missed-collections/">Missed collections</a>
+                            <a href="../taxonomies/missed-collections/">Missed collections</a>
                         </li>
                     
                         <li >
-                            <a href="taxonomies/material-streams/">Material streams</a>
+                            <a href="../taxonomies/material-streams/">Material streams</a>
                         </li>
                     
                     </ul>
@@ -117,7 +117,7 @@
             
             
                 <li >
-                    <a href="api/">API</a>
+                    <a href="../api/">API</a>
                 </li>
             
             
@@ -125,13 +125,13 @@
 
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
-                <li class="disabled">
-                    <a rel="next" >
+                <li >
+                    <a rel="next" href="..">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="models/">
+                    <a rel="prev" href="service/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -154,19 +154,49 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#introduction">Introduction</a></li>
-        
-            <li><a href="#design-principles">Design principles</a></li>
+        <li class="main active"><a href="#data-models">Data models</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="introduction">Introduction</h1>
-<p>These are the specifications developed by the <a href="http://www.localdirect.gov.uk/product/local-waste-service-standards-project/">Local Waste Service Standards Project</a>.</p>
-<h2 id="design-principles">Design principles</h2>
-<p>The Government Service Design Manual <a href="https://www.gov.uk/service-manual/making-software/apis.html">guidelines for APIs</a> will be used.</p></div>
+<h1 id="data-models">Data models</h1>
+<p>This gives an overview of the data models:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="service/">Service</a></td>
+<td>A waste or recycling service provided by the council for citizens.</td>
+</tr>
+<tr>
+<td><a href="round-plan/">Round plan</a></td>
+<td>A truck collecting one or more material streams from a set of containers on a repeating schedule.</td>
+</tr>
+<tr>
+<td><a href="round/">Round</a></td>
+<td>An instance of a round plan that has been executed on a particular date.</td>
+</tr>
+<tr>
+<td><a href="event/">Event</a></td>
+<td>An issue or check that is recorded during a round.</td>
+</tr>
+<tr>
+<td><a href="container/">Container</a></td>
+<td>Where materials are stored for collection.</td>
+</tr>
+<tr>
+<td><a href="material-stream/">Material stream</a></td>
+<td>The types of materials that can be collected.</td>
+</tr>
+</tbody>
+</table></div>
         </div>
 
 	<footer class="col-md-12">
@@ -176,9 +206,9 @@
 	</footer>
 
 
-        <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script src="./js/base.js"></script>
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script src="../js/base.js"></script>
     </body>
 </html>

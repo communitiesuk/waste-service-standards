@@ -63,11 +63,35 @@
                     <ul class="dropdown-menu">
                     
                         <li >
+                            <a href="../../models/">Introduction</a>
+                        </li>
+                    
+                        <li >
                             <a href="../../models/service/">Service</a>
                         </li>
                     
                         <li >
+                            <a href="../../models/round/">Round</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../models/round-plan/">Round plan</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../models/container/">Container</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../models/container-type/">Container type</a>
+                        </li>
+                    
+                        <li >
                             <a href="../../models/event/">Event</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../models/material-stream/">Material stream</a>
                         </li>
                     
                     </ul>
@@ -81,6 +105,10 @@
                     
                         <li class="active">
                             <a href="./">Missed collections</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../material-streams/">Material streams</a>
                         </li>
                     
                     </ul>
@@ -98,12 +126,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../../models/event/">
+                    <a rel="next" href="../../models/material-stream/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../../api/">
+                    <a rel="prev" href="../material-streams/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -126,40 +154,201 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#missed-collection-reasons">Missed collection reasons</a></li>
+        <li class="main active"><a href="#missed-collections-reasons">Missed collections reasons</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="missed-collection-reasons">Missed collection reasons</h1>
+<h1 id="missed-collections-reasons">Missed collections reasons</h1>
+<p>The table below lists a set of common possible events that can occur during a waste collection round.</p>
+<p>Many council classifications also divide event types by the service or container type. It is assumed here that it will be possible to categorise the events by:</p>
+<ul>
+<li>service type</li>
+<li>property or street</li>
+</ul>
+<p><br/></p>
 <table>
 <tr>
   <th>ID</th>
   <th>Name</th>
+  <th>Type</th>
   <th>Description</th>
+  <th>Synonyms</th>
 </tr>
 
 <tr>
-  <td>1</td>
+  <td></td>
   <td>Not presented</td>
-  <td>The container is not presented at the curbside.</td>
+  <td>service</td>
+  <td>The container was not presented on the street.</td>
+  <td>Non-Presentation</td>
 </tr>
 
 <tr>
-  <td>2</td>
-  <td>Contaminated</td>
-  <td>The contents of the container is contaminated with waste not suitable for that collection.</td>
+  <td></td>
+  <td>Incorrectly presented</td>
+  <td>service</td>
+  <td></td>
+  <td></td>
 </tr>
 
 <tr>
-  <td>3</td>
+  <td></td>
   <td>Too heavy</td>
-  <td>The container contents is too heavy for safe collection.</td>
+  <td>service</td>
+  <td>The container was too heavy to empty.</td>
+  <td>Overweight Bin</td>
 </tr>
 
-</table></div>
+<tr>
+  <td></td>
+  <td>Lid open</td>
+  <td>service</td>
+  <td>The container was too full, the lid would not close properly.</td>
+  <td>Overflowing Bin / Lid up</td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Side waste present</td>
+  <td>service</td>
+  <td>Extra refuse was present at the side of the bins.</td>
+  <td>Sidewaste</td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Contamination</td>
+  <td>service</td>
+  <td>The contents was contaminated.</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Inaccessible container store</td>
+  <td>service</td>
+  <td>It was not possible to access the bins.</td>
+  <td>Inaccessible Bin Store</td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Container damaged</td>
+  <td>service</td>
+  <td>A bin was damaged.</td>
+  <td>Bin damaged</td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Container lost in vehicle</td>
+  <td>service</td>
+  <td>A bin was lost inside the vehicle.</td>
+  <td>Receptacle Lost in Vehicle</td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Not on scheme</td>
+  <td>service</td>
+  <td>The property was not on the service.</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Inaccessible road</td>
+  <td>service</td>
+  <td>The road could not be accessed.</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Road closure</td>
+  <td>service</td>
+  <td>The road was closed.</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Querying assisted</td>
+  <td>service</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Street completed</td>
+  <td>general</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Blocked by vehicles</td>
+  <td>general</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Road works</td>
+  <td>general</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Gate locked</td>
+  <td>general</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Part access</td>
+  <td>general</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Partly completed street</td>
+  <td>general</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Alarm activated</td>
+  <td>general</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Breakdown</td>
+  <td>general</td>
+  <td></td>
+  <td></td>
+</tr>
+
+</table
+
+---</div>
         </div>
 
 	<footer class="col-md-12">

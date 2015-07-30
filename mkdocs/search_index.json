@@ -16,8 +16,18 @@
             "title": "Design principles"
         }, 
         {
+            "location": "/models/", 
+            "text": "Data models\n\n\nThis gives an overview of the data models:\n\n\n\n\n\n\n\n\nModel\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nService\n\n\nA waste or recycling service provided by the council for citizens.\n\n\n\n\n\n\nRound plan\n\n\nA truck collecting one or more material streams from a set of containers on a repeating schedule.\n\n\n\n\n\n\nRound\n\n\nAn instance of a round plan that has been executed on a particular date.\n\n\n\n\n\n\nEvent\n\n\nAn issue or check that is recorded during a round.\n\n\n\n\n\n\nContainer\n\n\nWhere materials are stored for collection.\n\n\n\n\n\n\nMaterial stream\n\n\nThe types of materials that can be collected.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/models/#data-models", 
+            "text": "This gives an overview of the data models:     Model  Description      Service  A waste or recycling service provided by the council for citizens.    Round plan  A truck collecting one or more material streams from a set of containers on a repeating schedule.    Round  An instance of a round plan that has been executed on a particular date.    Event  An issue or check that is recorded during a round.    Container  Where materials are stored for collection.    Material stream  The types of materials that can be collected.", 
+            "title": "Data models"
+        }, 
+        {
             "location": "/models/service/", 
-            "text": "Service\n\n\nUse cases and requirements\n\n\nThe Service model should have properties for:\n\n\nname\n\n\n\n\nFor identification.\n\n\n\n\nfrequency\n\n\n\n\nAn indication of typically how often the collection is run.\n\n\n\n\ndescription\n\n\n\n\nFor specific instructions about the service, such as when and where to put containers out, that bin lids must be closed, etc.\n\n\n\n\nnext collections\n\n\n\n\nTo know upcoming dates of when upcoming collections will happen.\n\n\n\n\nprevious collections\n\n\n\n\nTo know when the last few collections have taken place.\n\n\n\n\nmaterial stream\n\n\n\n\nWhat kinds of materials are handled by this service.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDefinition\n\n\n\n\n\n\n\n\n\n\nname\n\n\nText\n\n\nName of the service.\n\n\n\n\n\n\nfrequency\n\n\nText\n\n\nHow often it runs, e.g. weekly.\n\n\n\n\n\n\ndescription\n\n\nschema:description\n\n\nA short description of the service.\n\n\n\n\n\n\nnext collections\n\n\nDate\n\n\nList of dates of next collections.\n\n\n\n\n\n\nprevious collections\n\n\nDate\n\n\nList of dates of previous collections.\n\n\n\n\n\n\nmaterial stream\n\n\n?\n\n\nThe material stream that is collected.\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"name\": \"Recycling\"\n}\n\n\n    \n\n  \n\n\n\n\n\n\nCodelists\n\n\nFreqency\n\n\nTBD", 
+            "text": "Service\n\n\nUse cases and requirements\n\n\nThe Service model should have properties for:\n\n\nname\n\n\n\n\nFor identification.\n\n\n\n\nfrequency\n\n\n\n\nAn indication of typically how often the collection is run.\n\n\n\n\ndescription\n\n\n\n\nFor specific instructions about the service, such as when and where to put containers out, that bin lids must be closed, etc.\n\n\n\n\nnext collections\n\n\n\n\nTo know upcoming dates of when upcoming collections will happen, when filtered by property.\n\n\n\n\nprevious collections\n\n\n\n\nTo know when the last few collections have taken place, when filtered by property.\n\n\n\n\nmaterial stream\n\n\n\n\nWhat kinds of materials are handled by this service.\n\n\n\n\nrounds\n\n\n\n\nThe schedules and routes of trucks collecting the materials handled by this service.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDefinition\n\n\n\n\n\n\n\n\n\n\nname\n\n\nText\n\n\nName of the service.\n\n\n\n\n\n\nfrequency\n\n\nText\n\n\nHow often it runs, e.g. weekly.\n\n\n\n\n\n\ndescription\n\n\nschema:description\n\n\nA short description of the service.\n\n\n\n\n\n\nnext collections\n\n\nDate\n\n\nList of dates of next collections.\n\n\n\n\n\n\nprevious collections\n\n\nDate\n\n\nList of dates of previous collections.\n\n\n\n\n\n\nmaterial stream\n\n\n?\n\n\nThe material stream that is collected.\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"id\": 1,\n  \"name\": \"Recycling service\",\n  \"frequency\": \"weekly\",\n  \"esd_url\": \"http://id.esd.org.uk/service/1130\",\n  \"description\": \"Please put your recycling box on the street.\"\n}\n\n    \n\n  \n\n\n\n\n\n\nCodelists\n\n\nFreqency\n\n\nTBD", 
             "title": "Service"
         }, 
         {
@@ -27,7 +37,7 @@
         }, 
         {
             "location": "/models/service/#use-cases-and-requirements", 
-            "text": "The Service model should have properties for:  name   For identification.   frequency   An indication of typically how often the collection is run.   description   For specific instructions about the service, such as when and where to put containers out, that bin lids must be closed, etc.   next collections   To know upcoming dates of when upcoming collections will happen.   previous collections   To know when the last few collections have taken place.   material stream   What kinds of materials are handled by this service.", 
+            "text": "The Service model should have properties for:  name   For identification.   frequency   An indication of typically how often the collection is run.   description   For specific instructions about the service, such as when and where to put containers out, that bin lids must be closed, etc.   next collections   To know upcoming dates of when upcoming collections will happen, when filtered by property.   previous collections   To know when the last few collections have taken place, when filtered by property.   material stream   What kinds of materials are handled by this service.   rounds   The schedules and routes of trucks collecting the materials handled by this service.", 
             "title": "Use cases and requirements"
         }, 
         {
@@ -37,7 +47,7 @@
         }, 
         {
             "location": "/models/service/#serialisation", 
-            "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n  \"name\": \"Recycling\"\n}", 
+            "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n  \"id\": 1,\n  \"name\": \"Recycling service\",\n  \"frequency\": \"weekly\",\n  \"esd_url\": \"http://id.esd.org.uk/service/1130\",\n  \"description\": \"Please put your recycling box on the street.\"\n}", 
             "title": "Serialisation"
         }, 
         {
@@ -46,8 +56,113 @@
             "title": "Codelists"
         }, 
         {
+            "location": "/models/round/", 
+            "text": "Round plan\n\n\nUse cases and requirements\n\n\nThe Round model should have properties for:\n\n\ndate\n\n\n\n\nWhen this round took place.\n\n\n\n\nround plan\n\n\n\n\nA reference to which Round plan was used.\n\n\n\n\nevents\n\n\n\n\nAny related events that have been recorded.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDefinition\n\n\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"@id\": \"/rounds/456\",\n  \"date\": \"\",\n  \"plan\": {\n    \"id\": \"\",\n    \"start_date\": \"\",\n    \"rrule\": \"\",\n    \"containers\": \"/api/containers?round_plan=1\"\n  },\n  \"events\": \"/api/events?round=456\"\n}", 
+            "title": "Round"
+        }, 
+        {
+            "location": "/models/round/#round-plan", 
+            "text": "", 
+            "title": "Round plan"
+        }, 
+        {
+            "location": "/models/round/#use-cases-and-requirements", 
+            "text": "The Round model should have properties for:  date   When this round took place.   round plan   A reference to which Round plan was used.   events   Any related events that have been recorded.", 
+            "title": "Use cases and requirements"
+        }, 
+        {
+            "location": "/models/round/#properties", 
+            "text": "Term  Mapping  Definition", 
+            "title": "Properties"
+        }, 
+        {
+            "location": "/models/round/#serialisation", 
+            "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n  \"@id\": \"/rounds/456\",\n  \"date\": \"\",\n  \"plan\": {\n    \"id\": \"\",\n    \"start_date\": \"\",\n    \"rrule\": \"\",\n    \"containers\": \"/api/containers?round_plan=1\"\n  },\n  \"events\": \"/api/events?round=456\"\n}", 
+            "title": "Serialisation"
+        }, 
+        {
+            "location": "/models/round-plan/", 
+            "text": "Round plan\n\n\nUse cases and requirements\n\n\nThe Round plan model should have properties for:\n\n\ncontainers\n\n\n\n\nWhat properties the round will collect from.\n\n\n\n\nstart date\n\n\n\n\nWhen rule starts.\n\n\n\n\nrepeating rule\n\n\n\n\nHow often the round is run.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDefinition\n\n\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"id\": \"\",\n  \"start_date\": \"\",\n  \"rrule\": \"\",\n  \"containers\": \"/api/containers?round_plan=1\"\n}", 
+            "title": "Round plan"
+        }, 
+        {
+            "location": "/models/round-plan/#round-plan", 
+            "text": "", 
+            "title": "Round plan"
+        }, 
+        {
+            "location": "/models/round-plan/#use-cases-and-requirements", 
+            "text": "The Round plan model should have properties for:  containers   What properties the round will collect from.   start date   When rule starts.   repeating rule   How often the round is run.", 
+            "title": "Use cases and requirements"
+        }, 
+        {
+            "location": "/models/round-plan/#properties", 
+            "text": "Term  Mapping  Definition", 
+            "title": "Properties"
+        }, 
+        {
+            "location": "/models/round-plan/#serialisation", 
+            "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n  \"id\": \"\",\n  \"start_date\": \"\",\n  \"rrule\": \"\",\n  \"containers\": \"/api/containers?round_plan=1\"\n}", 
+            "title": "Serialisation"
+        }, 
+        {
+            "location": "/models/container/", 
+            "text": "Container\n\n\nUse cases and requirements\n\n\nThe Container model should have properties for:\n\n\ncontainer type\n\n\n\n\nFor the common properties of the container.\n\n\n\n\nserial number or ID\n\n\n\n\nFor identification of the container.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDefinition\n\n\n\n\n\n\n\n\n\n\nid\n\n\n\n\nUnique identifer.\n\n\n\n\n\n\ntype\n\n\n\n\nThe type of container.\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n\n}", 
+            "title": "Container"
+        }, 
+        {
+            "location": "/models/container/#container", 
+            "text": "", 
+            "title": "Container"
+        }, 
+        {
+            "location": "/models/container/#use-cases-and-requirements", 
+            "text": "The Container model should have properties for:  container type   For the common properties of the container.   serial number or ID   For identification of the container.", 
+            "title": "Use cases and requirements"
+        }, 
+        {
+            "location": "/models/container/#properties", 
+            "text": "Term  Mapping  Definition      id   Unique identifer.    type   The type of container.", 
+            "title": "Properties"
+        }, 
+        {
+            "location": "/models/container/#serialisation", 
+            "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n\n}", 
+            "title": "Serialisation"
+        }, 
+        {
+            "location": "/models/container-type/", 
+            "text": "Container type\n\n\nUse cases and requirements\n\n\nThe Container type model should have properties for:\n\n\ncolor\n\n\n\n\nThe general color.\n\n\n\n\nsize\n\n\n\n\nTypically in litres.\n\n\n\n\nshape\n\n\n\n\nWheelie bin, box, caddy, etc.\n\n\n\n\nlid color\n\n\n\n\nIn case its different to the body color.\n\n\n\n\nmaterial stream\n\n\n\n\nWhat kind of waste the container is used for.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDefinition\n\n\n\n\n\n\n\n\n\n\nid\n\n\n\n\nUnique identifer.\n\n\n\n\n\n\ncolor\n\n\nschema:color\n\n\nGeneral color as a hex value.\n\n\n\n\n\n\nsize\n\n\ninteger\n\n\nSize in litres.\n\n\n\n\n\n\nshape\n\n\ntext\n\n\nThe shape or type of the container.\n\n\n\n\n\n\nlid color\n\n\nschema:color\n\n\nLid-specific color as a hex value.\n\n\n\n\n\n\nmaterial stream\n\n\n\n\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"color\": \"#fff\",\n  \"shape\": \"wheelie bin\",\n  \"size\": \"240\",\n\n}\n\n    \n\n\n\n\n\n\n\n\n\nCodelists\n\n\nContainer shape", 
+            "title": "Container type"
+        }, 
+        {
+            "location": "/models/container-type/#container-type", 
+            "text": "", 
+            "title": "Container type"
+        }, 
+        {
+            "location": "/models/container-type/#use-cases-and-requirements", 
+            "text": "The Container type model should have properties for:  color   The general color.   size   Typically in litres.   shape   Wheelie bin, box, caddy, etc.   lid color   In case its different to the body color.   material stream   What kind of waste the container is used for.", 
+            "title": "Use cases and requirements"
+        }, 
+        {
+            "location": "/models/container-type/#properties", 
+            "text": "Term  Mapping  Definition      id   Unique identifer.    color  schema:color  General color as a hex value.    size  integer  Size in litres.    shape  text  The shape or type of the container.    lid color  schema:color  Lid-specific color as a hex value.    material stream", 
+            "title": "Properties"
+        }, 
+        {
+            "location": "/models/container-type/#serialisation", 
+            "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n  \"color\": \"#fff\",\n  \"shape\": \"wheelie bin\",\n  \"size\": \"240\",\n\n}", 
+            "title": "Serialisation"
+        }, 
+        {
+            "location": "/models/container-type/#codelists", 
+            "text": "Container shape", 
+            "title": "Codelists"
+        }, 
+        {
             "location": "/models/event/", 
-            "text": "Event\n\n\nUse cases and requirements\n\n\nThe Event model should have properties for:\n\n\nevent type\n\n\n\n\nWhat kind of event it is.\n\n\n\n\ndate created\n\n\n\n\nKnow when an event happened.\n\n\n\n\nUPRN\n\n\n\n\nFor recording against specific properties.\n\n\n\n\nUSRN\n\n\n\n\nFor recording street-level information.\n\n\n\n\ncoordinates\n\n\n\n\nFor easy geolocation of where the event was recorded.\n\n\n\n\nimage\n\n\n\n\nVisual evidence of an issue.\n\n\n\n\ncomments\n\n\n\n\nFor any additional information useful to record.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDefinition\n\n\n\n\n\n\n\n\n\n\nevent type\n\n\nstring\n\n\nA categorisation of the event.\n\n\n\n\n\n\ndate created\n\n\nstring\n\n\nWhen the event was created.\n\n\n\n\n\n\nuprn\n\n\nstring\n\n\nA unique identifier for a property.\n\n\n\n\n\n\nusrn\n\n\nstring\n\n\nA unique identifier for a street.\n\n\n\n\n\n\ngeo\n\n\nGeoCoordinates\n\n\nThe location in WGS84 datum.\n\n\n\n\n\n\nimage\n\n\nschema:image\n\n\nA URL to a related image.\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"event_type\": \"Not presented\",\n  \"date_created\": \"2014-05-23T20:00\",\n  \"uprn\": \"123456789012\",\n  \"usrn\": \"123456789012\",\n  \"image\": \"http://example.com/images/123.png\",\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": \"40.75\",\n    \"longitude\": \"73.98\"\n  }\n}", 
+            "text": "Event\n\n\nUse cases and requirements\n\n\nThe Event model should have properties for:\n\n\nevent type\n\n\n\n\nWhat kind of event it is.\n\n\n\n\ndate created\n\n\n\n\nKnow when an event happened.\n\n\n\n\nUPRN\n\n\n\n\nFor recording against specific properties.\n\n\n\n\nUSRN\n\n\n\n\nFor recording street-level events.\n\n\n\n\ncoordinates\n\n\n\n\nFor easy geolocation of where the event was recorded.\n\n\n\n\nimage\n\n\n\n\nVisual evidence of an issue.\n\n\n\n\ncomments\n\n\n\n\nFor any additional information useful to record.\n\n\n\n\nround\n\n\n\n\nThe round where this event happened.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDefinition\n\n\n\n\n\n\n\n\n\n\ntype\n\n\nstring\n\n\nA categorisation of the event.\n\n\n\n\n\n\ndate created\n\n\nstring\n\n\nWhen the event was created.\n\n\n\n\n\n\nuprn\n\n\nstring\n\n\nA unique identifier for a property.\n\n\n\n\n\n\nusrn\n\n\nstring\n\n\nA unique identifier for a street.\n\n\n\n\n\n\ngeo\n\n\nschema:geo\n\n\nThe location in WGS84 datum.\n\n\n\n\n\n\nimage\n\n\nschema:image\n\n\nA URL to a related image.\n\n\n\n\n\n\nround\n\n\nURL\n\n\nThe URL of the round where this event was recorded.\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"@id\": \"/api/events/1\",\n  \"type\": \"Not presented\",\n  \"date_created\": \"2014-05-23T20:00\",\n  \"uprn\": \"123456789012\",\n  \"usrn\": \"123456789012\",\n  \"image\": \"http://example.com/images/123.png\",\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": \"40.75\",\n    \"longitude\": \"73.98\"\n  },\n  \"round\": \"/rounds/123\"\n}", 
             "title": "Event"
         }, 
         {
@@ -57,43 +172,98 @@
         }, 
         {
             "location": "/models/event/#use-cases-and-requirements", 
-            "text": "The Event model should have properties for:  event type   What kind of event it is.   date created   Know when an event happened.   UPRN   For recording against specific properties.   USRN   For recording street-level information.   coordinates   For easy geolocation of where the event was recorded.   image   Visual evidence of an issue.   comments   For any additional information useful to record.", 
+            "text": "The Event model should have properties for:  event type   What kind of event it is.   date created   Know when an event happened.   UPRN   For recording against specific properties.   USRN   For recording street-level events.   coordinates   For easy geolocation of where the event was recorded.   image   Visual evidence of an issue.   comments   For any additional information useful to record.   round   The round where this event happened.", 
             "title": "Use cases and requirements"
         }, 
         {
             "location": "/models/event/#properties", 
-            "text": "Term  Mapping  Definition      event type  string  A categorisation of the event.    date created  string  When the event was created.    uprn  string  A unique identifier for a property.    usrn  string  A unique identifier for a street.    geo  GeoCoordinates  The location in WGS84 datum.    image  schema:image  A URL to a related image.", 
+            "text": "Term  Mapping  Definition      type  string  A categorisation of the event.    date created  string  When the event was created.    uprn  string  A unique identifier for a property.    usrn  string  A unique identifier for a street.    geo  schema:geo  The location in WGS84 datum.    image  schema:image  A URL to a related image.    round  URL  The URL of the round where this event was recorded.", 
             "title": "Properties"
         }, 
         {
             "location": "/models/event/#serialisation", 
-            "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n  \"event_type\": \"Not presented\",\n  \"date_created\": \"2014-05-23T20:00\",\n  \"uprn\": \"123456789012\",\n  \"usrn\": \"123456789012\",\n  \"image\": \"http://example.com/images/123.png\",\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": \"40.75\",\n    \"longitude\": \"73.98\"\n  }\n}", 
+            "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n  \"@id\": \"/api/events/1\",\n  \"type\": \"Not presented\",\n  \"date_created\": \"2014-05-23T20:00\",\n  \"uprn\": \"123456789012\",\n  \"usrn\": \"123456789012\",\n  \"image\": \"http://example.com/images/123.png\",\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": \"40.75\",\n    \"longitude\": \"73.98\"\n  },\n  \"round\": \"/rounds/123\"\n}", 
+            "title": "Serialisation"
+        }, 
+        {
+            "location": "/models/material-stream/", 
+            "text": "Material stream\n\n\nUse cases and requirements\n\n\nThe Material stream model should have properties for:\n\n\nname\n\n\n\n\nWhat kind of material it is.\n\n\n\n\nimage\n\n\n\n\nFor clear identification, matching physical signage.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDefinition\n\n\n\n\n\n\n\n\n\n\nname\n\n\nstring\n\n\nThe name of the material.\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"name\": \"Mixed recycling\"\n}", 
+            "title": "Material stream"
+        }, 
+        {
+            "location": "/models/material-stream/#material-stream", 
+            "text": "", 
+            "title": "Material stream"
+        }, 
+        {
+            "location": "/models/material-stream/#use-cases-and-requirements", 
+            "text": "The Material stream model should have properties for:  name   What kind of material it is.   image   For clear identification, matching physical signage.", 
+            "title": "Use cases and requirements"
+        }, 
+        {
+            "location": "/models/material-stream/#properties", 
+            "text": "Term  Mapping  Definition      name  string  The name of the material.", 
+            "title": "Properties"
+        }, 
+        {
+            "location": "/models/material-stream/#serialisation", 
+            "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n  \"name\": \"Mixed recycling\"\n}", 
             "title": "Serialisation"
         }, 
         {
             "location": "/taxonomies/missed-collections/", 
-            "text": "Missed collection reasons\n\n\n\n\n\n  \nID\n\n  \nName\n\n  \nDescription\n\n\n\n\n\n\n  \n1\n\n  \nNot presented\n\n  \nThe container is not presented at the curbside.\n\n\n\n\n\n\n  \n2\n\n  \nContaminated\n\n  \nThe contents of the container is contaminated with waste not suitable for that collection.\n\n\n\n\n\n\n  \n3\n\n  \nToo heavy\n\n  \nThe container contents is too heavy for safe collection.", 
+            "text": "Missed collections reasons\n\n\nThe table below lists a set of common possible events that can occur during a waste collection round.\n\n\nMany council classifications also divide event types by the service or container type. It is assumed here that it will be possible to categorise the events by:\n\n\n\n\nservice type\n\n\nproperty or street\n\n\n\n\n\n\n\n\n\n  \nID\n\n  \nName\n\n  \nType\n\n  \nDescription\n\n  \nSynonyms\n\n\n\n\n\n\n  \n\n  \nNot presented\n\n  \nservice\n\n  \nThe container was not presented on the street.\n\n  \nNon-Presentation\n\n\n\n\n\n\n  \n\n  \nIncorrectly presented\n\n  \nservice\n\n  \n\n  \n\n\n\n\n\n\n  \n\n  \nToo heavy\n\n  \nservice\n\n  \nThe container was too heavy to empty.\n\n  \nOverweight Bin\n\n\n\n\n\n\n  \n\n  \nLid open\n\n  \nservice\n\n  \nThe container was too full, the lid would not close properly.\n\n  \nOverflowing Bin / Lid up\n\n\n\n\n\n\n  \n\n  \nSide waste present\n\n  \nservice\n\n  \nExtra refuse was present at the side of the bins.\n\n  \nSidewaste\n\n\n\n\n\n\n  \n\n  \nContamination\n\n  \nservice\n\n  \nThe contents was contaminated.\n\n  \n\n\n\n\n\n\n  \n\n  \nInaccessible container store\n\n  \nservice\n\n  \nIt was not possible to access the bins.\n\n  \nInaccessible Bin Store\n\n\n\n\n\n\n  \n\n  \nContainer damaged\n\n  \nservice\n\n  \nA bin was damaged.\n\n  \nBin damaged\n\n\n\n\n\n\n  \n\n  \nContainer lost in vehicle\n\n  \nservice\n\n  \nA bin was lost inside the vehicle.\n\n  \nReceptacle Lost in Vehicle\n\n\n\n\n\n\n  \n\n  \nNot on scheme\n\n  \nservice\n\n  \nThe property was not on the service.\n\n  \n\n\n\n\n\n\n  \n\n  \nInaccessible road\n\n  \nservice\n\n  \nThe road could not be accessed.\n\n  \n\n\n\n\n\n\n  \n\n  \nRoad closure\n\n  \nservice\n\n  \nThe road was closed.\n\n  \n\n\n\n\n\n\n  \n\n  \nQuerying assisted\n\n  \nservice\n\n  \n\n  \n\n\n\n\n\n\n  \n\n  \nStreet completed\n\n  \ngeneral\n\n  \n\n  \n\n\n\n\n\n\n  \n\n  \nBlocked by vehicles\n\n  \ngeneral\n\n  \n\n  \n\n\n\n\n\n\n  \n\n  \nRoad works\n\n  \ngeneral\n\n  \n\n  \n\n\n\n\n\n\n  \n\n  \nGate locked\n\n  \ngeneral\n\n  \n\n  \n\n\n\n\n\n\n  \n\n  \nPart access\n\n  \ngeneral\n\n  \n\n  \n\n\n\n\n\n\n  \n\n  \nPartly completed street\n\n  \ngeneral\n\n  \n\n  \n\n\n\n\n\n\n  \n\n  \nAlarm activated\n\n  \ngeneral\n\n  \n\n  \n\n\n\n\n\n\n  \n\n  \nBreakdown\n\n  \ngeneral", 
             "title": "Missed collections"
         }, 
         {
-            "location": "/taxonomies/missed-collections/#missed-collection-reasons", 
-            "text": "ID \n   Name \n   Description   \n   1 \n   Not presented \n   The container is not presented at the curbside.   \n   2 \n   Contaminated \n   The contents of the container is contaminated with waste not suitable for that collection.   \n   3 \n   Too heavy \n   The container contents is too heavy for safe collection.", 
-            "title": "Missed collection reasons"
+            "location": "/taxonomies/missed-collections/#missed-collections-reasons", 
+            "text": "The table below lists a set of common possible events that can occur during a waste collection round.  Many council classifications also divide event types by the service or container type. It is assumed here that it will be possible to categorise the events by:   service type  property or street     \n   ID \n   Name \n   Type \n   Description \n   Synonyms   \n   \n   Not presented \n   service \n   The container was not presented on the street. \n   Non-Presentation   \n   \n   Incorrectly presented \n   service \n   \n     \n   \n   Too heavy \n   service \n   The container was too heavy to empty. \n   Overweight Bin   \n   \n   Lid open \n   service \n   The container was too full, the lid would not close properly. \n   Overflowing Bin / Lid up   \n   \n   Side waste present \n   service \n   Extra refuse was present at the side of the bins. \n   Sidewaste   \n   \n   Contamination \n   service \n   The contents was contaminated. \n     \n   \n   Inaccessible container store \n   service \n   It was not possible to access the bins. \n   Inaccessible Bin Store   \n   \n   Container damaged \n   service \n   A bin was damaged. \n   Bin damaged   \n   \n   Container lost in vehicle \n   service \n   A bin was lost inside the vehicle. \n   Receptacle Lost in Vehicle   \n   \n   Not on scheme \n   service \n   The property was not on the service. \n     \n   \n   Inaccessible road \n   service \n   The road could not be accessed. \n     \n   \n   Road closure \n   service \n   The road was closed. \n     \n   \n   Querying assisted \n   service \n   \n     \n   \n   Street completed \n   general \n   \n     \n   \n   Blocked by vehicles \n   general \n   \n     \n   \n   Road works \n   general \n   \n     \n   \n   Gate locked \n   general \n   \n     \n   \n   Part access \n   general \n   \n     \n   \n   Partly completed street \n   general \n   \n     \n   \n   Alarm activated \n   general \n   \n     \n   \n   Breakdown \n   general", 
+            "title": "Missed collections reasons"
+        }, 
+        {
+            "location": "/taxonomies/material-streams/", 
+            "text": "Material streams\n\n\nThe table below lists the material streams as defined by \nWRAP\n.\n\n\n\n\n\n\n\n  \nName\n\n  \nParent\n\n  \nColor\n\n\n\n\n\n\n  \ntextiles\n\n  \n\n  \n\n  \n\n\n\n\n\n\n  \nclothes\n\n  \ntextiles\n\n  \n\n  \n\n\n\n\n\n\n  \nshoes\n\n  \ntextiles\n\n  \n\n  \n\n\n\n\n\n\n  \nmixed textiles \n&\n clothes\n\n  \ntextiles\n\n  \n\n  \n\n\n\n\n\n\n  \nplastics\n\n  \n\n  \n\n  \n\n\n\n\n\n\n  \nplastic bottles\n\n  \nplastics\n\n  \n\n  \n\n\n\n\n\n\n  \nplastic bottles\n\n  \nplastics\n\n  \n\n  \n\n\n\n\n\n\n  \nplastic bottles\n\n  \nplastics\n\n  \n\n  \n\n\n\n\n\n\n  \nplastic bags\n\n  \nplastics\n\n  \n\n  \n\n\n\n\n\n\n  \nhousehold plastics (with film)\n\n  \nplastics\n\n  \n\n  \n\n\n\n\n\n\n  \nhousehold plastics (without film)\n\n  \nplastics\n\n  \n\n  \n\n\n\n\n\n\n  \nhard plastics\n\n  \nplastics\n\n  \n\n  \n\n\n\n\n\n\n  \npaper\n\n  \n\n  \n\n  \n\n\n\n\n\n\n  \nnewspapers \n&\n magazines\n\n  \npaper\n\n  \n\n  \n\n\n\n\n\n\n  \ncardboard\n\n  \npaper\n\n  \n\n  \n\n\n\n\n\n\n  \ntelephone directories\n\n  \npaper\n\n  \n\n  \n\n\n\n\n\n\n  \nmixed paper\n\n  \npaper\n\n  \n\n  \n\n\n\n\n\n\n  \nmixed paper and card\n\n  \npaper\n\n  \n\n  \n\n\n\n\n\n\n  \nbooks\n\n  \npaper\n\n  \n\n  \n\n\n\n\n\n\n  \ncorrugated cardboard\n\n  \npaper\n\n  \n\n  \n\n\n\n\n\n\n  \nglass\n\n  \n\n  \n\n  \n\n\n\n\n\n\n  \nmixed glass\n\n  \nglass\n\n  \n\n  \n\n\n\n\n\n\n  \nclear glass bottles and jars\n\n  \nglass\n\n  \n\n  \n\n\n\n\n\n\n  \nbrown glass bottles and jars\n\n  \nglass\n\n  \n\n  \n\n\n\n\n\n\n  \ngreen glass bottles and jars\n\n  \nglass\n\n  \n\n  \n\n\n\n\n\n\n  \nblue glass bottles and jars\n\n  \nglass\n\n  \n\n  \n\n\n\n\n\n\n  \nflat glass\n\n  \nglass\n\n  \n\n  \n\n\n\n\n\n\n  \nhousehold organics\n\n  \n\n  \n\n  \n\n\n\n\n\n\n  \ngarden waste\n\n  \nhousehold organics\n\n  \n\n  \n\n\n\n\n\n\n  \nfood waste\n\n  \nhousehold organics\n\n  \n\n  \n\n\n\n\n\n\n  \nmetals\n\n  \n\n  \n\n  \n\n\n\n\n\n\n  \nfood \n&\n drink cans\n\n  \nmetals\n\n  \n\n  \n\n\n\n\n\n\n  \naluminium cans\n\n  \nmetals\n\n  \n\n  \n\n\n\n\n\n\n  \nsteel cans\n\n  \nmetals\n\n  \n\n  \n\n\n\n\n\n\n  \naerosols\n\n  \nmetals\n\n  \n\n  \n\n\n\n\n\n\n  \nfoil\n\n  \nmetals\n\n  \n\n  \n\n\n\n\n\n\n  \nfoil (with pie tin)\n\n  \nmetals\n\n  \n\n  \n\n\n\n\n\n\n  \nfoil trays\n\n  \nmetals\n\n  \n\n  \n\n\n\n\n\n\n  \nscrap metal\n\n  \nmetals\n\n  \n\n  \n\n\n\n\n\n\n  \nlarge tins\n\n  \nmetals\n\n  \n\n  \n\n\n\n\n\n\n  \nmixed metals\n\n  \nmetals\n\n  \n\n  \n\n\n\n\n\n\n  \nmixed metals (with foil)\n\n  \nmetals\n\n  \n\n  \n\n\n\n\n\n\n  \nmixed metals (with foil but without aerosol)\n\n  \nmetals\n\n  \n\n  \n\n\n\n\n\n\n  \nautomotive waste\n\n  \n\n  \n\n  \n\n\n\n\n\n\n  \nused engine oil\n\n  \nautomotive waste\n\n  \n\n  \n\n\n\n\n\n\n  \ncar batteries\n\n  \nautomotive waste\n\n  \n\n  \n\n\n\n\n\n\n  \ntyres\n\n  \nautomotive waste\n\n  \n\n  \n\n\n\n\n\n\n  \nbuilding materials\n\n  \n\n  \n\n  \n\n\n\n\n\n\n  \nsoil\n\n  \nbuilding materials\n\n  \n\n  \n\n\n\n\n\n\n  \nhardcore \n&\n rubble\n\n  \nbuilding materials\n\n  \n\n  \n\n\n\n\n\n\n  \nwood \n&\n timber\n\n  \nbuilding materials\n\n  \n\n  \n\n\n\n\n\n\n  \nplasterboard\n\n  \nbuilding materials\n\n  \n\n  \n\n\n\n\n\n\n  \nUPVC frames\n\n  \nbuilding materials\n\n  \n\n  \n\n\n\n\n\n\n  \nother recyclables\n\n  \n\n  \n\n  \n\n\n\n\n\n\n  \npaint\n\n  \nother recyclables\n\n  \n\n  \n\n\n\n\n\n\n  \nspectacles\n\n  \nother recyclables\n\n  \n\n  \n\n\n\n\n\n\n  \ncartons\n\n  \nother recyclables\n\n  \n\n  \n\n\n\n\n\n\n  \nfurniture\n\n  \nother recyclables\n\n  \n\n  \n\n\n\n\n\n\n  \ntapes and discs\n\n  \nother recyclables\n\n  \n\n  \n\n\n\n\n\n\n  \ndiscs\n\n  \nother recyclables\n\n  \n\n  \n\n\n\n\n\n\n  \ntapes\n\n  \nother recyclables\n\n  \n\n  \n\n\n\n\n\n\n  \nhand tools\n\n  \nother recyclables\n\n  \n\n  \n\n\n\n\n\n\n  \ncooking oil\n\n  \nother recyclables\n\n  \n\n  \n\n\n\n\n\n\n  \ncarpet\n\n  \nother recyclables\n\n  \n\n  \n\n\n\n\n\n\n  \nmattresses\n\n  \nother recyclables\n\n  \n\n  \n\n\n\n\n\n\n  \nbicycles\n\n  \nother recyclables\n\n  \n\n  \n\n\n\n\n\n\n  \nelectrical\n\n  \n\n  \n\n  \n\n\n\n\n\n\n  \nfridges \n&\n freezers\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \nbatteries\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \ntelecoms \n&\n computers - phone \n&\n mouse\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \ntelecoms \n&\n computers - fax \n&\n cpu\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \nsmall appliances - irons\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \nsmall appliances - radios\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \nsmall appliances - hair dryers\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \nsmall appliances - mixed\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \nlarge appliances - mixed\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \nlarge appliances - washing machine\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \nfluorescent tubes\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \nlow energy bulbs\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \nmixed light bulbs\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \ntv \n&\n monitors\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \nmobile phones\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \nprinter cartridges\n\n  \nelectrical\n\n  \n\n  \n\n\n\n\n\n\n  \nhousehold waste\n\n  \n\n  \n\n  \n\n\n\n\n\n\n  \nhousehold hazardous waste\n\n  \n\n  \n\n  \n\n\n\n\n\n\n  \nhazardous materials\n\n  \nhousehold hazardous waste\n\n  \n\n  \n\n\n\n\n\n\n  \ngas bottles\n\n  \nhousehold hazardous waste\n\n  \n\n  \n\n\n\n\n\n\n  \nasbestos\n\n  \nhousehold hazardous waste\n\n  \n\n  \n\n\n\n\n\n\n  \nhousehold \n&\n garden chemicals\n\n  \nhousehold hazardous waste\n\n  \n\n  \n\n\n\n\n\n\n  \nmixed recyclables", 
+            "title": "Material streams"
+        }, 
+        {
+            "location": "/taxonomies/material-streams/#material-streams", 
+            "text": "The table below lists the material streams as defined by  WRAP .    \n   Name \n   Parent \n   Color   \n   textiles \n   \n   \n     \n   clothes \n   textiles \n   \n     \n   shoes \n   textiles \n   \n     \n   mixed textiles  &  clothes \n   textiles \n   \n     \n   plastics \n   \n   \n     \n   plastic bottles \n   plastics \n   \n     \n   plastic bottles \n   plastics \n   \n     \n   plastic bottles \n   plastics \n   \n     \n   plastic bags \n   plastics \n   \n     \n   household plastics (with film) \n   plastics \n   \n     \n   household plastics (without film) \n   plastics \n   \n     \n   hard plastics \n   plastics \n   \n     \n   paper \n   \n   \n     \n   newspapers  &  magazines \n   paper \n   \n     \n   cardboard \n   paper \n   \n     \n   telephone directories \n   paper \n   \n     \n   mixed paper \n   paper \n   \n     \n   mixed paper and card \n   paper \n   \n     \n   books \n   paper \n   \n     \n   corrugated cardboard \n   paper \n   \n     \n   glass \n   \n   \n     \n   mixed glass \n   glass \n   \n     \n   clear glass bottles and jars \n   glass \n   \n     \n   brown glass bottles and jars \n   glass \n   \n     \n   green glass bottles and jars \n   glass \n   \n     \n   blue glass bottles and jars \n   glass \n   \n     \n   flat glass \n   glass \n   \n     \n   household organics \n   \n   \n     \n   garden waste \n   household organics \n   \n     \n   food waste \n   household organics \n   \n     \n   metals \n   \n   \n     \n   food  &  drink cans \n   metals \n   \n     \n   aluminium cans \n   metals \n   \n     \n   steel cans \n   metals \n   \n     \n   aerosols \n   metals \n   \n     \n   foil \n   metals \n   \n     \n   foil (with pie tin) \n   metals \n   \n     \n   foil trays \n   metals \n   \n     \n   scrap metal \n   metals \n   \n     \n   large tins \n   metals \n   \n     \n   mixed metals \n   metals \n   \n     \n   mixed metals (with foil) \n   metals \n   \n     \n   mixed metals (with foil but without aerosol) \n   metals \n   \n     \n   automotive waste \n   \n   \n     \n   used engine oil \n   automotive waste \n   \n     \n   car batteries \n   automotive waste \n   \n     \n   tyres \n   automotive waste \n   \n     \n   building materials \n   \n   \n     \n   soil \n   building materials \n   \n     \n   hardcore  &  rubble \n   building materials \n   \n     \n   wood  &  timber \n   building materials \n   \n     \n   plasterboard \n   building materials \n   \n     \n   UPVC frames \n   building materials \n   \n     \n   other recyclables \n   \n   \n     \n   paint \n   other recyclables \n   \n     \n   spectacles \n   other recyclables \n   \n     \n   cartons \n   other recyclables \n   \n     \n   furniture \n   other recyclables \n   \n     \n   tapes and discs \n   other recyclables \n   \n     \n   discs \n   other recyclables \n   \n     \n   tapes \n   other recyclables \n   \n     \n   hand tools \n   other recyclables \n   \n     \n   cooking oil \n   other recyclables \n   \n     \n   carpet \n   other recyclables \n   \n     \n   mattresses \n   other recyclables \n   \n     \n   bicycles \n   other recyclables \n   \n     \n   electrical \n   \n   \n     \n   fridges  &  freezers \n   electrical \n   \n     \n   batteries \n   electrical \n   \n     \n   telecoms  &  computers - phone  &  mouse \n   electrical \n   \n     \n   telecoms  &  computers - fax  &  cpu \n   electrical \n   \n     \n   small appliances - irons \n   electrical \n   \n     \n   small appliances - radios \n   electrical \n   \n     \n   small appliances - hair dryers \n   electrical \n   \n     \n   small appliances - mixed \n   electrical \n   \n     \n   large appliances - mixed \n   electrical \n   \n     \n   large appliances - washing machine \n   electrical \n   \n     \n   fluorescent tubes \n   electrical \n   \n     \n   low energy bulbs \n   electrical \n   \n     \n   mixed light bulbs \n   electrical \n   \n     \n   tv  &  monitors \n   electrical \n   \n     \n   mobile phones \n   electrical \n   \n     \n   printer cartridges \n   electrical \n   \n     \n   household waste \n   \n   \n     \n   household hazardous waste \n   \n   \n     \n   hazardous materials \n   household hazardous waste \n   \n     \n   gas bottles \n   household hazardous waste \n   \n     \n   asbestos \n   household hazardous waste \n   \n     \n   household  &  garden chemicals \n   household hazardous waste \n   \n     \n   mixed recyclables", 
+            "title": "Material streams"
         }, 
         {
             "location": "/api/", 
-            "text": "Waste Services API\n\n\nServices\n\n\n\n\nGet a list of waste services\n\n\n\n  \nget\n\n  \n/services\n\n\n\n\n\nResponse\n\n\n[\n  {\n    \ndescription\n: \nPlease put your recycling box on the street.\n,\n    \nfrequency\n: \nweekly\n,\n    \nid\n: 1,\n    \nesd_id\n: \nhttp://id.esd.org.uk/service/524\n,\n    \nname\n: \nRecycling service\n\n  }\n]\n\n\n\n\nEvents\n\n\n\n\nGet a list of events\n\n\n\n  \nget\n\n  \n/events\n\n\n\n\n\nQuery parameters\n\n\n\n\n\n\n\n\nName\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nuprn\n\n\nstring\n\n\n\n\n\n\n\n\nusrn\n\n\nstring\n\n\n\n\n\n\n\n\neventType\n\n\nstring\n\n\nThe short name of an event type, e.g. \"Not presented\".\n\n\n\n\n\n\n\n\nResponse\n\n\n{}\n\n\n\n\n\n\nGet a single event\n\n\n\n  \nget\n\n  \n/events/{eventId}\n\n\n\n\n\nResponse\n\n\n{\n  \nevent_type\n: \nNot presented\n,\n  \ndate_created\n: \n2014-05-23T20:00\n,\n  \nuprn\n: \n123456789012\n,\n  \nusrn\n: \n123456789012\n,\n  \nimage\n: \nhttp://example.com/images/123.png\n,\n  \ngeo\n: {\n    \n@type\n: \nGeoCoordinates\n,\n    \nlatitude\n: \n40.75\n,\n    \nlongitude\n: \n73.98\n\n  }\n}", 
+            "text": "Waste Services API\n\n\nIntroduction\n\n\nThis API offers a core set of resources and operations for interacting with local council waste and recycling services.\n\n\nESD Standards\n\n\nThe \nESD Standards\n define all the categories of services that local authorities typically provide. These will be referenced via URL from the Services API, to allow individual council instances of a service to be matched to common service definitions.\n\n\nServices\n\n\n\n\nGet a list of waste services\n\n\n\n  \nget\n\n  \n/services\n\n\n\n\n\nResponse\n\n\n[\n  {\n    \nid\n: 1,\n    \nname\n: \nRecycling service\n,\n    \nfrequency\n: \nweekly\n,\n    \nesd_url\n: \nhttp://id.esd.org.uk/service/524\n,\n    \ndescription\n: \nPlease put your recycling box on the street.\n\n  },\n  {\n    \nid\n: 2,\n    \nname\n: \nRefuse\n,\n    \nfrequency\n: \nweekly\n,\n    \nesd_url\n: \nhttp://id.esd.org.uk/service/525\n,\n    \ndescription\n: \nBlack bins.\n\n  }\n]\n\n\n\n\n\n\nGet a single service\n\n\n\n  \nget\n\n  \n/services/{serviceId}\n\n\n\n\n\nResponse\n\n\n{\n  \nid\n: 1,\n  \nname\n: \nRecycling service\n,\n  \nfrequency\n: \nweekly\n,\n  \nesd_url\n: \nhttp://id.esd.org.uk/service/1130\n,\n  \ndescription\n: \nPlease put your recycling box on the street.\n\n}\n\n\n\n\nEvents\n\n\n\n\nGet a list of events\n\n\n\n  \nget\n\n  \n/events\n\n\n\n\n\nQuery parameters\n\n\n\n\n\n\n\n\nName\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\npage\n\n\nnumber\n\n\n\n\n\n\n\n\nuprn\n\n\nstring\n\n\nLimit results to those related to the property with this UPRN.\n\n\n\n\n\n\nusrn\n\n\nstring\n\n\nLimit results to those related to the street with this USRN.\n\n\n\n\n\n\ntype\n\n\nstring\n\n\nLimit results to those with a matching type, e.g. \"Not presented\".\n\n\n\n\n\n\nstart_date\n\n\ndate\n\n\nLimit results to those created on or after this start date.\n\n\n\n\n\n\nend_date\n\n\ndate\n\n\nLimit results to those created before this end date.\n\n\n\n\n\n\nround\n\n\nstring\n\n\nLimit results to those recorded against this round.\n\n\n\n\n\n\n\n\nResponse\n\n\n[\n  {\n    \nevent_type\n: \nNot presented\n,\n    \ndate_created\n: \n2014-05-23T20:00\n,\n    \nuprn\n: \n123456789012\n,\n    \nusrn\n: \n123456789012\n,\n    \nimage\n: \nhttp://example.com/images/123.png\n,\n    \ngeo\n: {\n      \n@type\n: \nGeoCoordinates\n,\n      \nlatitude\n: \n40.75\n,\n      \nlongitude\n: \n73.98\n\n    }\n  },\n  {\n    \nevent_type\n: \nToo heavy\n,\n    \ndate_created\n: \n2014-05-23T20:00\n,\n    \nuprn\n: \n123456789012\n,\n    \nusrn\n: \n123456789012\n,\n    \nimage\n: \nhttp://example.com/images/123.png\n,\n    \ngeo\n: {\n      \n@type\n: \nGeoCoordinates\n,\n      \nlatitude\n: \n45.75\n,\n      \nlongitude\n: \n53.98\n\n    }\n  }\n]\n\n\n\n\n\n\nGet a single event\n\n\n\n  \nget\n\n  \n/events/{eventId}\n\n\n\n\n\nResponse\n\n\n{\n  \n@id\n: \n/api/events/1\n,\n  \ntype\n: \nNot presented\n,\n  \ndate_created\n: \n2014-05-23T20:00\n,\n  \nuprn\n: \n123456789012\n,\n  \nusrn\n: \n123456789012\n,\n  \nimage\n: \nhttp://example.com/images/123.png\n,\n  \ngeo\n: {\n    \n@type\n: \nGeoCoordinates\n,\n    \nlatitude\n: \n40.75\n,\n    \nlongitude\n: \n73.98\n\n  },\n  \nround\n: \n/rounds/123\n\n}\n\n\n\n\nRounds\n\n\n\n\nGet a list of rounds\n\n\n\n  \nget\n\n  \n/rounds\n\n\n\n\n\nResponse\n\n\n{}\n\n\n\n\n\n\nGet a single round\n\n\n\n  \nget\n\n  \n/rounds/{roundId}\n\n\n\n\n\nResponse\n\n\n{\n  \n@id\n: \n/rounds/456\n,\n  \ndate\n: \n,\n  \nplan\n: {\n    \nid\n: \n,\n    \nstart_date\n: \n,\n    \nrrule\n: \n,\n    \ncontainers\n: \n/api/containers?round_plan=1\n\n  },\n  \nevents\n: \n/api/events?round=456\n\n}", 
             "title": "API"
         }, 
         {
+            "location": "/api/#waste-services-api", 
+            "text": "", 
+            "title": "Waste Services API"
+        }, 
+        {
+            "location": "/api/#introduction", 
+            "text": "This API offers a core set of resources and operations for interacting with local council waste and recycling services.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/api/#esd-standards", 
+            "text": "The  ESD Standards  define all the categories of services that local authorities typically provide. These will be referenced via URL from the Services API, to allow individual council instances of a service to be matched to common service definitions.", 
+            "title": "ESD Standards"
+        }, 
+        {
             "location": "/api/#services", 
-            "text": "Get a list of waste services  \n   get \n   /services   Response  [\n  {\n     description :  Please put your recycling box on the street. ,\n     frequency :  weekly ,\n     id : 1,\n     esd_id :  http://id.esd.org.uk/service/524 ,\n     name :  Recycling service \n  }\n]", 
+            "text": "Get a list of waste services  \n   get \n   /services   Response  [\n  {\n     id : 1,\n     name :  Recycling service ,\n     frequency :  weekly ,\n     esd_url :  http://id.esd.org.uk/service/524 ,\n     description :  Please put your recycling box on the street. \n  },\n  {\n     id : 2,\n     name :  Refuse ,\n     frequency :  weekly ,\n     esd_url :  http://id.esd.org.uk/service/525 ,\n     description :  Black bins. \n  }\n]   Get a single service  \n   get \n   /services/{serviceId}   Response  {\n   id : 1,\n   name :  Recycling service ,\n   frequency :  weekly ,\n   esd_url :  http://id.esd.org.uk/service/1130 ,\n   description :  Please put your recycling box on the street. \n}", 
             "title": "Services"
         }, 
         {
             "location": "/api/#events", 
-            "text": "Get a list of events  \n   get \n   /events   Query parameters     Name  Type  Description      uprn  string     usrn  string     eventType  string  The short name of an event type, e.g. \"Not presented\".     Response  {}   Get a single event  \n   get \n   /events/{eventId}   Response  {\n   event_type :  Not presented ,\n   date_created :  2014-05-23T20:00 ,\n   uprn :  123456789012 ,\n   usrn :  123456789012 ,\n   image :  http://example.com/images/123.png ,\n   geo : {\n     @type :  GeoCoordinates ,\n     latitude :  40.75 ,\n     longitude :  73.98 \n  }\n}", 
+            "text": "Get a list of events  \n   get \n   /events   Query parameters     Name  Type  Description      page  number     uprn  string  Limit results to those related to the property with this UPRN.    usrn  string  Limit results to those related to the street with this USRN.    type  string  Limit results to those with a matching type, e.g. \"Not presented\".    start_date  date  Limit results to those created on or after this start date.    end_date  date  Limit results to those created before this end date.    round  string  Limit results to those recorded against this round.     Response  [\n  {\n     event_type :  Not presented ,\n     date_created :  2014-05-23T20:00 ,\n     uprn :  123456789012 ,\n     usrn :  123456789012 ,\n     image :  http://example.com/images/123.png ,\n     geo : {\n       @type :  GeoCoordinates ,\n       latitude :  40.75 ,\n       longitude :  73.98 \n    }\n  },\n  {\n     event_type :  Too heavy ,\n     date_created :  2014-05-23T20:00 ,\n     uprn :  123456789012 ,\n     usrn :  123456789012 ,\n     image :  http://example.com/images/123.png ,\n     geo : {\n       @type :  GeoCoordinates ,\n       latitude :  45.75 ,\n       longitude :  53.98 \n    }\n  }\n]   Get a single event  \n   get \n   /events/{eventId}   Response  {\n   @id :  /api/events/1 ,\n   type :  Not presented ,\n   date_created :  2014-05-23T20:00 ,\n   uprn :  123456789012 ,\n   usrn :  123456789012 ,\n   image :  http://example.com/images/123.png ,\n   geo : {\n     @type :  GeoCoordinates ,\n     latitude :  40.75 ,\n     longitude :  73.98 \n  },\n   round :  /rounds/123 \n}", 
             "title": "Events"
+        }, 
+        {
+            "location": "/api/#rounds", 
+            "text": "Get a list of rounds  \n   get \n   /rounds   Response  {}   Get a single round  \n   get \n   /rounds/{roundId}   Response  {\n   @id :  /rounds/456 ,\n   date :  ,\n   plan : {\n     id :  ,\n     start_date :  ,\n     rrule :  ,\n     containers :  /api/containers?round_plan=1 \n  },\n   events :  /api/events?round=456 \n}", 
+            "title": "Rounds"
         }
     ]
 }

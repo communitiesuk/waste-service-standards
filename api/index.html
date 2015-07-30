@@ -63,11 +63,35 @@
                     <ul class="dropdown-menu">
                     
                         <li >
+                            <a href="../models/">Introduction</a>
+                        </li>
+                    
+                        <li >
                             <a href="../models/service/">Service</a>
                         </li>
                     
                         <li >
+                            <a href="../models/round/">Round</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../models/round-plan/">Round plan</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../models/container/">Container</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../models/container-type/">Container type</a>
+                        </li>
+                    
+                        <li >
                             <a href="../models/event/">Event</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../models/material-stream/">Material stream</a>
                         </li>
                     
                     </ul>
@@ -81,6 +105,10 @@
                     
                         <li >
                             <a href="../taxonomies/missed-collections/">Missed collections</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../taxonomies/material-streams/">Material streams</a>
                         </li>
                     
                     </ul>
@@ -98,7 +126,7 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../taxonomies/missed-collections/">
+                    <a rel="next" href="../taxonomies/material-streams/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
@@ -126,17 +154,28 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#services">Services</a></li>
+        <li class="main active"><a href="#waste-services-api">Waste Services API</a></li>
         
-    
-        <li class="main "><a href="#events">Events</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+        
+            <li><a href="#esd-standards">ESD Standards</a></li>
+        
+            <li><a href="#services">Services</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        
+            <li><a href="#rounds">Rounds</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<p>Waste Services API</p>
+<h1 id="waste-services-api">Waste Services API</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This API offers a core set of resources and operations for interacting with local council waste and recycling services.</p>
+<h2 id="esd-standards">ESD Standards</h2>
+<p>The <a href="http://standards.esd.org.uk">ESD Standards</a> define all the categories of services that local authorities typically provide. These will be referenced via URL from the Services API, to allow individual council instances of a service to be matched to common service definitions.</p>
 <h2 id="services">Services</h2>
 <hr />
 <p>Get a list of waste services</p>
@@ -148,13 +187,37 @@
 <p><strong>Response</strong></p>
 <pre><code>[
   {
-    &quot;description&quot;: &quot;Please put your recycling box on the street.&quot;,
-    &quot;frequency&quot;: &quot;weekly&quot;,
     &quot;id&quot;: 1,
-    &quot;esd_id&quot;: &quot;http://id.esd.org.uk/service/524&quot;,
-    &quot;name&quot;: &quot;Recycling service&quot;
+    &quot;name&quot;: &quot;Recycling service&quot;,
+    &quot;frequency&quot;: &quot;weekly&quot;,
+    &quot;esd_url&quot;: &quot;http://id.esd.org.uk/service/524&quot;,
+    &quot;description&quot;: &quot;Please put your recycling box on the street.&quot;
+  },
+  {
+    &quot;id&quot;: 2,
+    &quot;name&quot;: &quot;Refuse&quot;,
+    &quot;frequency&quot;: &quot;weekly&quot;,
+    &quot;esd_url&quot;: &quot;http://id.esd.org.uk/service/525&quot;,
+    &quot;description&quot;: &quot;Black bins.&quot;
   }
 ]
+</code></pre>
+
+<hr />
+<p>Get a single service</p>
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/services/{serviceId}</span>
+</div>
+
+<p><strong>Response</strong></p>
+<pre><code>{
+  &quot;id&quot;: 1,
+  &quot;name&quot;: &quot;Recycling service&quot;,
+  &quot;frequency&quot;: &quot;weekly&quot;,
+  &quot;esd_url&quot;: &quot;http://id.esd.org.uk/service/1130&quot;,
+  &quot;description&quot;: &quot;Please put your recycling box on the street.&quot;
+}
 </code></pre>
 
 <h2 id="events">Events</h2>
@@ -176,24 +239,69 @@
 </thead>
 <tbody>
 <tr>
+<td><tt>page</tt></td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
 <td><tt>uprn</tt></td>
 <td>string</td>
-<td></td>
+<td>Limit results to those related to the property with this UPRN.</td>
 </tr>
 <tr>
 <td><tt>usrn</tt></td>
 <td>string</td>
-<td></td>
+<td>Limit results to those related to the street with this USRN.</td>
 </tr>
 <tr>
-<td><tt>eventType</tt></td>
+<td><tt>type</tt></td>
 <td>string</td>
-<td>The short name of an event type, e.g. "Not presented".</td>
+<td>Limit results to those with a matching type, e.g. "Not presented".</td>
+</tr>
+<tr>
+<td><tt>start_date</tt></td>
+<td>date</td>
+<td>Limit results to those created on or after this start date.</td>
+</tr>
+<tr>
+<td><tt>end_date</tt></td>
+<td>date</td>
+<td>Limit results to those created before this end date.</td>
+</tr>
+<tr>
+<td><tt>round</tt></td>
+<td>string</td>
+<td>Limit results to those recorded against this round.</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Response</strong></p>
-<pre><code>{}
+<pre><code>[
+  {
+    &quot;event_type&quot;: &quot;Not presented&quot;,
+    &quot;date_created&quot;: &quot;2014-05-23T20:00&quot;,
+    &quot;uprn&quot;: &quot;123456789012&quot;,
+    &quot;usrn&quot;: &quot;123456789012&quot;,
+    &quot;image&quot;: &quot;http://example.com/images/123.png&quot;,
+    &quot;geo&quot;: {
+      &quot;@type&quot;: &quot;GeoCoordinates&quot;,
+      &quot;latitude&quot;: &quot;40.75&quot;,
+      &quot;longitude&quot;: &quot;73.98&quot;
+    }
+  },
+  {
+    &quot;event_type&quot;: &quot;Too heavy&quot;,
+    &quot;date_created&quot;: &quot;2014-05-23T20:00&quot;,
+    &quot;uprn&quot;: &quot;123456789012&quot;,
+    &quot;usrn&quot;: &quot;123456789012&quot;,
+    &quot;image&quot;: &quot;http://example.com/images/123.png&quot;,
+    &quot;geo&quot;: {
+      &quot;@type&quot;: &quot;GeoCoordinates&quot;,
+      &quot;latitude&quot;: &quot;45.75&quot;,
+      &quot;longitude&quot;: &quot;53.98&quot;
+    }
+  }
+]
 </code></pre>
 
 <hr />
@@ -205,7 +313,8 @@
 
 <p><strong>Response</strong></p>
 <pre><code>{
-  &quot;event_type&quot;: &quot;Not presented&quot;,
+  &quot;@id&quot;: &quot;/api/events/1&quot;,
+  &quot;type&quot;: &quot;Not presented&quot;,
   &quot;date_created&quot;: &quot;2014-05-23T20:00&quot;,
   &quot;uprn&quot;: &quot;123456789012&quot;,
   &quot;usrn&quot;: &quot;123456789012&quot;,
@@ -214,7 +323,41 @@
     &quot;@type&quot;: &quot;GeoCoordinates&quot;,
     &quot;latitude&quot;: &quot;40.75&quot;,
     &quot;longitude&quot;: &quot;73.98&quot;
-  }
+  },
+  &quot;round&quot;: &quot;/rounds/123&quot;
+}
+</code></pre>
+
+<h2 id="rounds">Rounds</h2>
+<hr />
+<p>Get a list of rounds</p>
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/rounds</span>
+</div>
+
+<p><strong>Response</strong></p>
+<pre><code>{}
+</code></pre>
+
+<hr />
+<p>Get a single round</p>
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/rounds/{roundId}</span>
+</div>
+
+<p><strong>Response</strong></p>
+<pre><code>{
+  &quot;@id&quot;: &quot;/rounds/456&quot;,
+  &quot;date&quot;: &quot;&quot;,
+  &quot;plan&quot;: {
+    &quot;id&quot;: &quot;&quot;,
+    &quot;start_date&quot;: &quot;&quot;,
+    &quot;rrule&quot;: &quot;&quot;,
+    &quot;containers&quot;: &quot;/api/containers?round_plan=1&quot;
+  },
+  &quot;events&quot;: &quot;/api/events?round=456&quot;
 }
 </code></pre></div>
         </div>
