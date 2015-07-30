@@ -173,7 +173,7 @@
 <tr>
   <th>ID</th>
   <th>Name</th>
-  <th>Type</th>
+  <th>Type<sup>1</sup></th>
   <th>Description</th>
   <th>Synonyms</th>
 </tr>
@@ -286,7 +286,7 @@
   <td></td>
   <td>Street completed</td>
   <td>general</td>
-  <td></td>
+  <td>All properties on this street have been visited.</td>
   <td></td>
 </tr>
 
@@ -294,15 +294,15 @@
   <td></td>
   <td>Blocked by vehicles</td>
   <td>general</td>
-  <td></td>
+  <td>A street cannot be accessed due to vehicles blocking access.</td>
   <td></td>
 </tr>
 
 <tr>
   <td></td>
-  <td>Road works</td>
+  <td>Roadworks</td>
   <td>general</td>
-  <td></td>
+  <td>Roadworks are blocking the street.</td>
   <td></td>
 </tr>
 
@@ -310,7 +310,7 @@
   <td></td>
   <td>Gate locked</td>
   <td>general</td>
-  <td></td>
+  <td>A street cannot be accessed due to a gate being locked.</td>
   <td></td>
 </tr>
 
@@ -334,7 +334,7 @@
   <td></td>
   <td>Alarm activated</td>
   <td>general</td>
-  <td></td>
+  <td>A vehicle alarm was activated.</td>
   <td></td>
 </tr>
 
@@ -342,13 +342,16 @@
   <td></td>
   <td>Breakdown</td>
   <td>general</td>
-  <td></td>
+  <td>The waste collection truck broke down.</td>
   <td></td>
 </tr>
 
-</table
+</table>
 
----</div>
+<ol>
+<li>Here "service" means an event type that is applied to a specific service, e.g. refuse, recycling, etc and often relates to the containers. "General" is for event types where the event is not specifically tied to a service but could affect any service</li>
+</ol>
+<hr /></div>
         </div>
 
 	<footer class="col-md-12">
