@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Introduction\n\n\nThese are the specifications developed by the \nLocal Waste Service Standards Project\n.\n\n\nDesign principles\n\n\nThe Government Service Design Manual \nguidelines for APIs\n will be used.", 
+            "text": "Introduction\n\n\nThese are the specifications developed by the \nLocal Waste Service Standards Project\n.\n\n\nDesign principles\n\n\nThe project will follow the \nAPI design guidance\n from the \nGovernment Service Design Manual\n.\n\n\nStandards\n\n\nThese technical specifications are used where relevant:\n\n\n\n\nThe API is documented using \nRAML\n.\n\n\nThe APIs make use of \nJSON-LD\n.\n\n\nObject models use \nJSON Schema\n.\n\n\nJSON Table Schema\n are used for table definitions.", 
             "title": "Home"
         }, 
         {
@@ -12,8 +12,13 @@
         }, 
         {
             "location": "/#design-principles", 
-            "text": "The Government Service Design Manual  guidelines for APIs  will be used.", 
+            "text": "The project will follow the  API design guidance  from the  Government Service Design Manual .", 
             "title": "Design principles"
+        }, 
+        {
+            "location": "/#standards", 
+            "text": "These technical specifications are used where relevant:   The API is documented using  RAML .  The APIs make use of  JSON-LD .  Object models use  JSON Schema .  JSON Table Schema  are used for table definitions.", 
+            "title": "Standards"
         }, 
         {
             "location": "/models/", 
@@ -132,7 +137,7 @@
         }, 
         {
             "location": "/models/container-type/", 
-            "text": "Container type\n\n\nUse cases and requirements\n\n\nThe Container type model should have properties for:\n\n\ncolor\n\n\n\n\nThe general color.\n\n\n\n\nsize\n\n\n\n\nTypically in litres.\n\n\n\n\nshape\n\n\n\n\nWheelie bin, box, caddy, etc.\n\n\n\n\nlid color\n\n\n\n\nIn case its different to the body color.\n\n\n\n\nmaterial stream\n\n\n\n\nWhat kind of waste the container is used for.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDefinition\n\n\n\n\n\n\n\n\n\n\nid\n\n\n\n\nUnique identifer.\n\n\n\n\n\n\ncolor\n\n\nschema:color\n\n\nGeneral color as a hex value.\n\n\n\n\n\n\nsize\n\n\ninteger\n\n\nSize in litres.\n\n\n\n\n\n\nshape\n\n\ntext\n\n\nThe shape or type of the container.\n\n\n\n\n\n\nlid color\n\n\nschema:color\n\n\nLid-specific color as a hex value.\n\n\n\n\n\n\nmaterial stream\n\n\n\n\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"color\": \"#fff\",\n  \"shape\": \"wheelie bin\",\n  \"size\": \"240\",\n\n}\n\n    \n\n\n\n\n\n\n\n\n\nCodelists\n\n\nContainer shape", 
+            "text": "Container type\n\n\nUse cases and requirements\n\n\nThe Container type model should have properties for:\n\n\ncolor\n\n\n\n\nThe general color.\n\n\n\n\nsize\n\n\n\n\nTypically in litres.\n\n\n\n\nshape\n\n\n\n\nWheelie bin, box, caddy, etc.\n\n\n\n\nlid color\n\n\n\n\nIn case its different to the body color.\n\n\n\n\nmaterial stream\n\n\n\n\nWhat kind of waste the container is used for.\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDefinition\n\n\n\n\n\n\n\n\n\n\nid\n\n\n\n\nUnique identifer.\n\n\n\n\n\n\ncolor\n\n\nschema:color\n\n\nGeneral color as a hex value.\n\n\n\n\n\n\nsize\n\n\ninteger\n\n\nSize in litres.\n\n\n\n\n\n\nshape\n\n\ntext\n\n\nThe shape or type of the container.\n\n\n\n\n\n\nlid color\n\n\nschema:color\n\n\nLid-specific color as a hex value.\n\n\n\n\n\n\nmaterial stream\n\n\n\n\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"color\": \"#fff\",\n  \"shape\": \"wheelie bin\",\n  \"size\": \"240\",\n  \"material_stream\": {\n    \"name\": \"mixed recyclables\",\n    \"@id\": \"/api/material-streams/mixed-recyclables\"\n  }\n}\n\n    \n\n  \n\n\n\n\n\n\nCodelists\n\n\nContainer shape", 
             "title": "Container type"
         }, 
         {
@@ -152,7 +157,7 @@
         }, 
         {
             "location": "/models/container-type/#serialisation", 
-            "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n  \"color\": \"#fff\",\n  \"shape\": \"wheelie bin\",\n  \"size\": \"240\",\n\n}", 
+            "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n  \"color\": \"#fff\",\n  \"shape\": \"wheelie bin\",\n  \"size\": \"240\",\n  \"material_stream\": {\n    \"name\": \"mixed recyclables\",\n    \"@id\": \"/api/material-streams/mixed-recyclables\"\n  }\n}", 
             "title": "Serialisation"
         }, 
         {
