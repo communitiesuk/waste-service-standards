@@ -10,7 +10,7 @@
         <link rel="shortcut icon" href="../../favicon.ico">
         
 
-	<title>Service - Waste Service Standards</title>
+	<title>Waste service - Waste Service Standards</title>
 
         <link href="../../css/bootstrap-3.0.3.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -67,7 +67,7 @@
                         </li>
                     
                         <li class="active">
-                            <a href="./">Service</a>
+                            <a href="./">Waste service</a>
                         </li>
                     
                         <li >
@@ -87,7 +87,7 @@
                         </li>
                     
                         <li >
-                            <a href="../event/">Event</a>
+                            <a href="../event/">Waste event</a>
                         </li>
                     
                         <li >
@@ -154,9 +154,11 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#service">Service</a></li>
+        <li class="main active"><a href="#waste-service">Waste service</a></li>
         
             <li><a href="#use-cases-and-requirements">Use cases and requirements</a></li>
+        
+            <li><a href="#types">Types</a></li>
         
             <li><a href="#properties">Properties</a></li>
         
@@ -169,7 +171,7 @@
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="service">Service</h1>
+<h1 id="waste-service">Waste service</h1>
 <h2 id="use-cases-and-requirements">Use cases and requirements</h2>
 <p>The Service model should have properties for:</p>
 <p><strong>name</strong></p>
@@ -200,6 +202,12 @@
 <blockquote>
 <p>The schedules and routes of trucks collecting the materials handled by this service.</p>
 </blockquote>
+<h2 id="types">Types</h2>
+<p>This WasteService type:</p>
+<ul>
+<li>Is a derivation of the <a href="http://www.legsb.gov.uk/smartcityconceptmodel/index.php?Action=ShowConcept&amp;Id=169">Service concept</a> in the Smart City Concept Model.</li>
+<li>Extends from the <a href="http://schema.org/GovernmentService">GovernmentService</a> schema.org type.</li>
+</ul>
 <h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -240,6 +248,26 @@
 <td>?</td>
 <td>The material stream that is collected.</td>
 </tr>
+<tr>
+<td>available channel</td>
+<td><a href="http://schema.org/availableChannel">schema:availableChannel</a></td>
+<td>A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).</td>
+</tr>
+<tr>
+<td>provider</td>
+<td><a href="http://schema.org/provider">schema:provider</a></td>
+<td>The council providing the service.</td>
+</tr>
+<tr>
+<td>service area</td>
+<td><a href="http://schema.org/serviceArea">schema:serviceArea</a></td>
+<td>The geographic area where the service is provided.</td>
+</tr>
+<tr>
+<td>service operator</td>
+<td><a href="http://schema.org/serviceOperator">schema:serviceOperator</a></td>
+<td>The operator of the service, if different to the provider.</td>
+</tr>
 </tbody>
 </table>
 <h2 id="serialisation">Serialisation</h2>
@@ -257,14 +285,39 @@
     </div>
     <div role="tabpanel" class="tab-pane active" id="json">
       <pre><code class="hljs json">{
+  "@type": "WasteService",
   "id": 1,
   "name": "Recycling service",
   "frequency": "weekly",
   "esd_url": "http://id.esd.org.uk/service/1130",
-  "description": "Please put your recycling box on the street."
+  "description": "Please put your recycling box on the street.",
+
+  "available_channel": {
+    "@type": "ServiceChannel",
+    "name": "Household waste and street maintenance",
+    "service_phone": {
+      "@type": "ContactPoint",
+      "telephone": "0123456789",
+    },
+    "service_url": "http://www.example.gov.uk/waste"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Example Council",
+    "url": "http://www.example.gov.uk"
+  },
+  "service_area": {
+    "@type": "AdministrativeArea",
+    "name": "Anytown"
+  },
+  "service_operator": {
+    "@type": "Organization",
+    "name": "Example Waste Operator Co"
+  }
 }</code></pre>
     </div>
-  </div>
+
+</div>
 
 </div>
 

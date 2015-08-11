@@ -10,7 +10,7 @@
         <link rel="shortcut icon" href="../../favicon.ico">
         
 
-	<title>Event - Waste Service Standards</title>
+	<title>Waste event - Waste Service Standards</title>
 
         <link href="../../css/bootstrap-3.0.3.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -67,7 +67,7 @@
                         </li>
                     
                         <li >
-                            <a href="../service/">Service</a>
+                            <a href="../service/">Waste service</a>
                         </li>
                     
                         <li >
@@ -87,7 +87,7 @@
                         </li>
                     
                         <li class="active">
-                            <a href="./">Event</a>
+                            <a href="./">Waste event</a>
                         </li>
                     
                         <li >
@@ -154,7 +154,7 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#event">Event</a></li>
+        <li class="main active"><a href="#waste-event">Waste event</a></li>
         
             <li><a href="#use-cases-and-requirements">Use cases and requirements</a></li>
         
@@ -167,14 +167,14 @@
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="event">Event</h1>
+<h1 id="waste-event">Waste event</h1>
 <h2 id="use-cases-and-requirements">Use cases and requirements</h2>
 <p>The Event model should have properties for:</p>
 <p><strong>event type</strong></p>
 <blockquote>
 <p>What kind of event it is.</p>
 </blockquote>
-<p><strong>date created</strong></p>
+<p><strong>start date</strong></p>
 <blockquote>
 <p>Know when an event happened.</p>
 </blockquote>
@@ -218,9 +218,9 @@
 <td>A categorisation of the event.</td>
 </tr>
 <tr>
-<td>date created</td>
+<td>start date</td>
 <td>string</td>
-<td>When the event was created.</td>
+<td>When the event was took place.</td>
 </tr>
 <tr>
 <td>uprn</td>
@@ -264,9 +264,10 @@
     </div>
     <div role="tabpanel" class="tab-pane active" id="json">
       <pre><code class="hljs json">{
+  "@type": "WasteEvent",
   "@id": "/api/events/1",
   "type": "Not presented",
-  "date_created": "2014-05-23T20:00",
+  "start_date": "2014-05-23T20:00",
   "uprn": "123456789012",
   "usrn": "123456789012",
   "image": "http://example.com/images/123.png",
