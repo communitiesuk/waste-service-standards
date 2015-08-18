@@ -194,9 +194,9 @@
 <blockquote>
 <p>To know when the last few collections have taken place, when filtered by property.</p>
 </blockquote>
-<p><strong>material stream</strong></p>
+<p><strong>container types</strong></p>
 <blockquote>
-<p>What kinds of materials are handled by this service.</p>
+<p>What types of containers (and in relation, materials) are collected by this service.</p>
 </blockquote>
 <p><strong>rounds</strong></p>
 <blockquote>
@@ -244,9 +244,9 @@
 <td>List of dates of previous collections.</td>
 </tr>
 <tr>
-<td>material stream</td>
-<td>?</td>
-<td>The material stream that is collected.</td>
+<td>container types</td>
+<td><a href="../container-type/">Container type</a></td>
+<td>The container types that are collected.</td>
 </tr>
 <tr>
 <td>available channel</td>
@@ -287,17 +287,61 @@
       <pre><code class="hljs json">{
   "@type": "WasteService",
   "id": 1,
-  "name": "Recycling service",
+  "name": "Mixed recycling",
   "frequency": "weekly",
+  "container_types": [
+    {
+      "color": "black",
+      "size": "240L",
+      "shape": "wheelie bin",
+      "lid_color": "green",
+      "material_stream": {
+        "name": "Mixed recyclables",
+        "@id": "/waste/material-streams/mixed-recycling"
+      },
+      "image": ""
+    },
+    {
+      "color": "brown",
+      "size": "40L",
+      "shape": "caddy",
+      "material_stream": {
+        "name": "Food waste",
+        "@id": "/waste/material-streams/food-waste"
+      },
+      "image": ""
+    }
+  ],
+  "description": "Please put your recycling wheelie bin on the street.",
+  "next_collection": "1 August 2014",
+  "last_collection": "23 July 2015",
   "esd_url": "http://id.esd.org.uk/service/1130",
-  "description": "Please put your recycling box on the street.",
 
+  "events": [
+    {
+      "@type": "WasteEvent",
+      "@id": "/api/events/1",
+      "type": "Not presented",
+      "date_created": "1 August 2015",
+      "uprn": "123456789012",
+      "usrn": "123456789012",
+      "image": "http://example.com/images/123.png",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "40.75",
+        "longitude": "73.98"
+      },
+      "container_color": "black",
+      "round": "/rounds/123"
+    }
+  ],
   "available_channel": {
     "@type": "ServiceChannel",
     "name": "Household waste and street maintenance",
     "service_phone": {
       "@type": "ContactPoint",
       "telephone": "0123456789",
+      "email": "waste@example.gov.uk"
     },
     "service_url": "http://www.example.gov.uk/waste"
   },
