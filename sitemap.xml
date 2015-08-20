@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2015-08-18</lastmod>
+     <lastmod>2015-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,49 +13,55 @@
         
     <url>
      <loc>None/models/</loc>
-     <lastmod>2015-08-18</lastmod>
+     <lastmod>2015-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/models/service/</loc>
-     <lastmod>2015-08-18</lastmod>
+     <lastmod>2015-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/models/round/</loc>
-     <lastmod>2015-08-18</lastmod>
+     <lastmod>2015-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/models/round-plan/</loc>
-     <lastmod>2015-08-18</lastmod>
+     <lastmod>2015-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/models/container/</loc>
-     <lastmod>2015-08-18</lastmod>
+     <lastmod>2015-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/models/container-type/</loc>
-     <lastmod>2015-08-18</lastmod>
+     <lastmod>2015-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/models/event/</loc>
-     <lastmod>2015-08-18</lastmod>
+     <lastmod>2015-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/models/material-stream/</loc>
-     <lastmod>2015-08-18</lastmod>
+     <lastmod>2015-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/models/place/</loc>
+     <lastmod>2015-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -65,13 +71,13 @@
         
     <url>
      <loc>None/taxonomies/missed-collections/</loc>
-     <lastmod>2015-08-18</lastmod>
+     <lastmod>2015-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/taxonomies/material-streams/</loc>
-     <lastmod>2015-08-18</lastmod>
+     <lastmod>2015-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -80,7 +86,7 @@
     
     <url>
      <loc>None/api/</loc>
-     <lastmod>2015-08-18</lastmod>
+     <lastmod>2015-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

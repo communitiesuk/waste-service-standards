@@ -221,6 +221,36 @@
             "title": "Serialisation"
         }, 
         {
+            "location": "/models/place/", 
+            "text": "Place\n\n\nUse cases and requirements\n\n\nThe Address model should have properties for:\n\n\naddress fields\n\n\ne.g. street, locality, country, postcode.\n\n\n\n\nTo provide basic address information that everyone understands.\n\n\n\n\nUPRN\n\n\n\n\nTo link an address to the property universal ID.\n\n\n\n\nUSRN\n\n\n\n\nTo identify the street where the property is located.\n\n\n\n\ngeo-coordinates\n\n\n\n\nTo be able to plot locations on maps.\n\n\n\n\nTypes\n\n\nThis maps to the schema.org Place type with some extended fields.\n\n\nProperties\n\n\n\n\n\n\n\n\nTerm\n\n\nMapping\n\n\nDefinition\n\n\n\n\n\n\n\n\n\n\nSerialisation\n\n\n\n\n  \n\n  \n\n    \nJSON Schema\n\n    \nJSON\n\n  \n\n\n  \n\n  \n\n    \n\n    \n\n    \n\n      \n{\n  \"@type\": \"Place\",\n  \"@id\": \"/places/1\",\n  \"address\": {\n    \"street_address\": \"1 Acacia Avenue\",\n    \"locality\": \"Anytown\",\n    \"region\": \"Anyshire\",\n    \"postcode\": \"AB1 2CD\",\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": \"40.75\",\n    \"longitude\": \"73.98\"\n  },\n  \"uprn\": \"123456789012\",\n  \"usrn\": \"123456789012\",\n}", 
+            "title": "Place"
+        }, 
+        {
+            "location": "/models/place/#place", 
+            "text": "", 
+            "title": "Place"
+        }, 
+        {
+            "location": "/models/place/#use-cases-and-requirements", 
+            "text": "The Address model should have properties for:  address fields  e.g. street, locality, country, postcode.   To provide basic address information that everyone understands.   UPRN   To link an address to the property universal ID.   USRN   To identify the street where the property is located.   geo-coordinates   To be able to plot locations on maps.", 
+            "title": "Use cases and requirements"
+        }, 
+        {
+            "location": "/models/place/#types", 
+            "text": "This maps to the schema.org Place type with some extended fields.", 
+            "title": "Types"
+        }, 
+        {
+            "location": "/models/place/#properties", 
+            "text": "Term  Mapping  Definition", 
+            "title": "Properties"
+        }, 
+        {
+            "location": "/models/place/#serialisation", 
+            "text": "JSON Schema \n     JSON \n   \n\n   \n   \n     \n     \n     \n       {\n  \"@type\": \"Place\",\n  \"@id\": \"/places/1\",\n  \"address\": {\n    \"street_address\": \"1 Acacia Avenue\",\n    \"locality\": \"Anytown\",\n    \"region\": \"Anyshire\",\n    \"postcode\": \"AB1 2CD\",\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": \"40.75\",\n    \"longitude\": \"73.98\"\n  },\n  \"uprn\": \"123456789012\",\n  \"usrn\": \"123456789012\",\n}", 
+            "title": "Serialisation"
+        }, 
+        {
             "location": "/taxonomies/missed-collections/", 
             "text": "Missed collections reasons\n\n\nThe table below lists a set of common possible events that can occur during a waste collection round.\n\n\nMany council classifications also divide event types by the service or container type. It is assumed here that it will be possible to categorise the events by:\n\n\n\n\nservice type\n\n\nproperty or street\n\n\n\n\n\n\n\n\n\n  \nID\n\n  \nName\n\n  \nParent\n\n  \nType\n1\n\n  \nDescription\n\n  \nSynonyms\n\n\n\n\n\n\n  \n\n  \nNot presented\n\n  \n\n  \nservice\n\n  \nThe container was not presented on the street.\n\n  \nNon-Presentation\n\n\n\n\n\n\n  \n\n  \nIncorrectly presented\n\n  \n\n  \nservice\n\n  \n\n  \n\n\n\n\n\n\n  \n\n  \nToo heavy\n\n  \n\n  \nservice\n\n  \nThe container was too heavy to empty.\n\n  \nOverweight Bin\n\n\n\n\n\n\n  \n\n  \nLid open\n\n  \n\n  \nservice\n\n  \nThe container was too full, the lid would not close properly.\n\n  \nOverflowing Bin / Lid up\n\n\n\n\n\n\n  \n\n  \nSide waste present\n\n  \n\n  \nservice\n\n  \nExtra refuse was present at the side of the bins.\n\n  \nSidewaste\n\n\n\n\n\n\n  \n\n  \nContamination\n\n  \n\n  \nservice\n\n  \nThe contents was contaminated.\n\n  \n\n\n\n\n\n\n  \n\n  \nFood waste\n\n  \nContamination\n\n  \nservice\n\n  \nContaminated with food waste\n\n  \n\n\n\n\n\n\n  \n\n  \nGarden waste\n\n  \nContamination\n\n  \nservice\n\n  \nContaminated with garden waste\n\n  \n\n\n\n\n\n\n  \n\n  \nRefuse waste\n\n  \nContamination\n\n  \nservice\n\n  \nContaminated with refuse waste\n\n  \n\n\n\n\n\n\n  \n\n  \nBulky waste\n\n  \nContamination\n\n  \nservice\n\n  \nContaminated with bulky waste\n\n  \n\n\n\n\n\n\n  \n\n  \nRubble/DIY\n\n  \nContamination\n\n  \nservice\n\n  \nContaminated with rubble\n\n  \n\n\n\n\n\n\n  \n\n  \nCommercial\n\n  \nContamination\n\n  \nservice\n\n  \nContaminated with commercial waste\n\n  \n\n\n\n\n\n\n  \n\n  \nTurf/soil\n\n  \nContamination\n\n  \nservice\n\n  \nContaminated with turf or soil\n\n  \n\n\n\n\n\n\n  \n\n  \nAnimal bedding\n\n  \nContamination\n\n  \nservice\n\n  \nContaminated with animal bedding\n\n  \n\n\n\n\n\n\n  \n\n  \nInaccessible container store\n\n  \n\n  \nservice\n\n  \nIt was not possible to access the bins.\n\n  \nInaccessible Bin Store\n\n\n\n\n\n\n  \n\n  \nContainer damaged\n\n  \n\n  \nservice\n\n  \nA bin was damaged.\n\n  \nBin damaged\n\n\n\n\n\n\n  \n\n  \nContainer lost in vehicle\n\n  \n\n  \nservice\n\n  \nA bin was lost inside the vehicle.\n\n  \nReceptacle Lost in Vehicle\n\n\n\n\n\n\n  \n\n  \nNot on scheme\n\n  \n\n  \nservice\n\n  \nThe property was not on the service.\n\n  \n\n\n\n\n\n\n  \n\n  \nInaccessible road\n\n  \n\n  \nservice\n\n  \nThe road could not be accessed.\n\n  \n\n\n\n\n\n\n  \n\n  \nRoad closure\n\n  \n\n  \nservice\n\n  \nThe road was closed.\n\n  \n\n\n\n\n\n\n  \n\n  \nQuerying assisted\n\n  \n\n  \nservice\n\n  \n\n  \n\n\n\n\n\n\n  \n\n  \nStreet completed\n\n  \n\n  \ngeneral\n\n  \nAll properties on this street have been visited.\n\n  \n\n\n\n\n\n\n  \n\n  \nBlocked by vehicles\n\n  \n\n  \ngeneral\n\n  \nA street cannot be accessed due to vehicles blocking access.\n\n  \n\n\n\n\n\n\n  \n\n  \nRoadworks\n\n  \n\n  \ngeneral\n\n  \nRoadworks are blocking the street.\n\n  \n\n\n\n\n\n\n  \n\n  \nGate locked\n\n  \n\n  \ngeneral\n\n  \nA street cannot be accessed due to a gate being locked.\n\n  \n\n\n\n\n\n\n  \n\n  \nPart access\n\n  \n\n  \ngeneral\n\n  \n\n  \n\n\n\n\n\n\n  \n\n  \nPartly completed street\n\n  \n\n  \ngeneral\n\n  \n\n  \n\n\n\n\n\n\n  \n\n  \nAlarm activated\n\n  \n\n  \ngeneral\n\n  \nA vehicle alarm was activated.\n\n  \n\n\n\n\n\n\n  \n\n  \nBreakdown\n\n  \n\n  \ngeneral\n\n  \nThe waste collection truck broke down.\n\n  \n\n\n\n\n\n\n\n\n\n\nHere \"service\" means an event type that is applied to a specific service, e.g. refuse, recycling, etc and often relates to the containers. \"General\" is for event types where the event is not specifically tied to a service but could affect any service", 
             "title": "Missed collections"

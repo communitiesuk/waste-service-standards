@@ -10,7 +10,7 @@
         <link rel="shortcut icon" href="../../favicon.ico">
         
 
-	<title>Waste service - Waste Service Standards</title>
+	<title>Place - Waste Service Standards</title>
 
         <link href="../../css/bootstrap-3.0.3.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -66,8 +66,8 @@
                             <a href="../">Introduction</a>
                         </li>
                     
-                        <li class="active">
-                            <a href="./">Waste service</a>
+                        <li >
+                            <a href="../service/">Waste service</a>
                         </li>
                     
                         <li >
@@ -94,8 +94,8 @@
                             <a href="../material-stream/">Material stream</a>
                         </li>
                     
-                        <li >
-                            <a href="../place/">Place</a>
+                        <li class="active">
+                            <a href="./">Place</a>
                         </li>
                     
                     </ul>
@@ -130,12 +130,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../">
+                    <a rel="next" href="../material-stream/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../round/">
+                    <a rel="prev" href="../../taxonomies/missed-collections/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -158,7 +158,7 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#waste-service">Waste service</a></li>
+        <li class="main active"><a href="#place">Place</a></li>
         
             <li><a href="#use-cases-and-requirements">Use cases and requirements</a></li>
         
@@ -168,50 +168,33 @@
         
             <li><a href="#serialisation">Serialisation</a></li>
         
-            <li><a href="#codelists">Codelists</a></li>
-        
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="waste-service">Waste service</h1>
+<h1 id="place">Place</h1>
 <h2 id="use-cases-and-requirements">Use cases and requirements</h2>
-<p>The Service model should have properties for:</p>
-<p><strong>name</strong></p>
+<p>The Address model should have properties for:</p>
+<p><strong>address fields</strong></p>
+<p>e.g. street, locality, country, postcode.</p>
 <blockquote>
-<p>For identification.</p>
+<p>To provide basic address information that everyone understands.</p>
 </blockquote>
-<p><strong>frequency</strong></p>
+<p><strong>UPRN</strong></p>
 <blockquote>
-<p>An indication of typically how often the collection is run.</p>
+<p>To link an address to the property universal ID.</p>
 </blockquote>
-<p><strong>description</strong></p>
+<p><strong>USRN</strong></p>
 <blockquote>
-<p>For specific instructions about the service, such as when and where to put containers out, that bin lids must be closed, etc.</p>
+<p>To identify the street where the property is located.</p>
 </blockquote>
-<p><strong>next collections</strong></p>
+<p><strong>geo-coordinates</strong></p>
 <blockquote>
-<p>To know upcoming dates of when upcoming collections will happen, when filtered by property.</p>
-</blockquote>
-<p><strong>previous collections</strong></p>
-<blockquote>
-<p>To know when the last few collections have taken place, when filtered by property.</p>
-</blockquote>
-<p><strong>container types</strong></p>
-<blockquote>
-<p>What types of containers (and in relation, materials) are collected by this service.</p>
-</blockquote>
-<p><strong>rounds</strong></p>
-<blockquote>
-<p>The schedules and routes of trucks collecting the materials handled by this service.</p>
+<p>To be able to plot locations on maps.</p>
 </blockquote>
 <h2 id="types">Types</h2>
-<p>This WasteService type:</p>
-<ul>
-<li>Is a derivation of the <a href="http://www.legsb.gov.uk/smartcityconceptmodel/index.php?Action=ShowConcept&amp;Id=169">Service concept</a> in the Smart City Concept Model.</li>
-<li>Extends from the <a href="http://schema.org/GovernmentService">GovernmentService</a> schema.org type.</li>
-</ul>
+<p>This maps to the schema.org Place type with some extended fields.</p>
 <h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -221,58 +204,7 @@
 <th>Definition</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td>name</td>
-<td>Text</td>
-<td>Name of the service.</td>
-</tr>
-<tr>
-<td>frequency</td>
-<td>Text</td>
-<td>How often it runs, e.g. weekly.</td>
-</tr>
-<tr>
-<td>description</td>
-<td><a href="https://schema.org/description">schema:description</a></td>
-<td>A short description of the service.</td>
-</tr>
-<tr>
-<td>next collections</td>
-<td>Date</td>
-<td>List of dates of next collections.</td>
-</tr>
-<tr>
-<td>previous collections</td>
-<td>Date</td>
-<td>List of dates of previous collections.</td>
-</tr>
-<tr>
-<td>container types</td>
-<td><a href="../container-type/">Container type</a></td>
-<td>The container types that are collected.</td>
-</tr>
-<tr>
-<td>available channel</td>
-<td><a href="http://schema.org/availableChannel">schema:availableChannel</a></td>
-<td>A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).</td>
-</tr>
-<tr>
-<td>provider</td>
-<td><a href="http://schema.org/provider">schema:provider</a></td>
-<td>The council providing the service.</td>
-</tr>
-<tr>
-<td>service area</td>
-<td><a href="http://schema.org/serviceArea">schema:serviceArea</a></td>
-<td>The geographic area where the service is provided.</td>
-</tr>
-<tr>
-<td>service operator</td>
-<td><a href="http://schema.org/serviceOperator">schema:serviceOperator</a></td>
-<td>The operator of the service, if different to the provider.</td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
 <h2 id="serialisation">Serialisation</h2>
 <div>
@@ -289,89 +221,26 @@
     </div>
     <div role="tabpanel" class="tab-pane active" id="json">
       <pre><code class="hljs json">{
-  "@type": "WasteService",
-  "id": 1,
-  "name": "Mixed recycling",
-  "frequency": "weekly",
-  "container_types": [
-    {
-      "color": "black",
-      "size": "240L",
-      "shape": "wheelie bin",
-      "lid_color": "green",
-      "material_stream": {
-        "name": "Mixed recyclables",
-        "@id": "/waste/material-streams/mixed-recycling"
-      },
-      "image": ""
-    },
-    {
-      "color": "brown",
-      "size": "40L",
-      "shape": "caddy",
-      "material_stream": {
-        "name": "Food waste",
-        "@id": "/waste/material-streams/food-waste"
-      },
-      "image": ""
-    }
-  ],
-  "description": "Please put your recycling wheelie bin on the street.",
-  "next_collection": "1 August 2014",
-  "last_collection": "23 July 2015",
-  "esd_url": "http://id.esd.org.uk/service/1130",
-
-  "events": [
-    {
-      "@type": "WasteEvent",
-      "@id": "/api/events/1",
-      "type": "Not presented",
-      "date_created": "1 August 2015",
-      "uprn": "123456789012",
-      "usrn": "123456789012",
-      "image": "http://example.com/images/123.png",
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "40.75",
-        "longitude": "73.98"
-      },
-      "container_color": "black",
-      "round": "/rounds/123"
-    }
-  ],
-  "available_channel": {
-    "@type": "ServiceChannel",
-    "name": "Household waste and street maintenance",
-    "service_phone": {
-      "@type": "ContactPoint",
-      "telephone": "0123456789",
-      "email": "waste@example.gov.uk"
-    },
-    "service_url": "http://www.example.gov.uk/waste"
+  "@type": "Place",
+  "@id": "/places/1",
+  "address": {
+    "street_address": "1 Acacia Avenue",
+    "locality": "Anytown",
+    "region": "Anyshire",
+    "postcode": "AB1 2CD",
   },
-  "provider": {
-    "@type": "Organization",
-    "name": "Example Council",
-    "url": "http://www.example.gov.uk"
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "40.75",
+    "longitude": "73.98"
   },
-  "service_area": {
-    "@type": "AdministrativeArea",
-    "name": "Anytown"
-  },
-  "service_operator": {
-    "@type": "Organization",
-    "name": "Example Waste Operator Co"
-  }
+  "uprn": "123456789012",
+  "usrn": "123456789012",
 }</code></pre>
     </div>
+  </div>
 
-</div>
-
-</div>
-
-<h2 id="codelists">Codelists</h2>
-<h3 id="freqency">Freqency</h3>
-<p>TBD</p></div>
+</div></div>
         </div>
 
 	<footer class="col-md-12">
