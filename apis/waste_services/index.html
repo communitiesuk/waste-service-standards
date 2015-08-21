@@ -7,16 +7,16 @@
         
         
         
-        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="shortcut icon" href="../../favicon.ico">
         
 
-	<title>API - Waste Service Standards</title>
+	<title>Waste Services - Waste Service Standards</title>
 
-        <link href="../css/bootstrap-3.0.3.min.css" rel="stylesheet">
-        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/highlight.css">
-        <link href="../css/base.css" rel="stylesheet">
-        <link href="../css/custom.css" rel="stylesheet">
+        <link href="../../css/bootstrap-3.0.3.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link href="../../css/custom.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -43,7 +43,7 @@
             </button>
 
             <!-- Main title -->
-            <a class="navbar-brand" href="..">Waste Service Standards</a>
+            <a class="navbar-brand" href="../..">Waste Service Standards</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -53,7 +53,7 @@
             
             
                 <li >
-                    <a href="..">Home</a>
+                    <a href="../..">Home</a>
                 </li>
             
             
@@ -63,39 +63,39 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../models/">Introduction</a>
+                            <a href="../../models/">Introduction</a>
                         </li>
                     
                         <li >
-                            <a href="../models/service/">Waste service</a>
+                            <a href="../../models/service/">Waste service</a>
                         </li>
                     
                         <li >
-                            <a href="../models/round/">Round</a>
+                            <a href="../../models/round/">Round</a>
                         </li>
                     
                         <li >
-                            <a href="../models/round-plan/">Round plan</a>
+                            <a href="../../models/round-plan/">Round plan</a>
                         </li>
                     
                         <li >
-                            <a href="../models/container/">Container</a>
+                            <a href="../../models/container/">Container</a>
                         </li>
                     
                         <li >
-                            <a href="../models/container-type/">Container type</a>
+                            <a href="../../models/container-type/">Container type</a>
                         </li>
                     
                         <li >
-                            <a href="../models/event/">Waste event</a>
+                            <a href="../../models/event/">Waste event</a>
                         </li>
                     
                         <li >
-                            <a href="../models/material-stream/">Material stream</a>
+                            <a href="../../models/material-stream/">Material stream</a>
                         </li>
                     
                         <li >
-                            <a href="../models/place/">Place</a>
+                            <a href="../../models/place/">Place</a>
                         </li>
                     
                     </ul>
@@ -108,11 +108,11 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../taxonomies/missed-collections/">Missed collections</a>
+                            <a href="../../taxonomies/missed-collections/">Missed collections</a>
                         </li>
                     
                         <li >
-                            <a href="../taxonomies/material-streams/">Material streams</a>
+                            <a href="../../taxonomies/material-streams/">Material streams</a>
                         </li>
                     
                     </ul>
@@ -120,8 +120,19 @@
             
             
             
-                <li class="active">
-                    <a href="./">API</a>
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">APIs <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li class="active">
+                            <a href="./">Waste Services</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../places/">Places</a>
+                        </li>
+                    
+                    </ul>
                 </li>
             
             
@@ -130,12 +141,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../taxonomies/material-streams/">
+                    <a rel="next" href="../../taxonomies/material-streams/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
-                <li class="disabled">
-                    <a rel="prev" >
+                <li >
+                    <a rel="prev" href="../places/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -192,17 +203,17 @@
 <pre><code>[
   {
     &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;Recycling service&quot;,
     &quot;frequency&quot;: &quot;weekly&quot;,
-    &quot;esd_url&quot;: &quot;http://id.esd.org.uk/service/524&quot;,
-    &quot;description&quot;: &quot;Please put your recycling box on the street.&quot;
+    &quot;description&quot;: &quot;Please put your recycling box on the street.&quot;,
+    &quot;name&quot;: &quot;Recycling service&quot;,
+    &quot;esd_url&quot;: &quot;http://id.esd.org.uk/service/524&quot;
   },
   {
     &quot;id&quot;: 2,
-    &quot;name&quot;: &quot;Refuse&quot;,
     &quot;frequency&quot;: &quot;weekly&quot;,
-    &quot;esd_url&quot;: &quot;http://id.esd.org.uk/service/525&quot;,
-    &quot;description&quot;: &quot;Black bins.&quot;
+    &quot;description&quot;: &quot;Black bins.&quot;,
+    &quot;name&quot;: &quot;Refuse&quot;,
+    &quot;esd_url&quot;: &quot;http://id.esd.org.uk/service/525&quot;
   }
 ]
 </code></pre>
@@ -216,11 +227,78 @@
 
 <p><strong>Response</strong></p>
 <pre><code>{
-  &quot;id&quot;: 1,
-  &quot;name&quot;: &quot;Recycling service&quot;,
+  &quot;description&quot;: &quot;Please put your recycling wheelie bin on the street.&quot;,
+  &quot;container_types&quot;: [
+    {
+      &quot;color&quot;: &quot;black&quot;,
+      &quot;image&quot;: &quot;&quot;,
+      &quot;material_stream&quot;: {
+        &quot;@id&quot;: &quot;/waste/material-streams/mixed-recycling&quot;,
+        &quot;name&quot;: &quot;Mixed recyclables&quot;
+      },
+      &quot;shape&quot;: &quot;wheelie bin&quot;,
+      &quot;lid_color&quot;: &quot;green&quot;,
+      &quot;size&quot;: &quot;240L&quot;
+    },
+    {
+      &quot;color&quot;: &quot;brown&quot;,
+      &quot;material_stream&quot;: {
+        &quot;@id&quot;: &quot;/waste/material-streams/food-waste&quot;,
+        &quot;name&quot;: &quot;Food waste&quot;
+      },
+      &quot;shape&quot;: &quot;caddy&quot;,
+      &quot;image&quot;: &quot;&quot;,
+      &quot;size&quot;: &quot;40L&quot;
+    }
+  ],
+  &quot;@type&quot;: &quot;WasteService&quot;,
+  &quot;service_operator&quot;: {
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;name&quot;: &quot;Example Waste Operator Co&quot;
+  },
+  &quot;service_area&quot;: {
+    &quot;@type&quot;: &quot;AdministrativeArea&quot;,
+    &quot;name&quot;: &quot;Anytown&quot;
+  },
+  &quot;name&quot;: &quot;Mixed recycling&quot;,
+  &quot;events&quot;: [
+    {
+      &quot;type&quot;: &quot;Not presented&quot;,
+      &quot;usrn&quot;: &quot;123456789012&quot;,
+      &quot;@id&quot;: &quot;/api/events/1&quot;,
+      &quot;image&quot;: &quot;http://example.com/images/123.png&quot;,
+      &quot;@type&quot;: &quot;WasteEvent&quot;,
+      &quot;uprn&quot;: &quot;123456789012&quot;,
+      &quot;date_created&quot;: &quot;1 August 2015&quot;,
+      &quot;geo&quot;: {
+        &quot;latitude&quot;: &quot;40.75&quot;,
+        &quot;@type&quot;: &quot;GeoCoordinates&quot;,
+        &quot;longitude&quot;: &quot;73.98&quot;
+      },
+      &quot;round&quot;: &quot;/rounds/123&quot;,
+      &quot;container_color&quot;: &quot;black&quot;
+    }
+  ],
+  &quot;next_collection&quot;: &quot;1 August 2014&quot;,
   &quot;frequency&quot;: &quot;weekly&quot;,
-  &quot;esd_url&quot;: &quot;http://id.esd.org.uk/service/1130&quot;,
-  &quot;description&quot;: &quot;Please put your recycling box on the street.&quot;
+  &quot;available_channel&quot;: {
+    &quot;service_url&quot;: &quot;http://www.example.gov.uk/waste&quot;,
+    &quot;service_phone&quot;: {
+      &quot;telephone&quot;: &quot;0123456789&quot;,
+      &quot;email&quot;: &quot;waste@example.gov.uk&quot;,
+      &quot;@type&quot;: &quot;ContactPoint&quot;
+    },
+    &quot;name&quot;: &quot;Household waste and street maintenance&quot;,
+    &quot;@type&quot;: &quot;ServiceChannel&quot;
+  },
+  &quot;provider&quot;: {
+    &quot;url&quot;: &quot;http://www.example.gov.uk&quot;,
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;name&quot;: &quot;Example Council&quot;
+  },
+  &quot;last_collection&quot;: &quot;23 July 2015&quot;,
+  &quot;id&quot;: 1,
+  &quot;esd_url&quot;: &quot;http://id.esd.org.uk/service/1130&quot;
 }
 </code></pre>
 
@@ -283,25 +361,25 @@
 <pre><code>[
   {
     &quot;event_type&quot;: &quot;Not presented&quot;,
-    &quot;date_created&quot;: &quot;2014-05-23T20:00&quot;,
-    &quot;uprn&quot;: &quot;123456789012&quot;,
     &quot;usrn&quot;: &quot;123456789012&quot;,
     &quot;image&quot;: &quot;http://example.com/images/123.png&quot;,
+    &quot;uprn&quot;: &quot;123456789012&quot;,
+    &quot;date_created&quot;: &quot;2014-05-23T20:00&quot;,
     &quot;geo&quot;: {
-      &quot;@type&quot;: &quot;GeoCoordinates&quot;,
       &quot;latitude&quot;: &quot;40.75&quot;,
+      &quot;@type&quot;: &quot;GeoCoordinates&quot;,
       &quot;longitude&quot;: &quot;73.98&quot;
     }
   },
   {
     &quot;event_type&quot;: &quot;Too heavy&quot;,
-    &quot;date_created&quot;: &quot;2014-05-23T20:00&quot;,
-    &quot;uprn&quot;: &quot;123456789012&quot;,
     &quot;usrn&quot;: &quot;123456789012&quot;,
     &quot;image&quot;: &quot;http://example.com/images/123.png&quot;,
+    &quot;uprn&quot;: &quot;123456789012&quot;,
+    &quot;date_created&quot;: &quot;2014-05-23T20:00&quot;,
     &quot;geo&quot;: {
-      &quot;@type&quot;: &quot;GeoCoordinates&quot;,
       &quot;latitude&quot;: &quot;45.75&quot;,
+      &quot;@type&quot;: &quot;GeoCoordinates&quot;,
       &quot;longitude&quot;: &quot;53.98&quot;
     }
   }
@@ -317,15 +395,16 @@
 
 <p><strong>Response</strong></p>
 <pre><code>{
-  &quot;@id&quot;: &quot;/api/events/1&quot;,
   &quot;type&quot;: &quot;Not presented&quot;,
-  &quot;date_created&quot;: &quot;2014-05-23T20:00&quot;,
-  &quot;uprn&quot;: &quot;123456789012&quot;,
   &quot;usrn&quot;: &quot;123456789012&quot;,
+  &quot;@id&quot;: &quot;/api/events/1&quot;,
   &quot;image&quot;: &quot;http://example.com/images/123.png&quot;,
+  &quot;@type&quot;: &quot;WasteEvent&quot;,
+  &quot;uprn&quot;: &quot;123456789012&quot;,
+  &quot;date_created&quot;: &quot;2014-05-23T20:00&quot;,
   &quot;geo&quot;: {
-    &quot;@type&quot;: &quot;GeoCoordinates&quot;,
     &quot;latitude&quot;: &quot;40.75&quot;,
+    &quot;@type&quot;: &quot;GeoCoordinates&quot;,
     &quot;longitude&quot;: &quot;73.98&quot;
   },
   &quot;round&quot;: &quot;/rounds/123&quot;
@@ -353,13 +432,13 @@
 
 <p><strong>Response</strong></p>
 <pre><code>{
-  &quot;@id&quot;: &quot;/rounds/456&quot;,
   &quot;date&quot;: &quot;&quot;,
+  &quot;@id&quot;: &quot;/rounds/456&quot;,
   &quot;plan&quot;: {
-    &quot;id&quot;: &quot;&quot;,
     &quot;start_date&quot;: &quot;&quot;,
     &quot;rrule&quot;: &quot;&quot;,
-    &quot;containers&quot;: &quot;/api/containers?round_plan=1&quot;
+    &quot;containers&quot;: &quot;/api/containers?round_plan=1&quot;,
+    &quot;id&quot;: &quot;&quot;
   },
   &quot;events&quot;: &quot;/api/events?round=456&quot;
 }
@@ -373,9 +452,9 @@
 	</footer>
 
 
-        <script src="../js/jquery-1.10.2.min.js"></script>
-        <script src="../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../js/highlight.pack.js"></script>
-        <script src="../js/base.js"></script>
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/base.js"></script>
     </body>
 </html>
