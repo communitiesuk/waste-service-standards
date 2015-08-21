@@ -1,10 +1,12 @@
 
 # {{ api.title }}
 
+{% if api.documentation %}
 {% for doc in api.documentation %}
 ## {{ doc.title }}
 {{ doc.content }}
 {% endfor %}
+{% endif %}
 
 {% for r in api.resources %}
 

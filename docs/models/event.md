@@ -1,5 +1,5 @@
 
-# Event
+# Waste event
 
 ## Use cases and requirements
 
@@ -9,7 +9,7 @@ The Event model should have properties for:
 
 > What kind of event it is.
 
-**date created**
+**start date**
 
 > Know when an event happened.
 
@@ -19,7 +19,7 @@ The Event model should have properties for:
 
 **USRN**
 
-> For recording street-level information.
+> For recording street-level events.
 
 **coordinates**
 
@@ -33,18 +33,23 @@ The Event model should have properties for:
 
 > For any additional information useful to record.
 
+**round**
+
+> The round where this event happened.
 
 
 ## Properties
 
 Term     | Mapping | Definition
 ---------|---------|-----------
-event type | string | A categorisation of the event.
-date created | string | When the event was created.
+type | string | A categorisation of the event.
+start date | string | When the event was took place.
 uprn | string | A unique identifier for a property.
 usrn | string | A unique identifier for a street.
-geo | [GeoCoordinates](https://schema.org/GeoCoordinates) | The location in WGS84 datum.
+geo | [schema:geo](https://schema.org/geo) | The location in WGS84 datum.
 image | [schema:image](https://schema.org/image) | A URL to a related image.
+round | URL | The URL of the round where this event was recorded.
+
 
 ## Serialisation
 

@@ -1,0 +1,30 @@
+name,parent,description,service_type,synonyms,issues
+Not presented,,The container was not presented on the street.,service,Non-Presentation,
+Incorrectly presented,,,service,,?
+Too heavy,,The container was too heavy to empty.,service,Overweight Bin,
+Lid open,,"The container was too full, the lid would not close properly.",service,Overflowing Bin / Lid up,
+Side waste present,,Extra refuse was present at the side of the bins.,service,Sidewaste,
+Contamination,,The contents was contaminated.,service,,
+Food waste,Contamination,Contaminated with food waste,service,,
+Garden waste,Contamination,Contaminated with garden waste,service,,
+Refuse waste,Contamination,Contaminated with refuse waste,service,,
+Bulky waste,Contamination,Contaminated with bulky waste,service,,
+Rubble/DIY,Contamination,Contaminated with rubble,service,,
+Commercial,Contamination,Contaminated with commercial waste,service,,
+Turf/soil,Contamination,Contaminated with turf or soil,service,,
+Animal bedding,Contamination,Contaminated with animal bedding,service,,
+Inaccessible container store,,It was not possible to access the bins.,service,Inaccessible Bin Store,
+Container damaged,,A bin was damaged.,service,Bin damaged,
+Container lost in vehicle,,A bin was lost inside the vehicle.,service,Receptacle Lost in Vehicle,
+Not on scheme,,The property was not on the service.,service,,
+Inaccessible road,,The road could not be accessed.,service,,is this street or property? Could it be general?
+Road closure,,The road was closed.,service,,is this street or property? Could it be general?
+Querying assisted,,,service,,?
+Street completed,,All properties on this street have been visited.,general,,
+Blocked by vehicles,,A street cannot be accessed due to vehicles blocking access.,general,,
+Roadworks,,Roadworks are blocking the street.,general,,
+Gate locked,,A street cannot be accessed due to a gate being locked.,general,,street gates?
+Part access,,,general,,?
+Partly completed street,,,general,,when?
+Alarm activated,,A vehicle alarm was activated.,general,,?
+Breakdown,,The waste collection truck broke down.,general,,

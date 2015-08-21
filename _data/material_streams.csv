@@ -1,0 +1,91 @@
+name,parent,color
+textiles,,fd8812
+clothes,textiles,fd8813
+shoes,textiles,fd8814
+mixed textiles & clothes,textiles,fd8815
+plastics,,ee3f22
+plastic bottles,plastics,ee3f23
+plastic bottles,plastics,ee3f24
+plastic bottles,plastics,ee3f25
+plastic bags,plastics,ee3f26
+household plastics (with film),plastics,ee3f27
+household plastics (without film),plastics,ee3f28
+hard plastics,plastics,ee3f29
+paper,,0089d1
+newspapers & magazines,paper,0089d2
+cardboard,paper,0089d3
+telephone directories,paper,0089d4
+mixed paper,paper,0089d5
+mixed paper and card,paper,0089d6
+books,paper,0089d7
+corrugated cardboard,paper,0089d8
+glass,,00a9a4
+mixed glass,glass,00a9a4
+clear glass bottles and jars,glass,00a9a4
+brown glass bottles and jars,glass,b7886e
+green glass bottles and jars,glass,5bc4b6
+blue glass bottles and jars,glass,74beeb
+flat glass,glass,00a9a4
+household organics,,
+garden waste,household organics,18b26a
+food waste,household organics,18b26a
+metals,,54656f
+food & drink cans,metals,54656f
+aluminium cans,metals,54656f
+steel cans,metals,54656f
+aerosols,metals,54656f
+foil,metals,54656f
+foil (with pie tin),metals,54656f
+foil trays,metals,54656f
+scrap metal,metals,54656f
+large tins,metals,54656f
+mixed metals,metals,54656f
+mixed metals (with foil),metals,54656f
+mixed metals (with foil but without aerosol),metals,54656f
+automotive waste,,000000
+used engine oil,automotive waste,000001
+car batteries,automotive waste,000002
+tyres,automotive waste,000003
+building materials,,985d35
+soil,building materials,985d36
+hardcore & rubble,building materials,985d37
+wood & timber,building materials,985d38
+plasterboard,building materials,985d39
+UPVC frames,building materials,985d40
+other recyclables,,f78f1e
+paint,other recyclables,f78f1e
+spectacles,other recyclables,f78f1e
+cartons,other recyclables,f78f1e
+furniture,other recyclables,f78f1e
+tapes and discs,other recyclables,f78f1e
+discs,other recyclables,f78f1e
+tapes,other recyclables,f78f1e
+hand tools,other recyclables,f78f1e
+cooking oil,other recyclables,f78f1e
+carpet,other recyclables,f78f1e
+mattresses,other recyclables,f78f1e
+bicycles,other recyclables,f78f1e
+electrical,,ed008c
+fridges & freezers,electrical,ed008c
+batteries,electrical,ed008c
+telecoms & computers - phone & mouse,electrical,ed008c
+telecoms & computers - fax & cpu,electrical,ed008c
+small appliances - irons,electrical,ed008c
+small appliances - radios,electrical,ed008c
+small appliances - hair dryers,electrical,ed008c
+small appliances - mixed,electrical,ed008c
+large appliances - mixed,electrical,ed008c
+large appliances - washing machine,electrical,ed008c
+fluorescent tubes,electrical,ed008c
+low energy bulbs,electrical,ed008c
+mixed light bulbs,electrical,ed008c
+tv & monitors,electrical,ed008c
+mobile phones,electrical,ed008c
+printer cartridges,electrical,ed008c
+household waste,,000000
+household hazardous waste,,
+hazardous materials,household hazardous waste,fef200
+gas bottles,household hazardous waste,fef201
+asbestos,household hazardous waste,fef202
+household & garden chemicals,household hazardous waste,fef203
+mixed recyclables,,8dc63f

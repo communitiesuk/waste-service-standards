@@ -8,17 +8,28 @@ repo_url: https://github.com/communitiesuk/waste-service-standards
 theme: bootstrap
 
 extra_css:
-- css/custom.css
+  - css/custom.css
 
 markdown_extensions:
-- markdown_include.include
+  - markdown_include.include
+  - attr_list
 
 pages:
-- Home: index.md
-- Models:
-  - Service: models/service.md
-  - Event: models/event.md
-- Taxonomies:
-  - taxonomies/missed-collections.md
-- API: api/index.md
+  - Home: index.md
+  - Models:
+    - Introduction: models/index.md
+    - Waste service: models/service.md
+    - Round: models/round.md
+    - Round plan: models/round-plan.md
+    - Container: models/container.md
+    - Container type: models/container-type.md
+    - Waste event: models/event.md
+    - Material stream: models/material-stream.md
+    - Place: models/place.md
+  - Taxonomies:
+    - taxonomies/missed-collections.md
+    - taxonomies/material-streams.md
+  - APIs:
+    - Waste Services: apis/waste_services.md
+    - Places: apis/places.md
 

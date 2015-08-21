@@ -1,4 +1,75 @@
 {
-  "name": "Recycling"
+  "@type": "WasteService",
+  "id": 1,
+  "name": "Mixed recycling",
+  "frequency": "weekly",
+  "container_types": [
+    {
+      "color": "black",
+      "size": "240L",
+      "shape": "wheelie bin",
+      "lid_color": "green",
+      "material_stream": {
+        "name": "Mixed recyclables",
+        "@id": "/waste/material-streams/mixed-recycling"
+      },
+      "image": ""
+    },
+    {
+      "color": "brown",
+      "size": "40L",
+      "shape": "caddy",
+      "material_stream": {
+        "name": "Food waste",
+        "@id": "/waste/material-streams/food-waste"
+      },
+      "image": ""
+    }
+  ],
+  "description": "Please put your recycling wheelie bin on the street.",
+  "next_collection": "1 August 2014",
+  "last_collection": "23 July 2015",
+  "esd_url": "http://id.esd.org.uk/service/1130",
+  
+  "events": [
+    {
+      "@type": "WasteEvent",
+      "@id": "/api/events/1",
+      "type": "Not presented",
+      "date_created": "1 August 2015",
+      "uprn": "123456789012",
+      "usrn": "123456789012",
+      "image": "http://example.com/images/123.png",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "40.75",
+        "longitude": "73.98"
+      },
+      "container_color": "black",
+      "round": "/rounds/123"
+    }
+  ],
+  "available_channel": {
+    "@type": "ServiceChannel",
+    "name": "Household waste and street maintenance",
+    "service_phone": {
+      "@type": "ContactPoint",
+      "telephone": "0123456789",
+      "email": "waste@example.gov.uk"
+    },
+    "service_url": "http://www.example.gov.uk/waste"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Example Council",
+    "url": "http://www.example.gov.uk"
+  },
+  "service_area": {
+    "@type": "AdministrativeArea",
+    "name": "Anytown"
+  },
+  "service_operator": {
+    "@type": "Organization",
+    "name": "Example Waste Operator Co"
+  }
 }
-

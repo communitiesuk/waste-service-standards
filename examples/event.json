@@ -1,5 +1,7 @@
 {
-  "event_type": "Not presented",
+  "@type": "WasteEvent",
+  "@id": "/api/events/1",
+  "type": "Not presented",
   "date_created": "2014-05-23T20:00",
   "uprn": "123456789012",
   "usrn": "123456789012",
@@ -8,6 +10,7 @@
     "@type": "GeoCoordinates",
     "latitude": "40.75",
     "longitude": "73.98"
-  }
+  },
+  "round": "/rounds/123"
 }
 

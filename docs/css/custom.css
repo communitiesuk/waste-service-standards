@@ -41,3 +41,13 @@
 .rest-method.delete {
   background-color: #a41e22;
 }
+
+.alert {
+  background-color: #FFCCCC;
+}
+
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+  background-color: transparent;
+}

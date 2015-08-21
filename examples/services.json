@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Recycling service",
+    "frequency": "weekly",
+    "esd_url": "http://id.esd.org.uk/service/524",
+    "description": "Please put your recycling box on the street."
+  },
+  {
+    "id": 2,
+    "name": "Refuse",
+    "frequency": "weekly",
+    "esd_url": "http://id.esd.org.uk/service/525",
+    "description": "Black bins."
+  }
+]

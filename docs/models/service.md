@@ -1,5 +1,5 @@
 
-# Service
+# Waste service
 
 ## Use cases and requirements
 
@@ -19,15 +19,27 @@ The Service model should have properties for:
 
 **next collections**
 
-> To know upcoming dates of when upcoming collections will happen.
+> To know upcoming dates of when upcoming collections will happen, when filtered by property.
 
 **previous collections**
 
-> To know when the last few collections have taken place.
+> To know when the last few collections have taken place, when filtered by property.
 
-**material stream**
+**container types**
 
-> What kinds of materials are handled by this service.
+> What types of containers (and in relation, materials) are collected by this service.
+
+**rounds**
+
+> The schedules and routes of trucks collecting the materials handled by this service.
+
+
+## Types
+
+This WasteService type:
+
+* Is a derivation of the [Service concept](http://www.legsb.gov.uk/smartcityconceptmodel/index.php?Action=ShowConcept&Id=169) in the Smart City Concept Model.
+* Extends from the [GovernmentService](http://schema.org/GovernmentService) schema.org type.
 
 
 ## Properties
@@ -39,7 +51,11 @@ frequency | Text | How often it runs, e.g. weekly.
 description | [schema:description](https://schema.org/description) | A short description of the service.
 next collections | Date | List of dates of next collections.
 previous collections | Date | List of dates of previous collections.
-material stream | ? | The material stream that is collected.
+container types | [Container type](container-type.md) | The container types that are collected.
+available channel | [schema:availableChannel](http://schema.org/availableChannel) | A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).
+provider | [schema:provider](http://schema.org/provider) | The council providing the service.
+service area | [schema:serviceArea](http://schema.org/serviceArea) | The geographic area where the service is provided.
+service operator | [schema:serviceOperator](http://schema.org/serviceOperator) | The operator of the service, if different to the provider.
 
 
 ## Serialisation
@@ -62,6 +78,7 @@ material stream | ? | The material stream that is collected.
   </div>
 
 </div>
+
 
 ## Codelists
 
