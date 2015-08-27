@@ -310,6 +310,7 @@
   "frequency": "weekly",
   "container_types": [
     {
+      "@type": "ContainerType",
       "color": "black",
       "size": "240L",
       "shape": "wheelie bin",
@@ -321,6 +322,7 @@
       "image": ""
     },
     {
+      "@type": "ContainerType",
       "color": "brown",
       "size": "40L",
       "shape": "caddy",
@@ -332,28 +334,74 @@
     }
   ],
   "description": "Please put your recycling wheelie bin on the street.",
-  "next_collection": "1 August 2014",
-  "last_collection": "23 July 2015",
   "esd_url": "http://id.esd.org.uk/service/1130",
 
-  "events": [
-    {
-      "@type": "WasteEvent",
-      "@id": "/api/events/1",
-      "type": "Not presented",
-      "date_created": "1 August 2015",
-      "uprn": "123456789012",
-      "usrn": "123456789012",
-      "image": "http://example.com/images/123.png",
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "40.75",
-        "longitude": "73.98"
-      },
-      "container_color": "black",
-      "round": "/rounds/123"
-    }
-  ],
+  "last_collection": {
+    "@type": "Collection",
+    "date": "23 July 2015",
+    "round": "/rounds/123",
+    "containers": [
+      {
+        "@type": "WasteContainer",
+        "id": "2140541",
+        "status": "in_service",
+        "type": {
+          "color": "black",
+          "size": "240L",
+          "shape": "wheelie bin",
+          "lid_color": "green",
+          "image": "",
+          "material_streams": [
+            {
+              "name": "Mixed recyclables",
+              "@id": "/waste/material-streams/mixed-recycling"
+            }
+          ]
+        }
+      }
+    ],
+    "events": [
+      {
+        "@type": "WasteEvent",
+        "@id": "/api/events/1",
+        "type": "Not presented",
+        "date_created": "1 August 2015",
+        "uprn": "123456789012",
+        "usrn": "123456789012",
+        "image": "http://example.com/images/123.png",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "40.75",
+          "longitude": "73.98"
+        },
+        "container_color": "black"
+      }
+    ]
+  },
+  "next_collection": {
+    "@type": "Collection",
+    "date": "1 August 2014",
+    "containers": [
+      {
+        "@type": "WasteContainer",
+        "id": "2140541",
+        "status": "in_service",
+        "type": {
+          "color": "black",
+          "size": "240L",
+          "shape": "wheelie bin",
+          "lid_color": "green",
+          "image": "",
+          "material_streams": [
+            {
+              "name": "Mixed recyclables",
+              "@id": "/waste/material-streams/mixed-recycling"
+            }
+          ]
+        }
+      }
+    ]
+  },
   "available_channel": {
     "@type": "ServiceChannel",
     "name": "Household waste and street maintenance",

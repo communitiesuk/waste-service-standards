@@ -241,21 +241,22 @@
         &quot;name&quot;: &quot;Mixed recyclables&quot;
       },
       &quot;shape&quot;: &quot;wheelie bin&quot;,
+      &quot;@type&quot;: &quot;ContainerType&quot;,
       &quot;lid_color&quot;: &quot;green&quot;,
       &quot;size&quot;: &quot;240L&quot;
     },
     {
       &quot;color&quot;: &quot;brown&quot;,
+      &quot;image&quot;: &quot;&quot;,
       &quot;material_stream&quot;: {
         &quot;@id&quot;: &quot;/waste/material-streams/food-waste&quot;,
         &quot;name&quot;: &quot;Food waste&quot;
       },
       &quot;shape&quot;: &quot;caddy&quot;,
-      &quot;image&quot;: &quot;&quot;,
+      &quot;@type&quot;: &quot;ContainerType&quot;,
       &quot;size&quot;: &quot;40L&quot;
     }
   ],
-  &quot;@type&quot;: &quot;WasteService&quot;,
   &quot;service_operator&quot;: {
     &quot;@type&quot;: &quot;Organization&quot;,
     &quot;name&quot;: &quot;Example Waste Operator Co&quot;
@@ -265,25 +266,31 @@
     &quot;name&quot;: &quot;Anytown&quot;
   },
   &quot;name&quot;: &quot;Mixed recycling&quot;,
-  &quot;events&quot;: [
-    {
-      &quot;type&quot;: &quot;Not presented&quot;,
-      &quot;usrn&quot;: &quot;123456789012&quot;,
-      &quot;@id&quot;: &quot;/api/events/1&quot;,
-      &quot;image&quot;: &quot;http://example.com/images/123.png&quot;,
-      &quot;@type&quot;: &quot;WasteEvent&quot;,
-      &quot;uprn&quot;: &quot;123456789012&quot;,
-      &quot;date_created&quot;: &quot;1 August 2015&quot;,
-      &quot;geo&quot;: {
-        &quot;latitude&quot;: &quot;40.75&quot;,
-        &quot;@type&quot;: &quot;GeoCoordinates&quot;,
-        &quot;longitude&quot;: &quot;73.98&quot;
-      },
-      &quot;round&quot;: &quot;/rounds/123&quot;,
-      &quot;container_color&quot;: &quot;black&quot;
-    }
-  ],
-  &quot;next_collection&quot;: &quot;1 August 2014&quot;,
+  &quot;@type&quot;: &quot;WasteService&quot;,
+  &quot;next_collection&quot;: {
+    &quot;date&quot;: &quot;1 August 2014&quot;,
+    &quot;@type&quot;: &quot;Collection&quot;,
+    &quot;containers&quot;: [
+      {
+        &quot;status&quot;: &quot;in_service&quot;,
+        &quot;type&quot;: {
+          &quot;color&quot;: &quot;black&quot;,
+          &quot;image&quot;: &quot;&quot;,
+          &quot;shape&quot;: &quot;wheelie bin&quot;,
+          &quot;material_streams&quot;: [
+            {
+              &quot;@id&quot;: &quot;/waste/material-streams/mixed-recycling&quot;,
+              &quot;name&quot;: &quot;Mixed recyclables&quot;
+            }
+          ],
+          &quot;lid_color&quot;: &quot;green&quot;,
+          &quot;size&quot;: &quot;240L&quot;
+        },
+        &quot;@type&quot;: &quot;WasteContainer&quot;,
+        &quot;id&quot;: &quot;2140541&quot;
+      }
+    ]
+  },
   &quot;frequency&quot;: &quot;weekly&quot;,
   &quot;available_channel&quot;: {
     &quot;service_url&quot;: &quot;http://www.example.gov.uk/waste&quot;,
@@ -300,7 +307,48 @@
     &quot;@type&quot;: &quot;Organization&quot;,
     &quot;name&quot;: &quot;Example Council&quot;
   },
-  &quot;last_collection&quot;: &quot;23 July 2015&quot;,
+  &quot;last_collection&quot;: {
+    &quot;date&quot;: &quot;23 July 2015&quot;,
+    &quot;round&quot;: &quot;/rounds/123&quot;,
+    &quot;events&quot;: [
+      {
+        &quot;type&quot;: &quot;Not presented&quot;,
+        &quot;usrn&quot;: &quot;123456789012&quot;,
+        &quot;@id&quot;: &quot;/api/events/1&quot;,
+        &quot;image&quot;: &quot;http://example.com/images/123.png&quot;,
+        &quot;uprn&quot;: &quot;123456789012&quot;,
+        &quot;date_created&quot;: &quot;1 August 2015&quot;,
+        &quot;geo&quot;: {
+          &quot;latitude&quot;: &quot;40.75&quot;,
+          &quot;@type&quot;: &quot;GeoCoordinates&quot;,
+          &quot;longitude&quot;: &quot;73.98&quot;
+        },
+        &quot;@type&quot;: &quot;WasteEvent&quot;,
+        &quot;container_color&quot;: &quot;black&quot;
+      }
+    ],
+    &quot;containers&quot;: [
+      {
+        &quot;status&quot;: &quot;in_service&quot;,
+        &quot;type&quot;: {
+          &quot;color&quot;: &quot;black&quot;,
+          &quot;image&quot;: &quot;&quot;,
+          &quot;shape&quot;: &quot;wheelie bin&quot;,
+          &quot;material_streams&quot;: [
+            {
+              &quot;@id&quot;: &quot;/waste/material-streams/mixed-recycling&quot;,
+              &quot;name&quot;: &quot;Mixed recyclables&quot;
+            }
+          ],
+          &quot;lid_color&quot;: &quot;green&quot;,
+          &quot;size&quot;: &quot;240L&quot;
+        },
+        &quot;@type&quot;: &quot;WasteContainer&quot;,
+        &quot;id&quot;: &quot;2140541&quot;
+      }
+    ],
+    &quot;@type&quot;: &quot;Collection&quot;
+  },
   &quot;id&quot;: 1,
   &quot;esd_url&quot;: &quot;http://id.esd.org.uk/service/1130&quot;
 }
@@ -403,6 +451,17 @@
   &quot;usrn&quot;: &quot;123456789012&quot;,
   &quot;@id&quot;: &quot;/api/events/1&quot;,
   &quot;image&quot;: &quot;http://example.com/images/123.png&quot;,
+  &quot;container_type&quot;: {
+    &quot;color&quot;: &quot;#fff&quot;,
+    &quot;material_stream&quot;: {
+      &quot;@id&quot;: &quot;/api/material-streams/mixed-recyclables&quot;,
+      &quot;name&quot;: &quot;mixed recyclables&quot;
+    },
+    &quot;shape&quot;: &quot;wheelie bin&quot;,
+    &quot;cost&quot;: &quot;\u00a310&quot;,
+    &quot;size&quot;: &quot;240&quot;,
+    &quot;reusable&quot;: true
+  },
   &quot;@type&quot;: &quot;WasteEvent&quot;,
   &quot;uprn&quot;: &quot;123456789012&quot;,
   &quot;date_created&quot;: &quot;2014-05-23T20:00&quot;,

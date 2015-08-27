@@ -221,6 +221,10 @@
 <blockquote>
 <p>The round where this event happened.</p>
 </blockquote>
+<p><strong>container type</strong></p>
+<blockquote>
+<p>What kind of container does the event relate to? This could be typically matched by colour.</p>
+</blockquote>
 <h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -266,6 +270,11 @@
 <td>URL</td>
 <td>The URL of the round where this event was recorded.</td>
 </tr>
+<tr>
+<td>container_type</td>
+<td><a href="../container-type/">Container type</a></td>
+<td>The type of container, if relevant.</td>
+</tr>
 </tbody>
 </table>
 <h2 id="serialisation">Serialisation</h2>
@@ -295,7 +304,17 @@
     "latitude": "40.75",
     "longitude": "73.98"
   },
-  "round": "/rounds/123"
+  "round": "/rounds/123",
+  "container_type": {
+    "color": "#fff",
+    "shape": "wheelie bin",
+    "size": "240",
+    "reusable": true,
+    "material_stream": {
+      "name": "mixed recyclables",
+      "@id": "/api/material-streams/mixed-recyclables"
+    }
+  }
 }
 </code></pre>
     </div>
