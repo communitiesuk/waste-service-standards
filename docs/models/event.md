@@ -37,6 +37,10 @@ The Event model should have properties for:
 
 > The round where this event happened.
 
+**container type**
+
+> What kind of container does the event relate to? This could be typically matched by colour.
+
 
 ## Properties
 
@@ -49,7 +53,7 @@ usrn | string | A unique identifier for a street.
 geo | [schema:geo](https://schema.org/geo) | The location in WGS84 datum.
 image | [schema:image](https://schema.org/image) | A URL to a related image.
 round | URL | The URL of the round where this event was recorded.
-
+container_type | [Container type](container-type.md) | The type of container, if relevant.
 
 ## Serialisation
 

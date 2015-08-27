@@ -11,6 +11,16 @@
     "latitude": "40.75",
     "longitude": "73.98"
   },
-  "round": "/rounds/123"
+  "round": "/rounds/123",
+  "container_type": {
+    "color": "#fff",
+    "shape": "wheelie bin",
+    "size": "240",
+    "reusable": true,
+    "material_stream": {
+      "name": "mixed recyclables",
+      "@id": "/api/material-streams/mixed-recyclables"
+    }
+  }
 }
 

@@ -84,21 +84,22 @@ Get a single service
         "name": "Mixed recyclables"
       },
       "shape": "wheelie bin",
+      "@type": "ContainerType",
       "lid_color": "green",
       "size": "240L"
     },
     {
       "color": "brown",
+      "image": "",
       "material_stream": {
         "@id": "/waste/material-streams/food-waste",
         "name": "Food waste"
       },
       "shape": "caddy",
-      "image": "",
+      "@type": "ContainerType",
       "size": "40L"
     }
   ],
-  "@type": "WasteService",
   "service_operator": {
     "@type": "Organization",
     "name": "Example Waste Operator Co"
@@ -108,25 +109,31 @@ Get a single service
     "name": "Anytown"
   },
   "name": "Mixed recycling",
-  "events": [
-    {
-      "type": "Not presented",
-      "usrn": "123456789012",
-      "@id": "/api/events/1",
-      "image": "http://example.com/images/123.png",
-      "@type": "WasteEvent",
-      "uprn": "123456789012",
-      "date_created": "1 August 2015",
-      "geo": {
-        "latitude": "40.75",
-        "@type": "GeoCoordinates",
-        "longitude": "73.98"
-      },
-      "round": "/rounds/123",
-      "container_color": "black"
-    }
-  ],
-  "next_collection": "1 August 2014",
+  "@type": "WasteService",
+  "next_collection": {
+    "date": "1 August 2014",
+    "@type": "Collection",
+    "containers": [
+      {
+        "status": "in_service",
+        "type": {
+          "color": "black",
+          "image": "",
+          "shape": "wheelie bin",
+          "material_streams": [
+            {
+              "@id": "/waste/material-streams/mixed-recycling",
+              "name": "Mixed recyclables"
+            }
+          ],
+          "lid_color": "green",
+          "size": "240L"
+        },
+        "@type": "WasteContainer",
+        "id": "2140541"
+      }
+    ]
+  },
   "frequency": "weekly",
   "available_channel": {
     "service_url": "http://www.example.gov.uk/waste",
@@ -143,7 +150,48 @@ Get a single service
     "@type": "Organization",
     "name": "Example Council"
   },
-  "last_collection": "23 July 2015",
+  "last_collection": {
+    "date": "23 July 2015",
+    "round": "/rounds/123",
+    "events": [
+      {
+        "type": "Not presented",
+        "usrn": "123456789012",
+        "@id": "/api/events/1",
+        "image": "http://example.com/images/123.png",
+        "uprn": "123456789012",
+        "date_created": "1 August 2015",
+        "geo": {
+          "latitude": "40.75",
+          "@type": "GeoCoordinates",
+          "longitude": "73.98"
+        },
+        "@type": "WasteEvent",
+        "container_color": "black"
+      }
+    ],
+    "containers": [
+      {
+        "status": "in_service",
+        "type": {
+          "color": "black",
+          "image": "",
+          "shape": "wheelie bin",
+          "material_streams": [
+            {
+              "@id": "/waste/material-streams/mixed-recycling",
+              "name": "Mixed recyclables"
+            }
+          ],
+          "lid_color": "green",
+          "size": "240L"
+        },
+        "@type": "WasteContainer",
+        "id": "2140541"
+      }
+    ],
+    "@type": "Collection"
+  },
   "id": 1,
   "esd_url": "http://id.esd.org.uk/service/1130"
 }
@@ -241,6 +289,17 @@ Get a single event
   "usrn": "123456789012",
   "@id": "/api/events/1",
   "image": "http://example.com/images/123.png",
+  "container_type": {
+    "color": "#fff",
+    "material_stream": {
+      "@id": "/api/material-streams/mixed-recyclables",
+      "name": "mixed recyclables"
+    },
+    "shape": "wheelie bin",
+    "cost": "\u00a310",
+    "size": "240",
+    "reusable": true
+  },
   "@type": "WasteEvent",
   "uprn": "123456789012",
   "date_created": "2014-05-23T20:00",

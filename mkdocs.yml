@@ -29,6 +29,7 @@ pages:
   - Taxonomies:
     - taxonomies/missed-collections.md
     - taxonomies/material-streams.md
+    - taxonomies/container-types.md
   - APIs:
     - Waste Services: apis/waste_services.md
     - Places: apis/places.md

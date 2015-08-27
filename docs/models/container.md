@@ -13,6 +13,10 @@ The Container model should have properties for:
 
 > For identification of the container.
 
+**UPRN**
+
+> To link to its property.
+
 
 ## Properties
 
