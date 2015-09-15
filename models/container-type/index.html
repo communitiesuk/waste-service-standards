@@ -71,19 +71,19 @@
                         </li>
                     
                         <li >
-                            <a href="../round/">Round</a>
-                        </li>
-                    
-                        <li >
                             <a href="../round-plan/">Round plan</a>
                         </li>
                     
                         <li >
-                            <a href="../container/">Container</a>
+                            <a href="../round/">Round</a>
                         </li>
                     
                         <li class="active">
                             <a href="./">Container type</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../container/">Container</a>
                         </li>
                     
                         <li >
@@ -140,17 +140,23 @@
                 </li>
             
             
+            
+                <li >
+                    <a href="../../data/data-formats/">Data</a>
+                </li>
+            
+            
             </ul>
 
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../container/">
+                    <a rel="next" href="../round/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../event/">
+                    <a rel="prev" href="../container/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -207,6 +213,10 @@
 <blockquote>
 <p>In case its different to the body color.</p>
 </blockquote>
+<p><strong>disposable</strong></p>
+<blockquote>
+<p>If the container type is disposable or one-time use, e.g. a bag.</p>
+</blockquote>
 <p><strong>material stream</strong></p>
 <blockquote>
 <p>What kind of waste the container is used for.</p>
@@ -247,9 +257,14 @@
 <td>Lid-specific color as a hex value.</td>
 </tr>
 <tr>
+<td>disposable</td>
+<td>boolean</td>
+<td>If container is disposable.</td>
+</tr>
+<tr>
 <td>material stream</td>
-<td></td>
-<td></td>
+<td><a href="../material-stream/">Material stream</a></td>
+<td>The materials used.</td>
 </tr>
 </tbody>
 </table>

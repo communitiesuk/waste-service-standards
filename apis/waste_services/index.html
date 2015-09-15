@@ -71,19 +71,19 @@
                         </li>
                     
                         <li >
-                            <a href="../../models/round/">Round</a>
-                        </li>
-                    
-                        <li >
                             <a href="../../models/round-plan/">Round plan</a>
                         </li>
                     
                         <li >
-                            <a href="../../models/container/">Container</a>
+                            <a href="../../models/round/">Round</a>
                         </li>
                     
                         <li >
                             <a href="../../models/container-type/">Container type</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../models/container/">Container</a>
                         </li>
                     
                         <li >
@@ -140,6 +140,12 @@
                 </li>
             
             
+            
+                <li >
+                    <a href="../../data/data-formats/">Data</a>
+                </li>
+            
+            
             </ul>
 
             <!-- Search, Navigation and Repo links -->
@@ -183,7 +189,11 @@
         
             <li><a href="#events">Events</a></li>
         
+            <li><a href="#round-plans">Round plans</a></li>
+        
             <li><a href="#rounds">Rounds</a></li>
+        
+            <li><a href="#material-streams">Material streams</a></li>
         
     
     </ul>
@@ -202,25 +212,6 @@
   <span class="rest-method get">get</span>
   <span>/services</span>
 </div>
-
-<p><strong>Response</strong></p>
-<pre><code>[
-  {
-    &quot;id&quot;: 1,
-    &quot;frequency&quot;: &quot;weekly&quot;,
-    &quot;description&quot;: &quot;Please put your recycling box on the street.&quot;,
-    &quot;name&quot;: &quot;Recycling service&quot;,
-    &quot;esd_url&quot;: &quot;http://id.esd.org.uk/service/524&quot;
-  },
-  {
-    &quot;id&quot;: 2,
-    &quot;frequency&quot;: &quot;weekly&quot;,
-    &quot;description&quot;: &quot;Black bins.&quot;,
-    &quot;name&quot;: &quot;Refuse&quot;,
-    &quot;esd_url&quot;: &quot;http://id.esd.org.uk/service/525&quot;
-  }
-]
-</code></pre>
 
 <hr />
 <p>Get a single service</p>
@@ -269,6 +260,7 @@
   &quot;@type&quot;: &quot;WasteService&quot;,
   &quot;next_collection&quot;: {
     &quot;date&quot;: &quot;1 August 2014&quot;,
+    &quot;changed_date&quot;: &quot;2 August 2015&quot;,
     &quot;@type&quot;: &quot;Collection&quot;,
     &quot;containers&quot;: [
       {
@@ -289,7 +281,8 @@
         &quot;@type&quot;: &quot;WasteContainer&quot;,
         &quot;id&quot;: &quot;2140541&quot;
       }
-    ]
+    ],
+    &quot;changed_date_reason&quot;: &quot;Bank holiday&quot;
   },
   &quot;frequency&quot;: &quot;weekly&quot;,
   &quot;available_channel&quot;: {
@@ -473,6 +466,31 @@
 }
 </code></pre>
 
+<h2 id="round-plans">Round plans</h2>
+<hr />
+<p>Get a list of round plans</p>
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/round-plans</span>
+</div>
+
+<hr />
+<p>Get a single round plan</p>
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/round-plans/{roundId}</span>
+</div>
+
+<p><strong>Response</strong></p>
+<pre><code>{
+  &quot;start_date&quot;: &quot;&quot;,
+  &quot;@id&quot;: &quot;/round-plans/1&quot;,
+  &quot;rrule&quot;: &quot;&quot;,
+  &quot;containers&quot;: &quot;/api/containers?round_plan=1&quot;,
+  &quot;@type&quot;: &quot;RoundPlan&quot;
+}
+</code></pre>
+
 <h2 id="rounds">Rounds</h2>
 <hr />
 <p>Get a list of rounds</p>
@@ -503,6 +521,46 @@
     &quot;id&quot;: &quot;&quot;
   },
   &quot;events&quot;: &quot;/api/events?round=456&quot;
+}
+</code></pre>
+
+<h2 id="material-streams">Material streams</h2>
+<hr />
+<p>Get a list of streams</p>
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/material-streams</span>
+</div>
+
+<p><strong>Response</strong></p>
+<pre><code>[
+  {
+    &quot;color&quot;: &quot;fd8812&quot;,
+    &quot;image&quot;: &quot;http://example.com/images/mixed-recycling.png&quot;,
+    &quot;@id&quot;: &quot;/api/material-streams/mixed-recyclables&quot;,
+    &quot;name&quot;: &quot;mixed recyclables&quot;
+  },
+  {
+    &quot;color&quot;: &quot;&quot;,
+    &quot;image&quot;: &quot;http://example.com/images/paper.png&quot;,
+    &quot;@id&quot;: &quot;/api/material-streams/paper&quot;,
+    &quot;name&quot;: &quot;paper&quot;
+  }
+]
+</code></pre>
+
+<hr />
+<p>Get a single material stream</p>
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/material-streams/{streamId}</span>
+</div>
+
+<p><strong>Response</strong></p>
+<pre><code>{
+  &quot;color&quot;: &quot;fd8812&quot;,
+  &quot;image&quot;: &quot;http://example.com/images/mixed-recycling.png&quot;,
+  &quot;name&quot;: &quot;Mixed recycling&quot;
 }
 </code></pre></div>
         </div>

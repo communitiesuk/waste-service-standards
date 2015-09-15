@@ -10,7 +10,7 @@
         <link rel="shortcut icon" href="../../favicon.ico">
         
 
-	<title>Waste event - Waste Service Standards</title>
+	<title>Data - Waste Service Standards</title>
 
         <link href="../../css/bootstrap-3.0.3.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -58,44 +58,44 @@
             
             
             
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Models <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../">Introduction</a>
+                            <a href="../../models/">Introduction</a>
                         </li>
                     
                         <li >
-                            <a href="../service/">Waste service</a>
+                            <a href="../../models/service/">Waste service</a>
                         </li>
                     
                         <li >
-                            <a href="../round-plan/">Round plan</a>
+                            <a href="../../models/round-plan/">Round plan</a>
                         </li>
                     
                         <li >
-                            <a href="../round/">Round</a>
+                            <a href="../../models/round/">Round</a>
                         </li>
                     
                         <li >
-                            <a href="../container-type/">Container type</a>
+                            <a href="../../models/container-type/">Container type</a>
                         </li>
                     
                         <li >
-                            <a href="../container/">Container</a>
-                        </li>
-                    
-                        <li class="active">
-                            <a href="./">Waste event</a>
+                            <a href="../../models/container/">Container</a>
                         </li>
                     
                         <li >
-                            <a href="../material-stream/">Material stream</a>
+                            <a href="../../models/event/">Waste event</a>
                         </li>
                     
                         <li >
-                            <a href="../place/">Place</a>
+                            <a href="../../models/material-stream/">Material stream</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../models/place/">Place</a>
                         </li>
                     
                     </ul>
@@ -141,8 +141,8 @@
             
             
             
-                <li >
-                    <a href="../../data/data-formats/">Data</a>
+                <li class="active">
+                    <a href="./">Data</a>
                 </li>
             
             
@@ -151,12 +151,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../container/">
+                    <a rel="next" href="../../apis/places/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
-                <li >
-                    <a rel="prev" href="../material-stream/">
+                <li class="disabled">
+                    <a rel="prev" >
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -179,154 +179,17 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#waste-event">Waste event</a></li>
+        <li class="main active"><a href="#data-formats">Data formats</a></li>
         
-            <li><a href="#use-cases-and-requirements">Use cases and requirements</a></li>
-        
-            <li><a href="#properties">Properties</a></li>
-        
-            <li><a href="#serialisation">Serialisation</a></li>
+            <li><a href="#round-plans">Round plans</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="waste-event">Waste event</h1>
-<h2 id="use-cases-and-requirements">Use cases and requirements</h2>
-<p>The Event model should have properties for:</p>
-<p><strong>event type</strong></p>
-<blockquote>
-<p>What kind of event it is.</p>
-</blockquote>
-<p><strong>start date</strong></p>
-<blockquote>
-<p>Know when an event happened.</p>
-</blockquote>
-<p><strong>UPRN</strong></p>
-<blockquote>
-<p>For recording against specific properties.</p>
-</blockquote>
-<p><strong>USRN</strong></p>
-<blockquote>
-<p>For recording street-level events.</p>
-</blockquote>
-<p><strong>coordinates</strong></p>
-<blockquote>
-<p>For easy geolocation of where the event was recorded.</p>
-</blockquote>
-<p><strong>image</strong></p>
-<blockquote>
-<p>Visual evidence of an issue.</p>
-</blockquote>
-<p><strong>comments</strong></p>
-<blockquote>
-<p>For any additional information useful to record.</p>
-</blockquote>
-<p><strong>round</strong></p>
-<blockquote>
-<p>The round where this event happened.</p>
-</blockquote>
-<p><strong>container type</strong></p>
-<blockquote>
-<p>What kind of container does the event relate to? This could be typically matched by colour.</p>
-</blockquote>
-<h2 id="properties">Properties</h2>
-<table>
-<thead>
-<tr>
-<th>Term</th>
-<th>Mapping</th>
-<th>Definition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td>string</td>
-<td>A categorisation of the event.</td>
-</tr>
-<tr>
-<td>start date</td>
-<td><a href="https://schema.org/startDate">schema:startDate</a></td>
-<td>When the event was took place.</td>
-</tr>
-<tr>
-<td>uprn</td>
-<td>string</td>
-<td>A unique identifier for a property.</td>
-</tr>
-<tr>
-<td>usrn</td>
-<td>string</td>
-<td>A unique identifier for a street.</td>
-</tr>
-<tr>
-<td>geo</td>
-<td><a href="https://schema.org/geo">schema:geo</a></td>
-<td>The location in WGS84 datum.</td>
-</tr>
-<tr>
-<td>image</td>
-<td><a href="https://schema.org/image">schema:image</a></td>
-<td>A URL to a related image.</td>
-</tr>
-<tr>
-<td>round</td>
-<td>URL</td>
-<td>The URL of the round where this event was recorded.</td>
-</tr>
-<tr>
-<td>container_type</td>
-<td><a href="../container-type/">Container type</a></td>
-<td>The type of container, if relevant.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="serialisation">Serialisation</h2>
-<div>
-
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation"><a href="#schema" aria-controls="schema" role="tab" data-toggle="tab">JSON Schema</a></li>
-    <li role="presentation" class="active"><a href="#json" aria-controls="json" role="tab" data-toggle="tab">JSON</a></li>
-  </ul>
-
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane" id="schema">
-    </div>
-    <div role="tabpanel" class="tab-pane active" id="json">
-      <pre><code class="hljs json">{
-  "@type": "WasteEvent",
-  "@id": "/api/events/1",
-  "type": "Not presented",
-  "date_created": "2014-05-23T20:00",
-  "uprn": "123456789012",
-  "usrn": "123456789012",
-  "image": "http://example.com/images/123.png",
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "40.75",
-    "longitude": "73.98"
-  },
-  "round": "/rounds/123",
-  "container_type": {
-    "color": "#fff",
-    "shape": "wheelie bin",
-    "size": "240",
-    "reusable": true,
-    "material_stream": {
-      "name": "mixed recyclables",
-      "@id": "/api/material-streams/mixed-recyclables"
-    }
-  }
-}
-</code></pre>
-    </div>
-  </div>
-
-</div></div>
+<h1 id="data-formats">Data formats</h1>
+<h2 id="round-plans">Round plans</h2></div>
         </div>
 
 	<footer class="col-md-12">

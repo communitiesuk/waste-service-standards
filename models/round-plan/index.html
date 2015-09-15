@@ -70,20 +70,20 @@
                             <a href="../service/">Waste service</a>
                         </li>
                     
-                        <li >
-                            <a href="../round/">Round</a>
-                        </li>
-                    
                         <li class="active">
                             <a href="./">Round plan</a>
                         </li>
                     
                         <li >
-                            <a href="../container/">Container</a>
+                            <a href="../round/">Round</a>
                         </li>
                     
                         <li >
                             <a href="../container-type/">Container type</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../container/">Container</a>
                         </li>
                     
                         <li >
@@ -140,17 +140,23 @@
                 </li>
             
             
+            
+                <li >
+                    <a href="../../data/data-formats/">Data</a>
+                </li>
+            
+            
             </ul>
 
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../round/">
+                    <a rel="next" href="../service/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../container/">
+                    <a rel="prev" href="../round/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -201,6 +207,10 @@
 <blockquote>
 <p>How often the round is run.</p>
 </blockquote>
+<p><strong>exceptions</strong></p>
+<blockquote>
+<p>When dates are exceptions to the repeating rule.</p>
+</blockquote>
 <h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -210,7 +220,33 @@
 <th>Definition</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>containers</td>
+<td>List of <a href="models/container.md">containers</a></td>
+<td>The list of containers at properties that will be emptied.</td>
+</tr>
+<tr>
+<td>start date</td>
+<td><a href="https://schema.org/startDate">schema:startDate</a></td>
+<td>When this plan started.</td>
+</tr>
+<tr>
+<td>repeating rule</td>
+<td>string</td>
+<td>How often a round is executed based on the plan. Typically weekly or fortnightly on a specific day of the week.</td>
+</tr>
+<tr>
+<td>exceptions</td>
+<td>List of <a href="https://schema.org/Date">Date</a></td>
+<td>Dates removed from the repeating rule.</td>
+</tr>
+<tr>
+<td>additions</td>
+<td>List of <a href="https://schema.org/Date">Date</a></td>
+<td>Extra dates not part of the repeating rule.</td>
+</tr>
+</tbody>
 </table>
 <h2 id="serialisation">Serialisation</h2>
 <div>
@@ -227,7 +263,8 @@
     </div>
     <div role="tabpanel" class="tab-pane active" id="json">
       <pre><code class="hljs json">{
-  "id": "",
+  "@id": "/round-plans/1",
+  "@type": "RoundPlan",
   "start_date": "",
   "rrule": "",
   "containers": "/api/containers?round_plan=1"
