@@ -18,7 +18,7 @@
     </url>
         
     <url>
-     <loc>None/models/service/</loc>
+     <loc>None/models/waste-service/</loc>
      <lastmod>2015-09-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -48,7 +48,7 @@
     </url>
         
     <url>
-     <loc>None/models/event/</loc>
+     <loc>None/models/waste-event/</loc>
      <lastmod>2015-09-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
