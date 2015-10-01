@@ -112,6 +112,10 @@
                         </li>
                     
                         <li >
+                            <a href="../../taxonomies/materials/">Materials</a>
+                        </li>
+                    
+                        <li >
                             <a href="../../taxonomies/material-streams/">Material streams</a>
                         </li>
                     
@@ -211,7 +215,7 @@
 <blockquote>
 <p>For recording street-level events.</p>
 </blockquote>
-<p><strong>coordinates</strong></p>
+<p><strong>geo-coordinates</strong></p>
 <blockquote>
 <p>For easy geolocation of where the event was recorded.</p>
 </blockquote>
@@ -264,7 +268,7 @@
 <tr>
 <td>geo</td>
 <td><a href="https://schema.org/geo">schema:geo</a></td>
-<td>The location in WGS84 datum.</td>
+<td>The location in WGS-84 datum.</td>
 </tr>
 <tr>
 <td>image</td>
@@ -295,6 +299,19 @@
   <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane" id="schema">
+      <pre><code class="hljs json">{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Event",
+  "description": "A waste collection event.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for a product",
+      "type": "integer"
+    }
+  },
+  "required": ["id"]
+}</code></pre>
     </div>
     <div role="tabpanel" class="tab-pane active" id="json">
       <pre><code class="hljs json">{
