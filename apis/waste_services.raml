@@ -14,7 +14,7 @@ documentation:
       The [ESD Standards](http://standards.esd.org.uk) define all the categories of services that local authorities typically provide. These will be referenced via URL from the Services API, to allow individual council instances of a service to be matched to common service definitions.
 
 schemas:
-  - event: !include ../schemas/event.schema.json
+  - event: !include ../schemas/waste_event.schema.json
     # events: !include ../schemas/events.json
 
 resourceTypes:
@@ -38,11 +38,11 @@ traits:
   type: collection
   get:
     description: Get a list of waste services
-    responses:
-      200:
-        body:
-          application/json:
-            example: !include ../examples/services.json
+    # responses:
+    #   200:
+    #     body:
+          # application/json:
+            # example: !include ../examples/services.json
   /{serviceId}:
     get:
     description: Get a single service
@@ -93,12 +93,32 @@ traits:
             application/json:
               example: !include ../examples/event.json
 
+/round-plans:
+  displayName: Round plans
+  description: A [Round plan](/models/round-plan.md) describes a route on which a set of containers are processed and the schedule it runs on.
+  type: collection
+  get:
+    description: Get a list of [round plans](/models/round-plan)
+    # responses:
+    #   200:
+    #     body:
+    #       application/json:
+            # example: !include ../examples/rounds.json
+  /{roundId}:
+    get:
+      description: Get a single round plan
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include ../examples/round_plan.json
+
 /rounds:
   displayName: Rounds
   description: A Round is a execution of a Round plan on a given day.
   type: collection
   get:
-    description: Get a list of rounds
+    description: Get a list of [rounds](/models/round)
     responses:
       200:
         body:
@@ -112,6 +132,26 @@ traits:
           body:
             application/json:
               example: !include ../examples/round.json
+
+/material-streams:
+  displayName: Material streams
+  description: A material stream is a type of materials that can be collected.
+  type: collection
+  get:
+    description: Get a list of [material streams](/models/material-streams)
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include ../examples/material_streams.json
+  /{streamId}:
+    get:
+      description: Get a single material stream
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include ../examples/material_stream.json
 
 
 

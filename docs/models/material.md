@@ -1,13 +1,17 @@
 
-# Material stream
+# Material
 
 ## Use cases and requirements
 
-The Material stream model should have properties for:
+The Material  model should have properties for:
 
 **name**
 
-> What kind of material it is.
+> What type of material it is.
+
+**colour**
+
+> A colour matching the WRAP material stream, for consistent colour identification.
 
 **image**
 
@@ -19,6 +23,7 @@ The Material stream model should have properties for:
 Term     | Mapping | Definition
 ---------|---------|-----------
 name | string | The name of the material.
+color | [schema:color](https://schema.org/color) | The related colour.
 
 
 ## Serialisation

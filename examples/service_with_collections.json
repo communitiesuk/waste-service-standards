@@ -45,14 +45,14 @@
           "size": "240L",
           "shape": "wheelie bin",
           "lid_color": "green",
-          "image": "",
+          "image": ""
           "material_streams": [
             {
               "name": "Mixed recyclables",
               "@id": "/waste/material-streams/mixed-recycling"
             }
-          ]
-        }
+          ],
+        },
       }
     ],
     "events": [
@@ -69,57 +69,12 @@
           "latitude": "40.75",
           "longitude": "73.98"
         },
-        "container_color": "black"
+        "container_color": "black",
       }
-    ]
+    ],
   },
   "next_collection": {
     "@type": "Collection",
-    "date": "1 August 2014",
-    "changed_date": "2 August 2015",
-    "changed_date_reason": "Bank holiday",
-    "containers": [
-      {
-        "@type": "WasteContainer",
-        "id": "2140541",
-        "status": "in_service",
-        "type": {
-          "color": "black",
-          "size": "240L",
-          "shape": "wheelie bin",
-          "lid_color": "green",
-          "image": "",
-          "material_streams": [
-            {
-              "name": "Mixed recyclables",
-              "@id": "/waste/material-streams/mixed-recycling"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "available_channel": {
-    "@type": "ServiceChannel",
-    "name": "Household waste and street maintenance",
-    "service_phone": {
-      "@type": "ContactPoint",
-      "telephone": "0123456789",
-      "email": "waste@example.gov.uk"
-    },
-    "service_url": "http://www.example.gov.uk/waste"
-  },
-  "provider": {
-    "@type": "Organization",
-    "name": "Example Council",
-    "url": "http://www.example.gov.uk"
-  },
-  "service_area": {
-    "@type": "AdministrativeArea",
-    "name": "Anytown"
-  },
-  "service_operator": {
-    "@type": "Organization",
-    "name": "Example Waste Operator Co"
+    "date": "1 August 2014"
   }
 }

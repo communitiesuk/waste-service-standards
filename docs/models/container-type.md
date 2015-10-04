@@ -21,6 +21,10 @@ The Container type model should have properties for:
 
 > In case its different to the body color.
 
+**disposable**
+
+> If the container type is disposable or one-time use, e.g. a bag.
+
 **material stream**
 
 > What kind of waste the container is used for.
@@ -35,7 +39,8 @@ color | [schema:color](https://schema.org/color) | General color as a hex value.
 size | integer | Size in litres.
 shape | text | The shape or type of the container.
 lid color | [schema:color](https://schema.org/color) | Lid-specific color as a hex value.
-material stream |  |
+disposable | boolean | If container is disposable.
+material stream | [Material stream](material-stream.md) | The materials used.
 
 ## Serialisation
 

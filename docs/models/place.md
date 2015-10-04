@@ -24,9 +24,10 @@ e.g. street, locality, country, postcode.
 > To be able to plot locations on maps.
 
 
+
 ## Types
 
-This maps to the schema.org Place type with some extended fields.
+This maps to the [schema.org Place type](http://schema.org/Place) with some extended fields.
 
 
 ## Properties

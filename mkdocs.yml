@@ -1,5 +1,5 @@
 site_name: Waste Service Standards
-site_description: Technical standards for local waste services.
+site_description: Technical standards for local waste and recycling services
 site_favicon: favicon.ico
 repo_url: https://github.com/communitiesuk/waste-service-standards
 
@@ -10,6 +10,8 @@ theme: bootstrap
 extra_css:
   - css/custom.css
 
+# theme_dir: 'custom_theme'
+
 markdown_extensions:
   - markdown_include.include
   - attr_list
@@ -18,19 +20,21 @@ pages:
   - Home: index.md
   - Models:
     - Introduction: models/index.md
-    - Waste service: models/service.md
-    - Round: models/round.md
+    - Waste service: models/waste-service.md
     - Round plan: models/round-plan.md
-    - Container: models/container.md
+    - Round: models/round.md
     - Container type: models/container-type.md
-    - Waste event: models/event.md
+    - Container: models/container.md
+    - Waste event: models/waste-event.md
     - Material stream: models/material-stream.md
     - Place: models/place.md
   - Taxonomies:
     - taxonomies/missed-collections.md
+    - taxonomies/materials.md
     - taxonomies/material-streams.md
     - taxonomies/container-types.md
   - APIs:
     - Waste Services: apis/waste_services.md
     - Places: apis/places.md
+  - Data: data/data-formats.md
 

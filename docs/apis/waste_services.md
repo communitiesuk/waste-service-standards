@@ -31,28 +31,6 @@ Get a list of waste services
 
 
 
-**Response**
-```
-[
-  {
-    "id": 1,
-    "frequency": "weekly",
-    "description": "Please put your recycling box on the street.",
-    "name": "Recycling service",
-    "esd_url": "http://id.esd.org.uk/service/524"
-  },
-  {
-    "id": 2,
-    "frequency": "weekly",
-    "description": "Black bins.",
-    "name": "Refuse",
-    "esd_url": "http://id.esd.org.uk/service/525"
-  }
-]
-```
-
-
-
 
 
 
@@ -112,6 +90,7 @@ Get a single service
   "@type": "WasteService",
   "next_collection": {
     "date": "1 August 2014",
+    "changed_date": "2 August 2015",
     "@type": "Collection",
     "containers": [
       {
@@ -132,7 +111,8 @@ Get a single service
         "@type": "WasteContainer",
         "id": "2140541"
       }
-    ]
+    ],
+    "changed_date_reason": "Bank holiday"
   },
   "frequency": "weekly",
   "available_channel": {
@@ -296,7 +276,6 @@ Get a single event
       "name": "mixed recyclables"
     },
     "shape": "wheelie bin",
-    "cost": "\u00a310",
     "size": "240",
     "reusable": true
   },
@@ -319,11 +298,62 @@ Get a single event
 
 
 
+## Round plans
+
+
+---
+Get a list of [round plans](/models/round-plan)
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/round-plans</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+---
+Get a single round plan
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/round-plans/{roundId}</span>
+</div>
+
+
+
+
+
+**Response**
+```
+{
+  "start_date": "",
+  "@id": "/round-plans/1",
+  "rrule": "",
+  "containers": "/api/containers?round_plan=1",
+  "@type": "RoundPlan"
+}
+```
+
+
+
+
+
+
+
+
 ## Rounds
 
 
 ---
-Get a list of rounds
+Get a list of [rounds](/models/round)
 
 <div class="api-call">
   <span class="rest-method get">get</span>
@@ -371,6 +401,75 @@ Get a single round
     "id": ""
   },
   "events": "/api/events?round=456"
+}
+```
+
+
+
+
+
+
+
+
+## Material streams
+
+
+---
+Get a list of [material streams](/models/material-streams)
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/material-streams</span>
+</div>
+
+
+
+
+
+**Response**
+```
+[
+  {
+    "color": "fd8812",
+    "image": "http://example.com/images/mixed-recycling.png",
+    "@id": "/api/material-streams/mixed-recyclables",
+    "name": "mixed recyclables"
+  },
+  {
+    "color": "",
+    "image": "http://example.com/images/paper.png",
+    "@id": "/api/material-streams/paper",
+    "name": "paper"
+  }
+]
+```
+
+
+
+
+
+
+
+
+
+---
+Get a single material stream
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/material-streams/{streamId}</span>
+</div>
+
+
+
+
+
+**Response**
+```
+{
+  "color": "fd8812",
+  "image": "http://example.com/images/mixed-recycling.png",
+  "name": "Mixed recycling"
 }
 ```
 

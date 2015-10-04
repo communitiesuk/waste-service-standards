@@ -13,17 +13,9 @@ The Event model should have properties for:
 
 > Know when an event happened.
 
-**UPRN**
+**location**
 
-> For recording against specific properties.
-
-**USRN**
-
-> For recording street-level events.
-
-**coordinates**
-
-> For easy geolocation of where the event was recorded.
+> To know what the location information is (property, street, addresss, etc).
 
 **image**
 
@@ -47,13 +39,12 @@ The Event model should have properties for:
 Term     | Mapping | Definition
 ---------|---------|-----------
 type | string | A categorisation of the event.
-start date | string | When the event was took place.
-uprn | string | A unique identifier for a property.
-usrn | string | A unique identifier for a street.
-geo | [schema:geo](https://schema.org/geo) | The location in WGS84 datum.
+start date | [schema:startDate](https://schema.org/startDate) | When the event was took place.
+location | [Place](place.md) | A unique identifier for a property.
 image | [schema:image](https://schema.org/image) | A URL to a related image.
 round | URL | The URL of the round where this event was recorded.
 container_type | [Container type](container-type.md) | The type of container, if relevant.
+
 
 ## Serialisation
 
@@ -68,6 +59,7 @@ container_type | [Container type](container-type.md) | The type of container, if
   <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane" id="schema">
+      <pre><code class="hljs json">{!schemas/waste_event.schema.json!}</code></pre>
     </div>
     <div role="tabpanel" class="tab-pane active" id="json">
       <pre><code class="hljs json">{!examples/event.json!}</code></pre>

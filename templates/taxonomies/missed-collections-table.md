@@ -1,21 +1,21 @@
 
 <table>
 <tr>
-  <th>ID</th>
-  <th>Name</th>
-  <th>Parent</th>
-  <th>Type<sup>1</sup></th>
+  <!-- <th>ID</th> -->
+  <th>Term</th>
+  <th>Sub-term</th>
   <th>Description</th>
-  <th>Synonyms</th>
+  <th>Type<sup>1</sup></th>
+  <!-- <th>Synonyms</th> -->
 </tr>
 {% for code in data.collection_event_types %}
 <tr>
-  <td></td>
-  <td>{{ code.name }}</td>
-  <td>{{ code.parent }}</td>
-  <td>{{ code.service_type }}</td>
+  <!-- <td></td> -->
+  <td>{{ code.level_1 }}</td>
+  <td>{{ code.level_2 }}</td>
   <td>{{ code.description }}</td>
-  <td>{{ code.synonyms }}</td>
+  <td>{{ code.service_type }}</td>
+  <!-- <td>{{ code.synonyms }}</td> -->
 </tr>
 {% endfor %}
 </table>

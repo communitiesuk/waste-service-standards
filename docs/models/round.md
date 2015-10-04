@@ -1,9 +1,13 @@
 
-# Round plan
+# Round
 
 ## Use cases and requirements
 
 The Round model should have properties for:
+
+**name**
+
+> An identifier for this round.
 
 **date**
 
@@ -22,6 +26,10 @@ The Round model should have properties for:
 
 Term     | Mapping | Definition
 ---------|---------|-----------
+name | [schema:name](http://schema.org/name) | Identifer for the round.
+date | Date | When the round took place.
+round plan | [Round plan](round-plan.md) | The round plan this round is based on.
+events | List of [Events](waste-event.md) | Events that happened on the round.
 
 
 ## Serialisation

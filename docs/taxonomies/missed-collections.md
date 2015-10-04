@@ -5,7 +5,7 @@ The table below lists a set of common possible events that can occur during a wa
 
 Many council classifications also divide event types by the service or container type. It is assumed here that it will be possible to categorise the events by:
 
-* service type
+* container type
 * property or street
 
 

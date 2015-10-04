@@ -19,7 +19,7 @@ The Service model should have properties for:
 
 **next collections**
 
-> To know upcoming dates of when upcoming collections will happen, when filtered by property.
+> To know upcoming dates of when upcoming collections will happen, when filtered by property. Also if any adjustments to the scheduled dates are made.
 
 **previous collections**
 
@@ -46,7 +46,7 @@ This WasteService type:
 
 Term     | Mapping | Definition
 ---------|---------|-----------
-name | Text | Name of the service.
+name | [schema:name](http://schema.org/name) | Name of the service.
 frequency | Text | How often it runs, e.g. weekly.
 description | [schema:description](https://schema.org/description) | A short description of the service.
 next collections | Date | List of dates of next collections.
