@@ -1,0 +1,19 @@
+[
+  {
+    "@type": "Place",
+    "@id": "/places/1",
+    "address": {
+      "street_address": "1 Acacia Avenue",
+      "locality": "Anytown",
+      "region": "Anyshire",
+      "postcode": "AB1 2CD"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.75",
+      "longitude": "73.98"
+    },
+    "uprn": "123456789012",
+    "usrn": "123456789012"
+  }
+]

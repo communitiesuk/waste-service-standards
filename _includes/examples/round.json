@@ -1,0 +1,11 @@
+{
+  "@id": "/rounds/456",
+  "date": "",
+  "plan": {
+    "id": "",
+    "start_date": "",
+    "rrule": "",
+    "containers": "/api/containers?round_plan=1"
+  },
+  "events": "/api/events?round=456"
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "event_type": "Not presented",
+    "date_created": "2014-05-23T20:00",
+    "uprn": "123456789012",
+    "usrn": "123456789012",
+    "image": "http://example.com/images/123.png",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.75",
+      "longitude": "73.98"
+    }
+  },
+  {
+    "event_type": "Too heavy",
+    "date_created": "2014-05-23T20:00",
+    "uprn": "123456789012",
+    "usrn": "123456789012",
+    "image": "http://example.com/images/123.png",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "45.75",
+      "longitude": "53.98"
+    }
+  }
+
+]

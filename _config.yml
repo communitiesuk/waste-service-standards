@@ -1,0 +1,18 @@
+name : Waste Service Standards
+brand : Waste Service Standards
+description : Technical standards for local waste and recycling services
+keyword : 
+url : http://127.0.0.1:4000
+email : paul@folklabs.com
+twitter : 
+github : https://github.com/communitiesuk/waste-service-standards
+author : Paul Mackay
+analytics : 
+year : 2015
+exclude :
+  - node_modules
+
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]

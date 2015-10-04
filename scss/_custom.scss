@@ -1,0 +1,83 @@
+// h1, h2, h3, h4, h5, h6 {
+// 	// font-weight: 200;
+// 	@media #{$medium-up} {
+// 	}
+// 	@media #{$large-up} {
+// 	}
+// }
+
+.content-region {
+  position: relative;
+  top: 45px;
+}
+
+footer.row {
+  margin-top: 40px;
+}
+
+#toc li a {
+  font-size: rem-calc(16);
+}
+
+//helper for font weight
+//Open+Sans:400,700,800|Raleway:400,200,700
+// .font-light {
+// 	font-weight: 200;
+// }
+// .font-weight-normal {
+// 	font-weight: 400;
+// }
+// .font-bold {
+// 	font-weight: 700;
+// }
+// .font-heavy {
+// 	font-weight: 800;
+// }
+
+.logo {
+  padding: 10px 0 30px 0;
+}
+
+
+.api-call {
+  height: 30px;
+  margin-bottom: 20px;
+  /*padding: 5px;*/
+
+  background-color: #eee;
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+.rest-method {
+  height: 100%;
+  display: inline-block;
+  padding: 0 5px 0;
+  /*float: right;*/
+
+  /*background-color: #eee;*/
+  color: #fff;
+  font-size: 14pt;
+  text-transform: uppercase;
+}
+
+.rest-method.get {
+  background-color: #0f6ab4;
+}
+.rest-method.post {
+  background-color: #10a54a;
+}
+.rest-method.put {
+  background-color: #c5862b;
+}
+.rest-method.delete {
+  background-color: #a41e22;
+}
+
+
+.highlight {
+  margin-bottom: 30px;
+
+  font-size: 0.8rem;
+}
+
+

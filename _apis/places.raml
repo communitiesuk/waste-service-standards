@@ -1,0 +1,38 @@
+#%RAML 0.8
+---
+title: Places API
+version: v0.1
+baseUri: http://api.council.gov.uk/
+
+# documentation:
+#   - title: Introduction
+#     content: |
+#       This API offers a core set of resources and operations for interacting with places and address data.
+
+/places:
+  displayName: Places
+  description: A Place is an entity with a physical location.
+  type: collection
+  get:
+    description: Get a list of places
+    queryParameters:
+      uprn:
+        type: string
+        description: Limit results to those related to the property with this UPRN.
+      usrn:
+        type: string
+        description: Limit results to those related to the street with this USRN.
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include ../_includes/examples/places.json
+
+  /{placeId}:
+    get:
+      description: Get a single place
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include ../_includes/examples/place.json

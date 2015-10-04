@@ -1,0 +1,20 @@
+
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="tabs" data-tab>
+    <li class="tab-title active" role="presentation"><a href="#example" aria-controls="schema" role="tab" data-toggle="tab">JSON</a></li>
+    <li class="tab-title" role="presentation" class="active"><a href="#schema" aria-controls="json" role="tab" data-toggle="tab">JSON Schema</a></li>
+  </ul>
+
+  <div class="tabs-content">
+    <div class="content active" id="example">
+  {% highlight json %}
+  {% include examples/{{ page.model }}.json %}
+  {% endhighlight %}
+    </div>
+    <div class="content" id="schema">
+      <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+    </div>
+  </div>
+</div>

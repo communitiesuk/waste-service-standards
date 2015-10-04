@@ -1,0 +1,14 @@
+[
+  {
+    "@id": "/api/material-streams/mixed-recyclables",
+    "name": "mixed recyclables",
+    "color": "fd8812",
+    "image": "http://example.com/images/mixed-recycling.png"
+  },
+  {
+    "@id": "/api/material-streams/paper",
+    "name": "paper",
+    "color": "",
+    "image": "http://example.com/images/paper.png"
+  }
+]

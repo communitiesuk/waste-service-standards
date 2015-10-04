@@ -1,0 +1,40 @@
+{
+  "fields": [
+    {
+      "name": "uprn",
+      "title": "UPRN",
+      "type": "integer",
+      "description": "The Unique Property Reference Number for the location.",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "round_plan",
+      "title": "Round plan",
+      "type": "string",
+      "description": "An identifier for a round plan, or set of properties visited by a crew.",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "container_type",
+      "title": "Container type",
+      "type": "string",
+      "description": "The type of container at the property or place.",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "schedule",
+      "title": "Schedule",
+      "type": "string",
+      "description": "For example, alternate weekly on Monday.",
+      "constraints": {
+        "required": true
+      }
+    }
+  ]
+}
