@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Address
-model: Address
+model: address
 ---
 
 # Address
