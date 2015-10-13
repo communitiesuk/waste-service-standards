@@ -18,7 +18,7 @@ e.g. street, locality, country, postcode.
 
 **UPRN**
 
-> To link an address to the property universal ID.
+> Defines a unique property ID.
 
 **USRN**
 
@@ -39,7 +39,7 @@ This maps to the [schema.org Place type](http://schema.org/Place) with some exte
 
 Term     | Mapping | Definition
 ---------|---------|-----------
-address | [schema:address](https://schema.org/address) | Physical address of the item.
+address | [Address](address.md) | Postal address of the item.
 uprn | Text | A unique identifier for a property.
 usrn | Text | A unique identifier for a street.
 geo | [schema:geo](https://schema.org/geo) | The location in WGS84 datum.

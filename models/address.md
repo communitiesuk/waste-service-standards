@@ -28,5 +28,3 @@ postcode | [landreg:postcode](http://landregistry.data.gov.uk/def/common/postcod
 
 {% include serialisation.html %}
 
-
-

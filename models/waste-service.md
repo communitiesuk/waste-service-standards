@@ -34,10 +34,6 @@ The Service model should have properties for:
 
 > What types of containers (and in relation, materials) are collected by this service.
 
-**rounds**
-
-> The schedules and routes of trucks collecting the materials handled by this service.
-
 
 ## Types
 
@@ -52,8 +48,8 @@ This WasteService type:
 Term     | Mapping | Definition
 ---------|---------|-----------
 name | [schema:name](http://schema.org/name) | Name of the service.
-frequency | Text | How often it runs, e.g. weekly.
 description | [schema:description](https://schema.org/description) | A short description of the service.
+frequency | Text | How often it runs, e.g. weekly.
 next collections | Date | List of dates of next collections.
 previous collections | Date | List of dates of previous collections.
 container types | [Container type](container-type.md) | The container types that are collected.

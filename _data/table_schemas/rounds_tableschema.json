@@ -1,0 +1,58 @@
+{
+  "fields": [
+    {
+      "name": "uprn",
+      "title": "UPRN",
+      "type": "integer",
+      "description": "The Unique Property Reference Number for the location.",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "service",
+      "title": "Service",
+      "type": "string",
+      "description": "The type of service that is provided. e.g. Recycling",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "schedule",
+      "title": "Schedule",
+      "type": "string",
+      "description": "For example, alternate weekly on Monday.",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "round",
+      "title": "Round",
+      "type": "string",
+      "description": "An identifier for a round, or set of properties visited by a crew.",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "round_sequence",
+      "title": "Round sequence",
+      "type": "integer",
+      "description": "The order of collections in the round.",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "container_type",
+      "title": "Container type",
+      "type": "string",
+      "description": "The type of container at the property or place.",
+      "constraints": {
+        "required": false
+      }
+    }
+  ]
+}

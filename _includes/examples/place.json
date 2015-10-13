@@ -2,7 +2,8 @@
   "@type": "Place",
   "@id": "/places/1",
   "address": {
-    "street_address": "1 Acacia Avenue",
+    "pao": "1",
+    "street": "Acacia Avenue",
     "locality": "Anytown",
     "region": "Anyshire",
     "postcode": "AB1 2CD"

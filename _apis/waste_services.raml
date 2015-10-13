@@ -52,6 +52,16 @@ traits:
           application/json:
             example: !include ../_includes/examples/service.json
 
+/tasks:
+  displayName: Tasks
+  type: collection
+  get:
+    description: Get a list of tasks
+    is: [ paged ]
+    queryParameters:
+      date_range:
+        type: string
+        description: Limit results to those tasks that were started between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.
 
 /events:
   displayName: Events
@@ -93,65 +103,65 @@ traits:
             application/json:
               example: !include ../_includes/examples/event.json
 
-/round-plans:
-  displayName: Round plans
-  description: A Round plan describes a route on which a set of containers are processed and the schedule it runs on.
-  type: collection
-  get:
-    description: Get a list of round plans
-    # responses:
-    #   200:
-    #     body:
-    #       application/json:
-            # example: !include ../_includes/examples/rounds.json
-  /{roundId}:
-    get:
-      description: Get a single round plan
-      responses:
-        200:
-          body:
-            application/json:
-              example: !include ../_includes/examples/round_plan.json
+# /round-plans:
+#   displayName: Round plans
+#   description: A Round plan describes a route on which a set of containers are processed and the schedule it runs on.
+#   type: collection
+#   get:
+#     description: Get a list of round plans
+#     # responses:
+#     #   200:
+#     #     body:
+#     #       application/json:
+#             # example: !include ../_includes/examples/rounds.json
+#   /{roundId}:
+#     get:
+#       description: Get a single round plan
+#       responses:
+#         200:
+#           body:
+#             application/json:
+#               example: !include ../_includes/examples/round_plan.json
 
-/rounds:
-  displayName: Rounds
-  description: A Round is a execution of a Round plan on a given day.
+# /rounds:
+#   displayName: Rounds
+#   description: A Round is a execution of a Round plan on a given day.
+#   type: collection
+#   get:
+#     description: Get a list of [rounds](/models/round)
+#     responses:
+#       200:
+#         body:
+#           application/json:
+#             # example: !include ../_includes/examples/rounds.json
+#   /{roundId}:
+#     get:
+#       description: Get a single round
+#       responses:
+#         200:
+#           body:
+#             application/json:
+#               example: !include ../_includes/examples/round.json
+
+/materials:
+  displayName: Materials
+  description: A material is a category of material items that can be collected.
   type: collection
   get:
-    description: Get a list of [rounds](/models/round)
+    description: Get a list of [materials](/models/materials)
     responses:
       200:
         body:
           application/json:
-            # example: !include ../_includes/examples/rounds.json
-  /{roundId}:
+            # example: !include ../_includes/examples/materials.json
+  /{id}:
     get:
-      description: Get a single round
+      description: Get a single material
       responses:
         200:
           body:
             application/json:
-              example: !include ../_includes/examples/round.json
-
-/material-streams:
-  displayName: Material streams
-  description: A material stream is a type of materials that can be collected.
-  type: collection
-  get:
-    description: Get a list of [material streams](/models/material-streams)
-    responses:
-      200:
-        body:
-          application/json:
-            example: !include ../_includes/examples/material_streams.json
-  /{streamId}:
-    get:
-      description: Get a single material stream
-      responses:
-        200:
-          body:
-            application/json:
-              example: !include ../_includes/examples/material_stream.json
+              example: !include ../_includes/examples/material.json
 
 
 

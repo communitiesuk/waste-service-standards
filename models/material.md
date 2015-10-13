@@ -8,7 +8,7 @@ model: material
 
 ## Use cases and requirements
 
-The Material  model should have properties for:
+The Material model should have properties for:
 
 **name**
 
@@ -28,7 +28,7 @@ The Material  model should have properties for:
 Term     | Mapping | Definition
 ---------|---------|-----------
 name | string | The name of the material.
-color | [schema:color](https://schema.org/color) | The related colour.
+color | [schema:color](https://schema.org/color) | The matching material stream colour.
 
 
 ## Serialisation

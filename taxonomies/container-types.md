@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: 
+title: Container types
 ---
 
 # Container types
 
-The table below lists standard names for typical waste containers.
+The table below lists common names for typical waste containers.
 
 LA name | Name  | Description | Image<sup>1</sup>
 --------|-------|------------ |------------------
