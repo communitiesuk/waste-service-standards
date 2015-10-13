@@ -1,10 +1,10 @@
 ---
 layout: doc
-title: Container
-model: container
+title: Waste container
+model: waste_container
 ---
 
-# Container
+# Waste container
 
 ## Use cases and requirements
 
