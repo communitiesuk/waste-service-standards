@@ -31,5 +31,5 @@ Model | Description
 [Round plan](round-plan.md) | A vehicle emptying containers from a set of properties on a repeating schedule.
 [Round](round.md) | An instance of a round plan that has been executed on a particular date.
 
-![Entity Relationships]({{ site.url }}/images/waste_services_erd.png)
+![Entity Relationships]({{ site.baseurl }}/images/waste_services_erd.png)
 -->

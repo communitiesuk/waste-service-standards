@@ -15,8 +15,8 @@
     <!-- Fount Awesome -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ site.url }}/css/style.css" />
-    <link rel="stylesheet" href="{{ site.url }}/css/syntax.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css" />
 
     <!-- Ah, the favicon.
     ================================================== -->
@@ -27,7 +27,7 @@
     ============================== -->
     <meta property="og:title" content="{{ page.title }}"/>
     <meta property="og:site_name" content=" - {{ site.name }}"/>
-    <meta property="og:url" content=" - {{ site.url }}"/>
+    <meta property="og:url" content=" - {{ site.baseurl }}"/>
     <meta property="og:description" content="{{ page.description }}"/>
     <meta property="og:image" content="{{ page.imageurl }}"/>
     <meta name="twitter:card" content="summary">
@@ -39,7 +39,7 @@
     <!-- modernizr
     ================================================== -->
     
-    <script src="{{ site.url }}/bower_components/modernizr/modernizr.js"></script>
+    <script src="{{ site.baseurl }}/bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
 
@@ -56,7 +56,7 @@
         <nav class="top-bar" data-topbar role="navigation">
           <ul class="title-area">
             <li class="name">
-              <h1><a href="{{ site.url }}">{{ site.brand }}</a></h1>
+              <h1><a href="{{ site.baseurl }}/">{{ site.brand }}</a></h1>
             </li>
              <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -94,7 +94,7 @@
                 </ul>
             </section>
 
-            <h1><a href="{{ site.url }}">{{ site.brand }}</a></h1>-->
+            <h1><a href="{{ site.baseurl }}">{{ site.brand }}</a></h1>-->
 
         </div>
     </header>

@@ -2,7 +2,7 @@ name : Waste Service Standards
 brand : Waste Service Standards
 description : Technical specifications for local waste and recycling services
 keyword : 
-url : //communitiesuk.github.io/waste-service-standards
+baseurl : /waste-service-standards
 email : paul@folklabs.com
 twitter : 
 github : https://github.com/communitiesuk/waste-service-standards

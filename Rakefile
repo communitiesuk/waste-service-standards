@@ -1,6 +1,6 @@
 
 task :serve do
-  sh "bundle exec jekyll serve --watch"
+  sh "bundle exec jekyll serve --watch --baseurl ''"
 end
 
 task :default => :serve
