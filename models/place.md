@@ -28,6 +28,10 @@ e.g. street, locality, country, postcode.
 
 > To be able to plot locations on maps.
 
+**attributes**
+
+> Custom data items recorded against a property, e.g. there is a dog.
+
 
 
 ## Types
@@ -43,6 +47,7 @@ address | [Address](address.md) | Postal address of the item.
 uprn | Text | A unique identifier for a property.
 usrn | Text | A unique identifier for a street.
 geo | [schema:geo](https://schema.org/geo) | The location in WGS84 datum.
+attributes | [schema:PropertyValueSpecification](http://schema.org/PropertyValueSpecification) | A custom property definition.
 
 
 ## Serialisation

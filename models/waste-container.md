@@ -36,7 +36,7 @@ The Container model should have properties for:
 Term     | Mapping | Definition
 ---------|---------|-----------
 id | string | Unique identifer.
-type | [Container type](container-type.md) | The type of container.
+type | [Container type](container-type.html) | The type of container.
 barcode | integer | A barcode number.
 RFID | integer | A RFID tag number.
 status | string | The status of the container.

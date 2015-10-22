@@ -1,35 +1,41 @@
-level_1,level_2,description,service_type,synonyms,issues
-Not presented,,The container was not presented on the street.,service,Non-Presentation,
-Incorrectly presented,,,service,Wrong bin (wrong residual / recycling week),Is this for wrong bins?
-Too heavy,,The container was too heavy to empty.,service,Overweight Bin / Bin too heavy (unsafe to lift),
-Excess waste,,There is too much waste to collect.,service,,
-,Lid open,"The container was too full, the lid would not close properly.",service,Overflowing Bin / Lid up,
-,Side waste present,Extra refuse was present at the side of the bins.,service,Sidewaste / Side waste (bin emptied but side waste left),
-Contaminated,,The contents was contaminated.,service,Incorrect items in bin (contaminated),
-,Food waste,Contaminated with food waste,service,,
-,Garden waste,Contaminated with garden waste,service,,
-,Refuse waste,Contaminated with refuse waste,service,,
-,Bulky waste,Contaminated with bulky waste,service,,
-,Rubble/DIY,Contaminated with rubble,service,,
-,Commercial,Contaminated with commercial waste,service,,
-,Turf/soil,Contaminated with turf or soil,service,,
-,Animal bedding,Contaminated with animal bedding,service,,
-Inaccessible container store,,It was not possible to access the bins.,service,Inaccessible Bin Store,
-Damaged,,A bin was damaged.,service,Bin damaged / Damaged bin (unsafe to lift),
-,Lid,,,,
-,Wheels,,,,
-,Body,,,,
-Container lost in vehicle,,A bin was lost inside the vehicle.,service,Receptacle Lost in Vehicle,
-Not on scheme,,The property was not on the service.,service,,
-Inaccessible road,,The road could not be accessed.,service,,is this street or property? Could it be general?
-Road closure,,The road was closed.,service,,is this street or property? Could it be general?
-Querying assisted,,,service,,?
-Risk of injury,,"The containers are in the wrong location, a dog made access difficult, etc.",,,
-Street completed,,All properties on this street have been visited.,general,,
-Blocked by vehicles,,A street cannot be accessed due to vehicles blocking access.,general,,
-Roadworks,,Roadworks are blocking the street.,general,,
-Gate locked,,A street cannot be accessed due to a gate being locked.,general,,street gates?
-Part access,,,general,,?
-Partly completed street,,,general,,when?
-Alarm activated,,A vehicle alarm was activated.,general,,?
-Breakdown,,The waste collection truck broke down.,general,,
+level_1,level_2,description,ui string,type,apply to bin,synonyms,issues
+Not presented,,The bin was not presented on the street.,Not emptied: 23 November. Sorry we couldn't empty your bins – they weren't left out for us to empty.,data,yes,Non-Presentation,
+Wrongly presented,,There was a problem with the bin as presented.,Not emptied: 23 November. Sorry we didn't empty your bins – they were the wrong bins for this week's recycling collection.,data,yes,Wrong bin (wrong residual / recycling week),Is this for wrong bins?
+Too heavy,,The container was too heavy to empty.,Not emptied: 23 November. Sorry we couldn't empty your bins – the contents were too heavy.,data,yes,Overweight Bin / Bin too heavy (unsafe to lift),
+Excess waste,,There is too much waste to collect.,Not emptied: 23 November. Sorry we couldn't empty your bins – there was too much waste for us to collect.,data,yes,,
+,Lid open,"The container was too full, the lid would not close properly.",Not emptied: 23 November. Sorry we didn't empty your bins – they were too full so the lid wouldn't close properly.,data,yes,Overflowing Bin / Lid up,
+,Side waste present,Extra refuse was present at the side of the bins.,Not emptied: 23 November. Sorry we didn't empty your bins – there was extra rubbish left by the side of your bins. [INFO: Find out how to avoid bin contamination here],data,yes,Sidewaste / Side waste (bin emptied but side waste left),
+Contaminated,,The contents was contaminated.,Not emptied: 23 November. Sorry we didn't empty your bins – the contents were contaminated. [INFO: Find out how to avoid bin contamination here],data,yes,Incorrect items in bin (contaminated),
+,Food waste,Contaminated with food waste,Not emptied: 23 November. Sorry we didn't empty your bins – the contents were contaminated with food waste. [INFO: Find out what to do with food waste here],data,yes,,
+,Garden waste,Contaminated with garden waste,Not emptied: 23 November. Sorry we didn't empty your bins – the contents were contaminated with garden waste. [INFO: Find out what to do with garden waste here],data,yes,,
+,Refuse waste,Contaminated with refuse waste,Not emptied: 23 November. Sorry we didn't empty your bins – the contents were contaminated with refuse waste. [INFO: Find out what to do with refuse waste here],data,yes,,
+,Bulky waste,Contaminated with bulky waste,Not emptied: 23 November. Sorry we didn't empty your bins – the contents were contaminated with bulky waste. [INFO: Find out what to do with bulky waste here],data,yes,,
+,Rubble/DIY,Contaminated with rubble,Not emptied: 23 November. Sorry we didn't empty your bins – the contents were contaminated with rubble. [INFO: Find out what to do with rubble here],data,yes,,
+,Commercial,Contaminated with commercial waste,Not emptied: 23 November. Sorry we didn't empty your bins – the contents were contaminated with commercial waste. [INFO: Find out what to do with commercial waste here],data,yes,,
+,Turf/soil,Contaminated with turf or soil,Not emptied: 23 November. Sorry we didn't empty your bins – the contents were contaminated with turf or soil. [INFO: Find out what to do with turf or soil here],data,yes,,
+,Animal bedding,Contaminated with animal bedding,Not emptied: 23 November. Sorry we didn't empty your bins – the contents were contaminated with animal bedding. [INFO: Find out what to do with animal bedding here],data,yes,,
+Inaccessible bin store,,It was not possible to access the bins.,Not emptied: 23 November. Sorry we couldn't empty your bins – it wasn't possible to access your bin store.,data,yes,Inaccessible Bin Store,
+Damaged,,A bin was damaged.,Not emptied: 23 November. Sorry we couldn't empty your bins – your bin was damaged.,data,yes,Bin damaged / Damaged bin (unsafe to lift),
+,Lid,Damaged lid.,"Not emptied: 23 November. Sorry we couldn't empty your bins – the lid of your bin was damaged. Don't worry, we'll replace it soon.",data,yes,,
+,Wheels,Damaged wheels.,"Not emptied: 23 November. Sorry we couldn't empty your bins – the wheels of your bin are damaged. Don't worry, we'll replace it soon.",data,yes,,
+,Body,Damaged body.,"Not emptied: 23 November. Sorry we couldn't empty your bins – the body of your bin was damaged. Don't worry, we'll replace it soon.",data,yes,,
+Excess bins,,Too many bins are at property.,Not emptied: 23 November. Sorry we couldn't empty your bins – there were too many bins on your property.,data,yes,,
+Bin from other council,,Bin is associated with a different council.,"Not emptied: 23 November. Sorry we didn't empty your bins – your bin is from a different council. If this sounds wrong, contact us immediately.",data,yes,,
+Bin lost in vehicle,,A bin was lost inside the vehicle.,Missing bin: 23 November. Sorry your bin is missing – it was lost inside our vehicle. Don't worry – we'll replace it soon.,data,yes,Receptacle Lost in Vehicle,
+Not on scheme,,The property was not on the service.,"Not emptied: 23 November. Sorry we didn't empty your bins – your property is not currently in our records. If this sounds wrong, contact us immediately.",data,yes,,
+Querying assisted,,,???,data,yes,,?
+Safety concern,,"The containers are in the wrong location, a dog made access difficult, etc.","Not emptied: 23 November. Sorry we couldn't empty your bins – there was a risk of injury because the containers were in the wrong location.
+Not emptied: 23 November. Sorry we couldn't empty your bins – there was a risk of injury because a dog blocked our access.",data,yes,,
+,Street,,,,no,,
+,Customer,,,,no,,
+,Animal,,,,no,,
+Street completed,,All properties on this street have been visited.,Emptied: 23 November. We emptied all the bins in your street.,info,no,,
+Blocked by vehicles,,A street cannot be accessed due to vehicles blocking access.,Not emptied: 23 November. Sorry we couldn't empty your bins – a vehicle blocked our access.,problem,no,,
+Roadworks,,Roadworks are blocking the street.,Not emptied: 23 November. Sorry we couldn't empty your bins – roadworks blocked our access.,problem,no,,
+Gate locked,,A street cannot be accessed due to a gate being locked.,Not emptied: 23 November. Sorry we couldn't empty your bins – a locked gate blocked our access.,problem,no,,street gates?
+Part access,,,???,problem,no,,?
+Partly completed street,,,???,problem,no,,when?
+Alarm activated,,A vehicle alarm was activated.,Not emptied: 23 November. Sorry we couldn't empty your bins – a vehicle alarm was activated.,problem,no,,?
+Breakdown,,The waste collection truck broke down.,Not emptied: 23 November. Sorry we couldn't empty your bins – our truck broke down.,problem,no,,
+Road closure,,The road was closed.,Not emptied: 23 November. Sorry we couldn't empty your bins – a road was closed which blocked our access.,problem,no,,
+Inaccessible road,,The road could not be accessed.,Not emptied: 23 November. Sorry we couldn't empty your bins – we couldn't access your road.,problem,no,,

@@ -45,10 +45,10 @@ Term     | Mapping | Definition
 ---------|---------|-----------
 type | string | A categorisation of the event.
 start date | [schema:startDate](https://schema.org/startDate) | When the event was took place.
-location | [Place](place.md) | A unique identifier for a property.
+location | [Place](place.html) | A unique identifier for a property.
 image | [schema:image](https://schema.org/image) | A URL to a related image.
 round | URL | The URL of the round where this event was recorded.
-container_type | [Container type](container-type.md) | The type of container, if relevant.
+container_type | [Container type](container-type.html) | The type of container, if relevant.
 
 
 ## Serialisation

@@ -45,7 +45,7 @@ size | integer | Size in litres.
 shape | text | The shape or type of the container.
 lid color | [schema:color](https://schema.org/color) | Lid-specific color as a hex value.
 disposable | boolean | If container is disposable.
-material stream | [Material stream](material-stream.md) | The materials used.
+material | [Material](material.html) | The materials used.
 
 ## Serialisation
 
