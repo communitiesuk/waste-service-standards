@@ -38,6 +38,7 @@ The Task model should have properties for:
 
 This Task type extends from the [Action](http://schema.org/Action) schema.org type.
 
+
 ### Sub-types
 
 Just as Action and other common types have a number of sub-types, here are specific Task sub-types for different kinds of services councils provide:

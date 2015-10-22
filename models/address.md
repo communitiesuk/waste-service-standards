@@ -4,7 +4,7 @@ title: Address
 model: address
 ---
 
-# Address
+# BS7666Address
 
 ## Types
 

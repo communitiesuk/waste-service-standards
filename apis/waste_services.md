@@ -61,25 +61,23 @@ The [ESD Standards](http://standards.esd.org.uk) define all the categories of se
     {
       "color": "black",
       "image": "",
-      "material_stream": {
+      "shape": "wheelie bin",
+      "materials": {
         "@id": "/waste/material-streams/mixed-recycling",
         "name": "Mixed recyclables"
       },
-      "shape": "wheelie bin",
       "@type": "ContainerType",
-      "lid_color": "green",
-      "size": "240L"
+      "lid_color": "green"
     },
     {
       "color": "brown",
-      "image": "",
-      "material_stream": {
+      "shape": "caddy",
+      "materials": {
         "@id": "/waste/material-streams/food-waste",
         "name": "Food waste"
       },
-      "shape": "caddy",
       "@type": "ContainerType",
-      "size": "40L"
+      "image": ""
     }
   ],
   "service_operator": {
@@ -99,21 +97,21 @@ The [ESD Standards](http://standards.esd.org.uk) define all the categories of se
     "containers": [
       {
         "status": "in_service",
+        "id": "2140541",
         "type": {
           "color": "black",
-          "image": "",
           "shape": "wheelie bin",
-          "material_streams": [
+          "materials": [
             {
               "@id": "/waste/material-streams/mixed-recycling",
               "name": "Mixed recyclables"
             }
           ],
-          "lid_color": "green",
-          "size": "240L"
+          "image": "",
+          "lid_color": "green"
         },
         "@type": "WasteContainer",
-        "id": "2140541"
+        "size": "240L"
       }
     ],
     "changed_date_reason": "Bank holiday"
@@ -136,7 +134,26 @@ The [ESD Standards](http://standards.esd.org.uk) define all the categories of se
   },
   "last_collection": {
     "date": "23 July 2015",
-    "round": "/rounds/123",
+    "@type": "Collection",
+    "containers": [
+      {
+        "status": "in_service",
+        "type": {
+          "color": "black",
+          "shape": "wheelie bin",
+          "materials": [
+            {
+              "@id": "/waste/material-streams/mixed-recycling",
+              "name": "Mixed recyclables"
+            }
+          ],
+          "image": "",
+          "lid_color": "green"
+        },
+        "@type": "WasteContainer",
+        "id": "2140541"
+      }
+    ],
     "events": [
       {
         "type": "Not presented",
@@ -153,33 +170,40 @@ The [ESD Standards](http://standards.esd.org.uk) define all the categories of se
         "@type": "WasteEvent",
         "container_color": "black"
       }
-    ],
-    "containers": [
-      {
-        "status": "in_service",
-        "type": {
-          "color": "black",
-          "image": "",
-          "shape": "wheelie bin",
-          "material_streams": [
-            {
-              "@id": "/waste/material-streams/mixed-recycling",
-              "name": "Mixed recyclables"
-            }
-          ],
-          "lid_color": "green",
-          "size": "240L"
-        },
-        "@type": "WasteContainer",
-        "id": "2140541"
-      }
-    ],
-    "@type": "Collection"
+    ]
   },
   "id": 1,
   "esd_url": "http://id.esd.org.uk/service/1130"
 }
 {% endhighlight %}
+
+
+
+
+
+
+
+
+<h2 id="Tasks">Tasks</h2>
+
+
+<hr/>
+<h4>Get a list of tasks</h4>
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/tasks</span>
+</div>
+
+
+**Query parameters**
+
+Name | Type | Description
+-----|------|------------
+<tt>page</tt> | number | 
+<tt>date_range</tt> | string | Limit results to those tasks that were started between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.
+
+
 
 
 
@@ -207,10 +231,8 @@ Name | Type | Description
 <tt>page</tt> | number | 
 <tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
 <tt>usrn</tt> | string | Limit results to those related to the street with this USRN.
-<tt>type</tt> | string | Limit results to those with a matching type, e.g. "Not presented".
 <tt>start_date</tt> | date | Limit results to those created on or after this start date.
 <tt>end_date</tt> | date | Limit results to those created before this end date.
-<tt>round</tt> | string | Limit results to those recorded against this round.
 
 
 
@@ -275,23 +297,21 @@ Name | Type | Description
   "image": "http://example.com/images/123.png",
   "container_type": {
     "color": "#fff",
-    "material_stream": {
-      "@id": "/api/material-streams/mixed-recyclables",
-      "name": "mixed recyclables"
-    },
     "shape": "wheelie bin",
-    "size": "240",
+    "materials": {
+      "@id": "/api/materials/paper",
+      "name": "paper"
+    },
     "reusable": true
   },
   "@type": "WasteEvent",
   "uprn": "123456789012",
-  "date_created": "2014-05-23T20:00",
   "geo": {
     "latitude": "40.75",
     "@type": "GeoCoordinates",
     "longitude": "73.98"
   },
-  "round": "/rounds/123"
+  "start_date": "2014-05-23T20:00"
 }
 {% endhighlight %}
 
@@ -302,15 +322,15 @@ Name | Type | Description
 
 
 
-<h2 id="Round plans">Round plans</h2>
+<h2 id="Materials">Materials</h2>
 
 
 <hr/>
-<h4>Get a list of round plans</h4>
+<h4>Get a list of materials</h4>
 
 <div class="api-call">
   <span class="rest-method get">get</span>
-  <span>/round-plans</span>
+  <span>/materials</span>
 </div>
 
 
@@ -324,144 +344,11 @@ Name | Type | Description
 
 
 <hr/>
-<h4>Get a single round plan</h4>
+<h4>Get a single material</h4>
 
 <div class="api-call">
   <span class="rest-method get">get</span>
-  <span>/round-plans/{roundId}</span>
-</div>
-
-
-
-
-
-**Response**
-{% highlight json %}
-{
-  "start_date": "",
-  "@id": "/round-plans/1",
-  "rrule": "",
-  "containers": "/api/containers?round_plan=1",
-  "@type": "RoundPlan"
-}
-{% endhighlight %}
-
-
-
-
-
-
-
-
-<h2 id="Rounds">Rounds</h2>
-
-
-<hr/>
-<h4>Get a list of [rounds](/models/round)</h4>
-
-<div class="api-call">
-  <span class="rest-method get">get</span>
-  <span>/rounds</span>
-</div>
-
-
-
-
-
-**Response**
-{% highlight json %}
-{}
-{% endhighlight %}
-
-
-
-
-
-
-
-
-
-<hr/>
-<h4>Get a single round</h4>
-
-<div class="api-call">
-  <span class="rest-method get">get</span>
-  <span>/rounds/{roundId}</span>
-</div>
-
-
-
-
-
-**Response**
-{% highlight json %}
-{
-  "date": "",
-  "@id": "/rounds/456",
-  "plan": {
-    "start_date": "",
-    "rrule": "",
-    "containers": "/api/containers?round_plan=1",
-    "id": ""
-  },
-  "events": "/api/events?round=456"
-}
-{% endhighlight %}
-
-
-
-
-
-
-
-
-<h2 id="Material streams">Material streams</h2>
-
-
-<hr/>
-<h4>Get a list of [material streams](/models/material-streams)</h4>
-
-<div class="api-call">
-  <span class="rest-method get">get</span>
-  <span>/material-streams</span>
-</div>
-
-
-
-
-
-**Response**
-{% highlight json %}
-[
-  {
-    "color": "fd8812",
-    "image": "http://example.com/images/mixed-recycling.png",
-    "@id": "/api/material-streams/mixed-recyclables",
-    "name": "mixed recyclables"
-  },
-  {
-    "color": "",
-    "image": "http://example.com/images/paper.png",
-    "@id": "/api/material-streams/paper",
-    "name": "paper"
-  }
-]
-{% endhighlight %}
-
-
-
-
-
-
-
-
-
-<hr/>
-<h4>Get a single material stream</h4>
-
-<div class="api-call">
-  <span class="rest-method get">get</span>
-  <span>/material-streams/{streamId}</span>
+  <span>/materials/{id}</span>
 </div>
 
 
@@ -472,8 +359,8 @@ Name | Type | Description
 {% highlight json %}
 {
   "color": "fd8812",
-  "image": "http://example.com/images/mixed-recycling.png",
-  "name": "Mixed recycling"
+  "image": "http://example.com/images/paper.png",
+  "name": "Paper"
 }
 {% endhighlight %}
 

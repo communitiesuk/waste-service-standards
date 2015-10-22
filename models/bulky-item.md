@@ -4,7 +4,7 @@ title: Bulky item
 model: bulky_item
 ---
 
-# Item
+# Bulky item
 
 ## Use cases and requirements
 

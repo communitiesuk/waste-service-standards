@@ -1,0 +1,24 @@
+{
+  "name": "Empty Black 240L",
+  "description": "",
+  "status": "active",
+  "location": {
+    "@type": "Place",
+    "@id": "/places/1",
+    "address": {
+      "@type": "BS7666Address",
+      "paon": "1",
+      "street": "Acacia Avenue",
+      "locality": "Anytown",
+      "region": "Anyshire",
+      "postcode": "AB1 2CD"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.75",
+      "longitude": "73.98"
+    },
+    "uprn": "123456789012",
+    "usrn": "12345678"
+  }
+}

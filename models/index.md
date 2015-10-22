@@ -11,12 +11,12 @@ This gives an overview of the data model entities:
 
 Model | Description
 ------|------------
-[Waste service](waste-service.md) | A waste or recycling service provided by the council for citizens.
-[Waste event](waste-event.md) | An issue or check that is recorded during a round.
 [Container type](container-type.md) | What types of containers are used by the services.
-[Waste container](waste-container.md) | Where materials are stored for collection.
 [Material](material.md) | The types of materials that can be collected.
 [Task](task.md) | A unit of work as part of scheduled rounds or resulting from ad-hoc requests.
+[Waste container](waste-container.md) | Where materials are stored for collection.
+[Waste event](waste-event.md) | An issue or check that is recorded during a round.
+[Waste service](waste-service.md) | A waste or recycling service provided by the council for citizens.
 
 
 ## Places

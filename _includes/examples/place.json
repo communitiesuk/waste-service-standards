@@ -2,7 +2,8 @@
   "@type": "Place",
   "@id": "/places/1",
   "address": {
-    "pao": "1",
+    "@type": "BS7666Address",
+    "paon": "1",
     "street": "Acacia Avenue",
     "locality": "Anytown",
     "region": "Anyshire",

@@ -82,10 +82,12 @@ Name | Type | Description
   "usrn": "123456789012",
   "@id": "/places/1",
   "address": {
+    "locality": "Anytown",
     "region": "Anyshire",
+    "street": "Acacia Avenue",
     "postcode": "AB1 2CD",
-    "street_address": "1 Acacia Avenue",
-    "locality": "Anytown"
+    "@type": "BS7666Address",
+    "paon": "1"
   },
   "uprn": "123456789012",
   "geo": {

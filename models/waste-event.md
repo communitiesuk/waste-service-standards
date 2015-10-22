@@ -30,10 +30,6 @@ The Event model should have properties for:
 
 > For any additional information useful to record.
 
-**round**
-
-> The round where this event happened.
-
 **container type**
 
 > What kind of container does the event relate to? This could be typically matched by colour.

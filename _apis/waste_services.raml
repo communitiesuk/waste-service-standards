@@ -50,7 +50,7 @@ traits:
       200:
         body:
           application/json:
-            example: !include ../_includes/examples/service.json
+            example: !include ../_includes/examples/waste_service.json
 
 /tasks:
   displayName: Tasks
@@ -76,18 +76,12 @@ traits:
       usrn:
         type: string
         description: Limit results to those related to the street with this USRN.
-      type:
-        type: string
-        description: Limit results to those with a matching type, e.g. "Not presented".
       start_date:
         type: date
         description: Limit results to those created on or after this start date.
       end_date:
         type: date
         description: Limit results to those created before this end date.
-      round:
-        type: string
-        description: Limit results to those recorded against this round.
     responses:
       200:
         body:
@@ -101,7 +95,7 @@ traits:
         200:
           body:
             application/json:
-              example: !include ../_includes/examples/event.json
+              example: !include ../_includes/examples/waste_event.json
 
 # /round-plans:
 #   displayName: Round plans
@@ -148,11 +142,11 @@ traits:
   description: A material is a category of material items that can be collected.
   type: collection
   get:
-    description: Get a list of [materials](/models/materials)
-    responses:
-      200:
-        body:
-          application/json:
+    description: Get a list of materials
+    # responses:
+    #   200:
+    #     body:
+    #       application/json:
             # example: !include ../_includes/examples/materials.json
   /{id}:
     get:

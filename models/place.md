@@ -10,7 +10,7 @@ model: place
 
 The Address model should have properties for:
 
-**address fields**
+**address**
 
 e.g. street, locality, country, postcode.
 

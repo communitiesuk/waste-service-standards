@@ -17,6 +17,10 @@ The Case model should have properties for:
 
 > Describe what the case is about.
 
+**customer**
+
+> The person who created the case, or is recipient of the outcome.
+
 **date created**
 
 > When the case was opened.
@@ -45,8 +49,6 @@ Just as Action and other common types have a number of sub-types, here are speci
 * EmergencyCollection
 * FreezerCollection (why not bulky?)
 * NewCollection
-* 
-
 
 
 ## Properties
@@ -54,6 +56,8 @@ Just as Action and other common types have a number of sub-types, here are speci
 Term     | Mapping | Definition
 ---------|---------|-----------
 subject | [schema:name](http://schema.org/name) | Subject of the case.
+status |  | Current status, e.g. active, closed.
+customer | [schema:person]() | Customer of the case.
 
 
 ## Serialisation

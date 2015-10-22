@@ -7,10 +7,9 @@
     {
       "@type": "ContainerType",
       "color": "black",
-      "size": "240L",
       "shape": "wheelie bin",
       "lid_color": "green",
-      "material_stream": {
+      "materials": {
         "name": "Mixed recyclables",
         "@id": "/waste/material-streams/mixed-recycling"
       },
@@ -19,9 +18,8 @@
     {
       "@type": "ContainerType",
       "color": "brown",
-      "size": "40L",
       "shape": "caddy",
-      "material_stream": {
+      "materials": {
         "name": "Food waste",
         "@id": "/waste/material-streams/food-waste"
       },
@@ -34,7 +32,6 @@
   "last_collection": {
     "@type": "Collection",
     "date": "23 July 2015",
-    "round": "/rounds/123",
     "containers": [
       {
         "@type": "WasteContainer",
@@ -42,11 +39,10 @@
         "status": "in_service",
         "type": {
           "color": "black",
-          "size": "240L",
           "shape": "wheelie bin",
           "lid_color": "green",
           "image": "",
-          "material_streams": [
+          "materials": [
             {
               "name": "Mixed recyclables",
               "@id": "/waste/material-streams/mixed-recycling"
@@ -83,13 +79,13 @@
         "@type": "WasteContainer",
         "id": "2140541",
         "status": "in_service",
+        "size": "240L",
         "type": {
           "color": "black",
-          "size": "240L",
           "shape": "wheelie bin",
           "lid_color": "green",
           "image": "",
-          "material_streams": [
+          "materials": [
             {
               "name": "Mixed recyclables",
               "@id": "/waste/material-streams/mixed-recycling"
