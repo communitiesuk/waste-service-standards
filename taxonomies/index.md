@@ -5,24 +5,25 @@ title:
 
 # Taxonomies
 
+Taxonomy | Description
+---------|------------
+[Bulky items](bulky-items.html) | Common items authorities can collect.
+[Container types](container-types.html) | They come in all shapes and sizes.
+[Materials](materials.html) | Material categories and the items that can be included.
+[Missed collections](missed-collections.html) | Definitions of events that can happen during collection rounds.
 
 
+## Guidelines
 
-## [Bulky items](bulky-items.html)
+The definition of taxonomy terms follows these conventions:
 
-Common items authorities can collect.
+**DO**
 
+* Use a capital at the start of a term.
+* Use capitals for other words only if they are proper nouns.
+* Separate related terms with an ampersand (&).
+* Use generic names for products rather than brandnames, e.g. "vaccuum" instead of "Hoover".
 
-## [Container types](container-types.html)
+**DON'T**
 
-They come in all shapes and sizes.
-
-
-## [Materials](materials.html)
-
-Material categories and the items that can be included.
-
-
-## [Missed collections](missed-collections.html)
-
-Definitions of events that can happen during collection rounds.
+* Use "etc" at the end of a term.
