@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Feature
-model: waste_container
+model: feature
 ---
 
 # Feature

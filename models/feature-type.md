@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Container type
+title: Feature type
 model: feature_type
 ---
 
