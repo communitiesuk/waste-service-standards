@@ -1,0 +1,12 @@
+{
+  "id": "123",
+  "type": {
+    "name": "240L wheelie bin",
+    "description": "240L wheelie bin",
+    "reusable": true,
+    "materials": {
+      "name": "paper",
+      "@id": "/api/materials/paper"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "color": "#fff",
-  "shape": "wheelie bin",
+  "name": "Green wheelie bin",
+  "description": "Garden refuse green wheelie bin",
   "reusable": true,
   "materials": {
     "name": "mixed recyclables",

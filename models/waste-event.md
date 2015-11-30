@@ -39,7 +39,7 @@ The Event model should have properties for:
 
 Term     | Mapping | Definition
 ---------|---------|-----------
-type | string | A categorisation of the event.
+type | string | A categorisation of the event. This should be limited to 20 characters for ease of use on in-cab systems.
 start date | [schema:startDate](https://schema.org/startDate) | When the event was took place.
 location | [Place](place.html) | A unique identifier for a property.
 image | [schema:image](https://schema.org/image) | A URL to a related image.

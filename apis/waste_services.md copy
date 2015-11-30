@@ -32,13 +32,6 @@ The [ESD Standards](http://standards.esd.org.uk) define all the categories of se
 </div>
 
 
-**Query parameters**
-
-Name | Type | Description
------|------|------------
-<tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
-
-
 
 
 
@@ -208,8 +201,6 @@ Name | Type | Description
 Name | Type | Description
 -----|------|------------
 <tt>page</tt> | number | 
-<tt>type</tt> | string | Limit results to a specific task type.
-<tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
 <tt>date_range</tt> | string | Limit results to those tasks that were started between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.
 
 
@@ -335,33 +326,18 @@ Name | Type | Description
 
 
 
-<h2 id="Features">Features</h2>
+<h2 id="Materials">Materials</h2>
 
 
 <hr/>
-<h4>Get a list of features</h4>
+<h4>Get a list of materials</h4>
 
 <div class="api-call">
   <span class="rest-method get">get</span>
-  <span>/features</span>
+  <span>/materials</span>
 </div>
 
 
-**Query parameters**
-
-Name | Type | Description
------|------|------------
-<tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
-<tt>usrn</tt> | string | Limit results to those related to the street with this USRN.
-
-
-
-
-
-**Response**
-{% highlight json %}
-{}
-{% endhighlight %}
 
 
 
@@ -372,11 +348,11 @@ Name | Type | Description
 
 
 <hr/>
-<h4>Get a single feature</h4>
+<h4>Get a single material</h4>
 
 <div class="api-call">
   <span class="rest-method get">get</span>
-  <span>/features/{featureId}</span>
+  <span>/materials/{id}</span>
 </div>
 
 
@@ -386,16 +362,9 @@ Name | Type | Description
 **Response**
 {% highlight json %}
 {
-  "type": {
-    "description": "240L wheelie bin",
-    "materials": {
-      "@id": "/api/materials/paper",
-      "name": "paper"
-    },
-    "name": "240L wheelie bin",
-    "reusable": true
-  },
-  "id": "123"
+  "color": "fd8812",
+  "image": "http://example.com/images/paper.png",
+  "name": "Paper"
 }
 {% endhighlight %}
 

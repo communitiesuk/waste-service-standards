@@ -2,7 +2,7 @@
   "@type": "WasteEvent",
   "@id": "/api/events/1",
   "type": "Not presented",
-  "start_date": "2014-05-23T20:00",
+  "start_date": "2014-05-23T20:00Z",
   "uprn": "123456789012",
   "usrn": "123456789012",
   "image": "http://example.com/images/123.png",
@@ -11,14 +11,18 @@
     "latitude": "40.75",
     "longitude": "73.98"
   },
-  "container_type": {
-    "color": "#fff",
-    "shape": "wheelie bin",
-    "reusable": true,
-    "materials": {
-      "name": "paper",
-      "@id": "/api/materials/paper"
+  "features": [
+    {
+      "color": "#fff",
+      "type": {
+        "name": "240L wheelie bin",
+        "reusable": true,
+        "materials": {
+          "name": "paper",
+          "@id": "/api/materials/paper"
+        }
+      }
     }
-  }
+  ]
 }
 

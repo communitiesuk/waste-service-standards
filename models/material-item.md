@@ -1,14 +1,14 @@
 ---
 layout: doc
-title: Item
-model: item
+title: Material item
+model: material_item
 ---
 
-# Item
+# Material item
 
 ## Use cases and requirements
 
-The Item model should have properties for:
+The MaterialItem model should have properties for:
 
 **name**
 

@@ -8,7 +8,7 @@ model: place
 
 ## Use cases and requirements
 
-The Address model should have properties for:
+The Place model should have properties for:
 
 **address**
 
@@ -18,20 +18,15 @@ e.g. street, locality, country, postcode.
 
 **UPRN**
 
-> Defines a unique property ID.
+> Defines a Unique Property Reference Number.
 
 **USRN**
 
-> To identify the street where the property is located.
+> To identify the street where the property is located. The Unique Street Reference Number.
 
 **geo**
 
 > To be able to plot locations on maps.
-
-**attributes**
-
-> Custom data items recorded against a property, e.g. there is a dog.
-
 
 
 ## Types
@@ -43,11 +38,10 @@ This maps to the [schema.org Place type](http://schema.org/Place) with some exte
 
 Term     | Mapping | Definition
 ---------|---------|-----------
-address | [Address](address.md) | Postal address of the item.
+address | [Address](address.html) | Postal address of the item.
 uprn | Text | A unique identifier for a property.
 usrn | Text | A unique identifier for a street.
 geo | [schema:geo](https://schema.org/geo) | The location in WGS84 datum.
-attributes | [schema:PropertyValueSpecification](http://schema.org/PropertyValueSpecification) | A custom property definition.
 
 
 ## Serialisation

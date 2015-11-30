@@ -1,6 +1,6 @@
 {
-  "@type": "Place",
-  "@id": "/places/1",
+  "@type": "Site",
+  "@id": "/sites/1",
   "address": {
     "@type": "BS7666Address",
     "paon": "1",
@@ -14,10 +14,12 @@
     "latitude": "40.75",
     "longitude": "73.98"
   },
-  "geo_osgb36": {
-    "easting": "1",
-    "northing": "2"
-  },
   "uprn": "123456789012",
-  "usrn": "12345678"
+  "usrn": "12345678",
+  "attributes": [
+    {
+      "name": "assisted collection",
+      "value": "yes"
+    }
+  ]  
 }

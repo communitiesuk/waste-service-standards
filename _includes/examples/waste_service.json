@@ -13,7 +13,7 @@
         "name": "Mixed recyclables",
         "@id": "/waste/material-streams/mixed-recycling"
       },
-      "image": ""
+      "image": "/images/green_bin.png"
     },
     {
       "@type": "ContainerType",
@@ -23,7 +23,7 @@
         "name": "Food waste",
         "@id": "/waste/material-streams/food-waste"
       },
-      "image": ""
+      "image": "/images/brown_caddy.png"
     }
   ],
   "description": "Please put your recycling wheelie bin on the street.",
@@ -32,7 +32,7 @@
   "last_collection": {
     "@type": "Collection",
     "date": "23 July 2015",
-    "containers": [
+    "features": [
       {
         "@type": "WasteContainer",
         "id": "2140541",
@@ -74,7 +74,7 @@
     "date": "1 August 2014",
     "changed_date": "2 August 2015",
     "changed_date_reason": "Bank holiday",
-    "containers": [
+    "features": [
       {
         "@type": "WasteContainer",
         "id": "2140541",

@@ -62,5 +62,18 @@ location | [schema:location](http://schema.org/location) | Location information.
 
 {% include serialisation.html %}
 
+## Codelists
+
+### Task statuses
+
+* Not started
+* In progress
+* On break
+* Closed / Complete
+* Closed / Not done
+* Closed / Not required
+* Closed / Part done
+* Blocked
+* Abandoned
 
 

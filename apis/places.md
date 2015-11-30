@@ -26,8 +26,8 @@ title:
 
 Name | Type | Description
 -----|------|------------
-<tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
 <tt>usrn</tt> | string | Limit results to those related to the street with this USRN.
+<tt>postcode</tt> | string | Limit results to those with a matching postcode.
 
 
 
@@ -65,11 +65,11 @@ Name | Type | Description
 
 
 <hr/>
-<h4>Get a single place</h4>
+<h4>Get a single place using its UPRN as ID.</h4>
 
 <div class="api-call">
   <span class="rest-method get">get</span>
-  <span>/places/{placeId}</span>
+  <span>/places/{UPRN}</span>
 </div>
 
 
@@ -79,7 +79,7 @@ Name | Type | Description
 **Response**
 {% highlight json %}
 {
-  "usrn": "123456789012",
+  "usrn": "12345678",
   "@id": "/places/1",
   "address": {
     "locality": "Anytown",
@@ -88,6 +88,10 @@ Name | Type | Description
     "postcode": "AB1 2CD",
     "@type": "BS7666Address",
     "paon": "1"
+  },
+  "geo_osgb36": {
+    "easting": "1",
+    "northing": "2"
   },
   "uprn": "123456789012",
   "geo": {

@@ -47,7 +47,7 @@ Just as Action and other common types have a number of sub-types, here are speci
 * ReportDamage
 * DeadAnimal
 * EmergencyCollection
-* FreezerCollection (why not bulky?)
+* FreezerCollection
 * NewCollection
 
 
@@ -57,7 +57,8 @@ Term     | Mapping | Definition
 ---------|---------|-----------
 subject | [schema:name](http://schema.org/name) | Subject of the case.
 status |  | Current status, e.g. active, closed.
-customer | [schema:person]() | Customer of the case.
+customer | [schema:person](http://schema.org/Person) | Customer of the case.
+date_created | [schema:dateCreated](https://schema.org/dateCreated) | When the case was created.
 
 
 ## Serialisation

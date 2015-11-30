@@ -16,21 +16,21 @@ baseUri: http://api.council.gov.uk/
   get:
     description: Get a list of places
     queryParameters:
-      uprn:
-        type: string
-        description: Limit results to those related to the property with this UPRN.
       usrn:
         type: string
         description: Limit results to those related to the street with this USRN.
+      postcode:
+        type: string
+        description: Limit results to those with a matching postcode.
     responses:
       200:
         body:
           application/json:
             example: !include ../_includes/examples/places.json
 
-  /{placeId}:
+  /{UPRN}:
     get:
-      description: Get a single place
+      description: Get a single place using its UPRN as ID.
       responses:
         200:
           body:

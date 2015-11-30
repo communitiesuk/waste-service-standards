@@ -11,9 +11,12 @@ This gives an overview of the data model entities:
 
 Model | Description
 ------|------------
-[Container type](container-type.html) | What types of containers are used by the services.
+[Case](case.html) | A customer interaction record.
+[Feature type](feature-type.html) | A type of item related to a service.
+[Feature](feature.html) | An item related to a service.
 [Material](material.html) | The types of materials that can be collected.
 [Task](task.html) | A unit of work as part of scheduled rounds or resulting from ad-hoc requests.
+[Waste container type](waste-container-type.html) | What kinds of containers are used for waste.
 [Waste container](waste-container.html) | Where materials are stored for collection.
 [Waste event](waste-event.html) | An issue or check that is recorded during a round.
 [Waste service](waste-service.html) | A waste or recycling service provided by the council for citizens.

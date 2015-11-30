@@ -4,31 +4,12 @@ title: Waste container
 model: waste_container
 ---
 
-# Waste container
+# WasteContainer
 
-## Use cases and requirements
 
-The Container model should have properties for:
+## Types
 
-**container type**
-
-> For the common properties of the container.
-
-**serial number or ID**
-
-> For identification of the container.
-
-**barcode, RFID number**
-
-> If the container has been tagged with a barcode or RFID chip.
-
-**UPRN**
-
-> To link to its property.
-
-**status**
-
-> Capture whether in-use, damaged, etc.
+WasteContainer derives from [Feature](feature.html).
 
 
 ## Properties
@@ -45,15 +26,4 @@ status | string | The status of the container.
 ## Serialisation
 
 {% include serialisation.html %}
-
-
-## Codelists
-
-### Status
-
-* in service
-* damaged
-
-
-
 
