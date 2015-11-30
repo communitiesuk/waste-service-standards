@@ -17,7 +17,7 @@ WasteContainer derives from [Feature](feature.html).
 Term     | Mapping | Definition
 ---------|---------|-----------
 id | string | Unique identifer.
-type | [Container type](container-type.html) | The type of container.
+type | [Waste container type](waste-container-type.html) | The type of container.
 barcode | integer | A barcode number.
 RFID | integer | A RFID tag number.
 status | string | The status of the container.

@@ -1,7 +1,0 @@
-{
-  "@id": "/round-plans/1",
-  "@type": "RoundPlan",
-  "start_date": "",
-  "rrule": "",
-  "containers": "/api/containers?round_plan=1"
-}

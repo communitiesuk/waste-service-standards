@@ -99,9 +99,9 @@ Name | Type | Description
   "@type": "WasteService",
   "next_collection": {
     "date": "1 August 2014",
+    "changed_date_reason": "Bank holiday",
     "changed_date": "2 August 2015",
-    "@type": "Collection",
-    "containers": [
+    "features": [
       {
         "status": "in_service",
         "id": "2140541",
@@ -121,7 +121,7 @@ Name | Type | Description
         "size": "240L"
       }
     ],
-    "changed_date_reason": "Bank holiday"
+    "@type": "Collection"
   },
   "frequency": "weekly",
   "available_channel": {
@@ -141,8 +141,7 @@ Name | Type | Description
   },
   "last_collection": {
     "date": "23 July 2015",
-    "@type": "Collection",
-    "containers": [
+    "features": [
       {
         "status": "in_service",
         "type": {
@@ -177,7 +176,8 @@ Name | Type | Description
         "@type": "WasteEvent",
         "container_color": "black"
       }
-    ]
+    ],
+    "@type": "Collection"
   },
   "id": 1,
   "esd_url": "http://id.esd.org.uk/service/1130"
