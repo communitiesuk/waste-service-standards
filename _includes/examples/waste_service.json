@@ -3,7 +3,7 @@
   "id": 1,
   "name": "Mixed recycling",
   "frequency": "weekly",
-  "container_types": [
+  "feature_types": [
     {
       "@type": "ContainerType",
       "color": "black",
