@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Site
-model: Site
+model: site
 ---
 
 # Site
