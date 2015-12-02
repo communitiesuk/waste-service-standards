@@ -19,6 +19,8 @@ The [ESD Standards](http://standards.esd.org.uk) define all the categories of se
 
 
 
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 <h2 id="Services">Services</h2>
 
@@ -46,6 +48,8 @@ Name | Type | Description
 
 
 
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 <hr/>
@@ -64,7 +68,46 @@ Name | Type | Description
 {% highlight json %}
 {
   "description": "Please put your recycling wheelie bin on the street.",
-  "container_types": [
+  "last_collection": {
+    "date": "23 July 2015",
+    "features": [
+      {
+        "status": "In use",
+        "type": {
+          "image": "",
+          "materials": [
+            {
+              "@id": "/waste/material-streams/mixed-recycling",
+              "name": "Mixed recyclables"
+            }
+          ],
+          "name": "Green wheelie bin",
+          "description": "Garden refuse green wheelie bin"
+        },
+        "@type": "WasteContainer",
+        "id": "2140541"
+      }
+    ],
+    "events": [
+      {
+        "type": "Not presented",
+        "usrn": "123456789012",
+        "@id": "/api/events/1",
+        "image": "http://example.com/images/123.png",
+        "uprn": "123456789012",
+        "date_created": "1 August 2015",
+        "geo": {
+          "latitude": "40.75",
+          "@type": "GeoCoordinates",
+          "longitude": "73.98"
+        },
+        "@type": "WasteEvent",
+        "container_color": "black"
+      }
+    ],
+    "@type": "Collection"
+  },
+  "feature_types": [
     {
       "color": "black",
       "image": "/images/green_bin.png",
@@ -87,15 +130,10 @@ Name | Type | Description
       "image": "/images/brown_caddy.png"
     }
   ],
-  "service_operator": {
-    "@type": "Organization",
-    "name": "Example Waste Operator Co"
-  },
   "service_area": {
     "@type": "AdministrativeArea",
     "name": "Anytown"
   },
-  "name": "Mixed recycling",
   "@type": "WasteService",
   "next_collection": {
     "date": "1 August 2014",
@@ -124,6 +162,12 @@ Name | Type | Description
     "@type": "Collection"
   },
   "frequency": "weekly",
+  "esd_url": "http://id.esd.org.uk/service/1130",
+  "provider": {
+    "url": "http://www.example.gov.uk",
+    "@type": "Organization",
+    "name": "Example Council"
+  },
   "available_channel": {
     "service_url": "http://www.example.gov.uk/waste",
     "service_phone": {
@@ -134,53 +178,12 @@ Name | Type | Description
     "name": "Household waste and street maintenance",
     "@type": "ServiceChannel"
   },
-  "provider": {
-    "url": "http://www.example.gov.uk",
+  "service_operator": {
     "@type": "Organization",
-    "name": "Example Council"
-  },
-  "last_collection": {
-    "date": "23 July 2015",
-    "features": [
-      {
-        "status": "in_service",
-        "type": {
-          "color": "black",
-          "shape": "wheelie bin",
-          "materials": [
-            {
-              "@id": "/waste/material-streams/mixed-recycling",
-              "name": "Mixed recyclables"
-            }
-          ],
-          "image": "",
-          "lid_color": "green"
-        },
-        "@type": "WasteContainer",
-        "id": "2140541"
-      }
-    ],
-    "events": [
-      {
-        "type": "Not presented",
-        "usrn": "123456789012",
-        "@id": "/api/events/1",
-        "image": "http://example.com/images/123.png",
-        "uprn": "123456789012",
-        "date_created": "1 August 2015",
-        "geo": {
-          "latitude": "40.75",
-          "@type": "GeoCoordinates",
-          "longitude": "73.98"
-        },
-        "@type": "WasteEvent",
-        "container_color": "black"
-      }
-    ],
-    "@type": "Collection"
+    "name": "Example Waste Operator Co"
   },
   "id": 1,
-  "esd_url": "http://id.esd.org.uk/service/1130"
+  "name": "Mixed recycling"
 }
 {% endhighlight %}
 
@@ -190,6 +193,8 @@ Name | Type | Description
 
 
 
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 <h2 id="Tasks">Tasks</h2>
 
@@ -220,6 +225,8 @@ Name | Type | Description
 
 
 
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 <h2 id="Events">Events</h2>
 
@@ -283,6 +290,8 @@ Name | Type | Description
 
 
 
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 <hr/>
@@ -334,6 +343,8 @@ Name | Type | Description
 
 
 
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 <h2 id="Features">Features</h2>
 
@@ -358,17 +369,12 @@ Name | Type | Description
 
 
 
-**Response**
-{% highlight json %}
-{}
-{% endhighlight %}
 
 
 
 
-
-
-
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 <hr/>
@@ -396,6 +402,186 @@ Name | Type | Description
     "reusable": true
   },
   "id": "123"
+}
+{% endhighlight %}
+
+
+
+
+
+
+
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
+
+<h2 id="Sites">Sites</h2>
+
+
+<hr/>
+<h4>Get a list of sites</h4>
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/sites</span>
+</div>
+
+
+**Query parameters**
+
+Name | Type | Description
+-----|------|------------
+<tt>usrn</tt> | string | Limit results to those related to the street with this USRN.
+<tt>postcode</tt> | string | Limit results to those with the given postcode.
+
+
+
+
+
+**Response**
+{% highlight json %}
+{}
+{% endhighlight %}
+
+
+
+
+
+
+
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
+
+
+<hr/>
+<h4>Get a single site indexed by UPRN</h4>
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/sites/{UPRN}</span>
+</div>
+
+
+
+
+
+**Response**
+{% highlight json %}
+{
+  "usrn": "12345678",
+  "geo": {
+    "latitude": "40.75",
+    "@type": "GeoCoordinates",
+    "longitude": "73.98"
+  },
+  "address": {
+    "locality": "Anytown",
+    "region": "Anyshire",
+    "street": "Acacia Avenue",
+    "postcode": "AB1 2CD",
+    "@type": "BS7666Address",
+    "paon": "1"
+  },
+  "uprn": "123456789012",
+  "attributes": [
+    {
+      "name": "assisted collection",
+      "value": "yes"
+    }
+  ],
+  "@id": "/sites/1",
+  "@type": "Site"
+}
+{% endhighlight %}
+
+
+
+
+
+
+
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
+
+<h2 id="Cases">Cases</h2>
+
+
+<hr/>
+<h4>Get a list of cases</h4>
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/cases</span>
+</div>
+
+
+**Query parameters**
+
+Name | Type | Description
+-----|------|------------
+<tt>uprn</tt> | string | Limit results to cases associated with this UPRN.
+<tt>usrn</tt> | string | Limit results to cases within this USRN.
+<tt>postcode</tt> | string | Limit results to those with the given postcode.
+
+
+
+
+
+**Response**
+{% highlight json %}
+{}
+{% endhighlight %}
+
+
+
+
+
+
+
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
+
+
+<hr/>
+<h4>Create a new case</h4>
+
+<div class="api-call">
+  <span class="rest-method post">post</span>
+  <span>/cases</span>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
+
+
+<hr/>
+<h4>Get a case record</h4>
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/cases/{caseId}</span>
+</div>
+
+
+
+
+
+**Response**
+{% highlight json %}
+{
+  "customer": {
+    "name": "Bob Smith"
+  },
+  "date_created": "2014-05-23T20:00Z",
+  "@id": "/cases/1",
+  "id": "1"
 }
 {% endhighlight %}
 

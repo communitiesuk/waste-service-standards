@@ -14,7 +14,9 @@ title:
 
 {% for r in api.resources %}
 
-{% if r.name == r.path %}
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
+{% if r.name == r.path and r.method == 'get' %}
 <h2 id="{{ r.display_name }}">{{ r.display_name }}</h2>
 {% endif %}
 

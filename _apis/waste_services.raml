@@ -120,10 +120,10 @@ traits:
       usrn:
         type: string
         description: Limit results to those related to the street with this USRN.
-    responses:
-      200:
-        body:
-          application/json:
+    # responses:
+    #   200:
+    #     body:
+    #       application/json:
             # example: !include ../_includes/examples/features.json
   /{featureId}:
     get:
@@ -134,8 +134,62 @@ traits:
             application/json:
               example: !include ../_includes/examples/feature.json
 
+/sites:
+  displayName: Sites
+  description: A site is a place or location where services are provided.
+  type: collection
+  get:
+    description: Get a list of sites
+    queryParameters:
+      usrn:
+        type: string
+        description: Limit results to those related to the street with this USRN.
+      postcode:
+        type: string
+        description: Limit results to those with the given postcode.
+    responses:
+      200:
+        body:
+          application/json:
+            # example: !include ../_includes/examples/sites.json
+  /{UPRN}:
+    get:
+      description: Get a single site indexed by UPRN
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include ../_includes/examples/site.json
 
-
-
-
+/cases:
+  displayName: Cases
+  description: A case is a customer interaction record.
+  type: collection
+  get:
+    description: Get a list of cases
+    queryParameters:
+      uprn:
+        type: string
+        description: Limit results to cases associated with this UPRN.
+      usrn:
+        type: string
+        description: Limit results to cases within this USRN.
+      postcode:
+        type: string
+        description: Limit results to those with the given postcode.
+    responses:
+      200:
+        body:
+          application/json:
+            # example: !include ../_includes/examples/cases.json
+  post:
+    description: Create a new case
+  /{caseId}:
+    get:
+      description: Get a case record
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include ../_includes/examples/case.json
 

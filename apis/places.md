@@ -9,6 +9,8 @@ title:
 
 
 
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 <h2 id="Places">Places</h2>
 
@@ -62,6 +64,8 @@ Name | Type | Description
 
 
 
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 <hr/>
