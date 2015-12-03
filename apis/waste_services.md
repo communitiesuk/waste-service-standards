@@ -39,8 +39,29 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 Name | Type | Description
 -----|------|------------
 <tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
+<tt>full</tt> | boolean | Return the full service information.
 
 
+
+
+
+**Example response**
+{% highlight json %}
+[
+  {
+    "frequency": "weekly",
+    "@id": "http://example.com/services/1",
+    "name": "Recycling service",
+    "description": "Please put your recycling box on the street."
+  },
+  {
+    "frequency": "weekly",
+    "@id": "http://example.com/services/2",
+    "name": "Refuse",
+    "description": "Black bins."
+  }
+]
+{% endhighlight %}
 
 
 
@@ -61,52 +82,20 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 </div>
 
 
+**Query parameters**
+
+Name | Type | Description
+-----|------|------------
+<tt>uprn</tt> | string | Limit results to those related to the property with this UPRN. This will include the last and next collection task information.
 
 
 
-**Response**
+
+
+**Example response**
 {% highlight json %}
 {
-  "description": "Please put your recycling wheelie bin on the street.",
-  "last_collection": {
-    "date": "23 July 2015",
-    "features": [
-      {
-        "status": "In use",
-        "type": {
-          "image": "",
-          "materials": [
-            {
-              "@id": "/waste/material-streams/mixed-recycling",
-              "name": "Mixed recyclables"
-            }
-          ],
-          "name": "Green wheelie bin",
-          "description": "Garden refuse green wheelie bin"
-        },
-        "@type": "WasteContainer",
-        "id": "2140541"
-      }
-    ],
-    "events": [
-      {
-        "type": "Not presented",
-        "usrn": "123456789012",
-        "@id": "/api/events/1",
-        "image": "http://example.com/images/123.png",
-        "uprn": "123456789012",
-        "date_created": "1 August 2015",
-        "geo": {
-          "latitude": "40.75",
-          "@type": "GeoCoordinates",
-          "longitude": "73.98"
-        },
-        "@type": "WasteEvent",
-        "container_color": "black"
-      }
-    ],
-    "@type": "Collection"
-  },
+  "@id": "http://example.com/services/1",
   "feature_types": [
     {
       "color": "black",
@@ -130,6 +119,11 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
       "image": "/images/brown_caddy.png"
     }
   ],
+  "name": "Mixed recycling",
+  "service_operator": {
+    "@type": "Organization",
+    "name": "Example Waste Operator Co"
+  },
   "service_area": {
     "@type": "AdministrativeArea",
     "name": "Anytown"
@@ -143,23 +137,12 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
       {
         "status": "in_service",
         "id": "2140541",
-        "type": {
-          "color": "black",
-          "shape": "wheelie bin",
-          "materials": [
-            {
-              "@id": "/waste/material-streams/mixed-recycling",
-              "name": "Mixed recyclables"
-            }
-          ],
-          "image": "",
-          "lid_color": "green"
-        },
+        "type": "http://example.com/feature-types/2",
         "@type": "WasteContainer",
-        "size": "240L"
+        "size": 240
       }
     ],
-    "@type": "Collection"
+    "@type": "WasteCollectionTask"
   },
   "frequency": "weekly",
   "esd_url": "http://id.esd.org.uk/service/1130",
@@ -178,12 +161,38 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
     "name": "Household waste and street maintenance",
     "@type": "ServiceChannel"
   },
-  "service_operator": {
-    "@type": "Organization",
-    "name": "Example Waste Operator Co"
+  "last_collection": {
+    "date": "23 July 2015",
+    "features": [
+      {
+        "status": "In use",
+        "id": "2140541",
+        "type": "http://example.com/feature-types/1",
+        "@type": "WasteContainer",
+        "size": 240
+      }
+    ],
+    "events": [
+      {
+        "type": "Not presented",
+        "usrn": "123456789012",
+        "@id": "/api/events/1",
+        "image": "http://example.com/images/123.png",
+        "uprn": "123456789012",
+        "date_created": "1 August 2015",
+        "geo": {
+          "latitude": "40.75",
+          "@type": "GeoCoordinates",
+          "longitude": "73.98"
+        },
+        "@type": "WasteEvent",
+        "container_color": "black"
+      }
+    ],
+    "@type": "WasteCollectionTask"
   },
   "id": 1,
-  "name": "Mixed recycling"
+  "description": "Please put your recycling wheelie bin on the street."
 }
 {% endhighlight %}
 
@@ -247,14 +256,13 @@ Name | Type | Description
 <tt>page</tt> | number | 
 <tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
 <tt>usrn</tt> | string | Limit results to those related to the street with this USRN.
-<tt>start_date</tt> | date | Limit results to those created on or after this start date.
-<tt>end_date</tt> | date | Limit results to those created before this end date.
+<tt>date_range</tt> | string | Limit results to those events that occurred between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.
 
 
 
 
 
-**Response**
+**Example response**
 {% highlight json %}
 [
   {
@@ -306,7 +314,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
-**Response**
+**Example response**
 {% highlight json %}
 {
   "type": "Not presented",
@@ -389,7 +397,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
-**Response**
+**Example response**
 {% highlight json %}
 {
   "type": {
@@ -402,6 +410,76 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
     "reusable": true
   },
   "id": "123"
+}
+{% endhighlight %}
+
+
+
+
+
+
+
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
+
+<h2 id="Feature types">Feature types</h2>
+
+
+<hr/>
+<h4>Get a list of feature types</h4>
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/feature-types</span>
+</div>
+
+
+**Query parameters**
+
+Name | Type | Description
+-----|------|------------
+<tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
+
+
+
+
+
+
+
+
+
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
+
+
+<hr/>
+<h4>Get a single feature type</h4>
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/feature-types/{featureTypeId}</span>
+</div>
+
+
+
+
+
+**Example response**
+{% highlight json %}
+{
+  "description": "240L wheelie bin",
+  "sizes": [
+    180,
+    240
+  ],
+  "materials": {
+    "@id": "/api/materials/paper",
+    "name": "paper"
+  },
+  "reusable": true,
+  "@id": "http://example.com/container-types/1",
+  "@type": "WasteContainerType",
+  "name": "240L wheelie bin"
 }
 {% endhighlight %}
 
@@ -437,7 +515,7 @@ Name | Type | Description
 
 
 
-**Response**
+**Example response**
 {% highlight json %}
 {}
 {% endhighlight %}
@@ -464,7 +542,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
-**Response**
+**Example response**
 {% highlight json %}
 {
   "usrn": "12345678",
@@ -526,7 +604,7 @@ Name | Type | Description
 
 
 
-**Response**
+**Example response**
 {% highlight json %}
 {}
 {% endhighlight %}
@@ -573,7 +651,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
-**Response**
+**Example response**
 {% highlight json %}
 {
   "customer": {

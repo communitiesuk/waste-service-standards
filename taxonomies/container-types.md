@@ -7,9 +7,9 @@ title: Container types
 
 The table below lists common names for typical waste containers.
 
-LA name | Name  | Description | Image<sup>1</sup>
---------|-------|------------ |------------------
-{% for c in site.data.container_types %}{{ c.reference_name }} | {{ c.name }} | {{ c.description }} | {% if c.image %}![img]({{ site.baseurl }}/images/{{ c.image }}){% endif %}
+LA name | Name  | Machine name | Description | Image<sup>1</sup>
+--------|-------|--------------|-------------|------------------
+{% for c in site.data.container_types %}{{ c.reference_name }} | {{ c.name }} | {{ c.machine_name }} | {{ c.description }} | {% if c.image %}![img]({{ site.baseurl }}/images/{{ c.image }}){% endif %}
 {% endfor %}
 
 

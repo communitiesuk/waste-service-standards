@@ -1,5 +1,6 @@
 {
   "@type": "WasteService",
+  "@id": "http://example.com/services/1",
   "id": 1,
   "name": "Mixed recycling",
   "frequency": "weekly",
@@ -30,25 +31,15 @@
   "esd_url": "http://id.esd.org.uk/service/1130",
   
   "last_collection": {
-    "@type": "Collection",
+    "@type": "WasteCollectionTask",
     "date": "23 July 2015",
     "features": [
       {
         "@type": "WasteContainer",
         "id": "2140541",
-        "status": "in_service",
-        "type": {
-          "color": "black",
-          "shape": "wheelie bin",
-          "lid_color": "green",
-          "image": "",
-          "materials": [
-            {
-              "name": "Mixed recyclables",
-              "@id": "/waste/material-streams/mixed-recycling"
-            }
-          ]
-        }
+        "status": "In use",
+        "size": 240,
+        "type": "http://example.com/feature-types/1"
       }
     ],
     "events": [
@@ -70,7 +61,7 @@
     ]
   },
   "next_collection": {
-    "@type": "Collection",
+    "@type": "WasteCollectionTask",
     "date": "1 August 2014",
     "changed_date": "2 August 2015",
     "changed_date_reason": "Bank holiday",
@@ -79,19 +70,8 @@
         "@type": "WasteContainer",
         "id": "2140541",
         "status": "in_service",
-        "size": "240L",
-        "type": {
-          "color": "black",
-          "shape": "wheelie bin",
-          "lid_color": "green",
-          "image": "",
-          "materials": [
-            {
-              "name": "Mixed recyclables",
-              "@id": "/waste/material-streams/mixed-recycling"
-            }
-          ]
-        }
+        "size": 240,
+        "type": "http://example.com/feature-types/2"
       }
     ]
   },

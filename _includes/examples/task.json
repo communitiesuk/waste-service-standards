@@ -1,7 +1,18 @@
 {
+  "@type": "WasteCollectionTask",
   "name": "Empty Black 240L",
-  "description": "",
-  "status": "active",
+  "description": "Empty Black 240L",
+  "date": "23 July 2016",
+  "status": "not_started",
+  "features": [
+      {
+        "@type": "WasteContainer",
+        "id": "2140541",
+        "status": "In use",
+        "size": 240,
+        "type": "http://example.com/feature-types/1"
+      }
+    ],
   "location": {
     "@type": "Place",
     "@id": "/places/1",

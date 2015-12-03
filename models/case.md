@@ -6,6 +6,10 @@ model: case
 
 # Case
 
+<div class="alert-box warning">
+  Note: The Case model is currently incomplete and needs further development.
+</div>
+
 A case is a way to track transactions with a citizen.
 
 

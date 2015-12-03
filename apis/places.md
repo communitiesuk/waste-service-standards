@@ -35,7 +35,7 @@ Name | Type | Description
 
 
 
-**Response**
+**Example response**
 {% highlight json %}
 [
   {
@@ -80,7 +80,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
-**Response**
+**Example response**
 {% highlight json %}
 {
   "usrn": "12345678",

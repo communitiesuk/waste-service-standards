@@ -10,7 +10,6 @@ model: waste_container_type
 
 The ContainerType model should have properties for:
 
-<!--
 **color**
 
 > The general color.
@@ -22,14 +21,18 @@ The ContainerType model should have properties for:
 **lid color**
 
 > In case its different to the body color.
--->
+
 **disposable**
 
 > If the container type is disposable or one-time use, e.g. a bag.
 
-**material**
+**materials**
 
 > What kind of materials the container is used for.
+
+**sizes**
+
+> What container sizes are available. Relevant if ordering new containers.
 
 
 ## Types
@@ -44,12 +47,10 @@ Term     | Mapping | Definition
 id |  | Unique identifer.
 disposable | boolean | If container is disposable.
 material | [Material](material.html) | The materials it stores.
-
-<!--
-color | [schema:color](https://schema.org/color) | General color as a hex value.
+color | [schema:color](https://schema.org/color) | The colour.
 shape | text | The shape or type of the container.
-lid color | [schema:color](https://schema.org/color) | Lid-specific color as a hex value.
--->
+lid color | [schema:color](https://schema.org/color) | The lid colour.
+sizes | list of integers | Available sizes of containers.
 
 ## Serialisation
 

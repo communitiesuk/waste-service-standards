@@ -2,6 +2,9 @@
   "name": "Green wheelie bin",
   "description": "Garden refuse green wheelie bin",
   "reusable": true,
+  "color": "green",
+  "sizes": [240],
+  "shape": "wheelie_bin",
   "materials": {
     "name": "mixed recyclables",
     "@id": "/api/material-streams/mixed-recyclables"

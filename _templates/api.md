@@ -39,7 +39,7 @@ Name | Type | Description
 
 {% if r.responses %}
 {% for response in r.responses %}
-**Response**
+**Example response**
 {{ '{% highlight json %}' }}
 {{ response.body[0].example | jsonify(indent=2, separators=(',', ': '), sort_keys=False) }}
 {{ '{% endhighlight %}' }}

@@ -1,7 +1,10 @@
 {
+  "@type": "WasteContainerType",
+  "@id": "http://example.com/container-types/1",
   "name": "240L wheelie bin",
   "description": "240L wheelie bin",
   "reusable": true,
+  "sizes": [180, 240],
   "materials": {
     "name": "paper",
     "@id": "/api/materials/paper"

@@ -42,19 +42,26 @@ traits:
       uprn:
         type: string
         description: Limit results to those related to the property with this UPRN.
-    # responses:
-    #   200:
-    #     body:
-          # application/json:
-            # example: !include ../_includes/examples/services.json
-  /{serviceId}:
-    get:
-    description: Get a single service
+      full:
+        type: boolean
+        description: Return the full service information.
     responses:
       200:
         body:
           application/json:
-            example: !include ../_includes/examples/waste_service.json
+            example: !include ../_includes/examples/waste_services.json
+  /{serviceId}:
+    get:
+      description: Get a single service
+      queryParameters:
+        uprn:
+          type: string
+          description: Limit results to those related to the property with this UPRN. This will include the last and next collection task information.
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include ../_includes/examples/waste_service.json
 
 /tasks:
   displayName: Tasks
@@ -86,12 +93,9 @@ traits:
       usrn:
         type: string
         description: Limit results to those related to the street with this USRN.
-      start_date:
-        type: date
-        description: Limit results to those created on or after this start date.
-      end_date:
-        type: date
-        description: Limit results to those created before this end date.
+      date_range:
+        type: string
+        description: Limit results to those events that occurred between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.
     responses:
       200:
         body:
@@ -133,6 +137,30 @@ traits:
           body:
             application/json:
               example: !include ../_includes/examples/feature.json
+
+/feature-types:
+  displayName: Feature types
+  description: A feature type is a representative of the kinds of items related to a service, for example a waste container used in a waste collection service.
+  type: collection
+  get:
+    description: Get a list of feature types
+    queryParameters:
+      uprn:
+        type: string
+        description: Limit results to those related to the property with this UPRN.
+    # responses:
+    #   200:
+    #     body:
+    #       application/json:
+            # example: !include ../_includes/examples/features.json
+  /{featureTypeId}:
+    get:
+      description: Get a single feature type
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include ../_includes/examples/feature_type.json
 
 /sites:
   displayName: Sites
