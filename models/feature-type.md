@@ -18,6 +18,10 @@ The ContainerType model should have properties for:
 
 > Additional information.
 
+**manufacturer**
+
+> To know who to order from.
+
 
 ## Types
 
@@ -31,6 +35,7 @@ Term     | Mapping | Definition
 id |  | Unique identifer.
 name | [schema:name](http://schema.org/name) | Identifer for the Feature.
 description | [schema:description](https://schema.org/description) | A short description of the Feature.
+manufacturer | [schema:manufacturer](https://schema.org/manufacturer) | The organisation that manufactured it.
 
 
 ## Serialisation
@@ -38,8 +43,5 @@ description | [schema:description](https://schema.org/description) | A short des
 {% include serialisation.html %}
 
 
-## Codelists
-
-### Container shape
 
 
