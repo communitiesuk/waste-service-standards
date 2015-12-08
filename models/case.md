@@ -49,6 +49,7 @@ Just as Action and other common types have a number of sub-types, here are speci
 * ClinicalOneTimeCollection
 * ClinicalCollection
 * ReportDamage
+* ReportMissedBin
 * DeadAnimal
 * EmergencyCollection
 * FreezerCollection
@@ -65,9 +66,18 @@ customer | [schema:person](http://schema.org/Person) | Customer of the case.
 date_created | [schema:dateCreated](https://schema.org/dateCreated) | When the case was created.
 
 
+### ReportMissedCollection
+
+Additional properties needed to report a missed bin collection:
+
+Term     | Mapping | Definition
+---------|---------|-----------
+collection_type | string | The Container type machine name, if related to a missed bin collection. Otherwise a common string identifier of the collection type.
+
+
+
 ## Serialisation
 
 {% include serialisation.html %}
-
 
 
