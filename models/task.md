@@ -31,7 +31,19 @@ The Task model should have properties for:
 
 **location**
 
-> The information if it relates to a property or street location.
+> A link to a property or street location.
+
+**start date**
+
+> When the task was started.
+
+**end date**
+
+> When the task ended.
+
+**scheduled start date**
+
+> When the task was planned to start.
 
 
 ## Types
@@ -43,7 +55,7 @@ This Task type extends from the [Action](http://schema.org/Action) schema.org ty
 
 Just as Action and other common types have a number of sub-types, here are specific Task sub-types for different kinds of services councils provide:
 
-* BinCollectionTask
+* EmptyBinTask
 * StreetCleansingTask
 * FlytippingCleanupTask
 
@@ -56,6 +68,9 @@ name | [schema:name](http://schema.org/name) | Identifer for the Task.
 description | [schema:description](https://schema.org/description) | A short description of the Task.
 status | [schema:actionStatus](http://schema.org/actionStatus) | The status of the Task.
 location | [schema:location](http://schema.org/location) | Location information.
+start date | [schema:startDate] | Start date.
+end date | [schema:endDate] | End date.
+scheduled start date | [schema:startDate] | Planned start date.
 
 
 ## Serialisation

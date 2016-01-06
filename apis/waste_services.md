@@ -221,7 +221,6 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 Name | Type | Description
 -----|------|------------
-<tt>page</tt> | number | 
 <tt>type</tt> | string | Limit results to a specific task type.
 <tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
 <tt>date_range</tt> | string | Limit results to those tasks that were started between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.
@@ -253,7 +252,6 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 Name | Type | Description
 -----|------|------------
-<tt>page</tt> | number | 
 <tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
 <tt>usrn</tt> | string | Limit results to those related to the street with this USRN.
 <tt>date_range</tt> | string | Limit results to those events that occurred between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.

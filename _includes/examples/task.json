@@ -1,8 +1,9 @@
 {
-  "@type": "WasteCollectionTask",
+  "@type": "EmptyBinTask",
   "name": "Empty Black 240L",
   "description": "Empty Black 240L",
-  "date": "23 July 2016",
+  "start_date": "2015-09-27T21:04:00.743",
+  "scheduled_start_date": "2015-09-27T21:04:00.743",
   "status": "not_started",
   "features": [
       {
@@ -10,26 +11,8 @@
         "id": "2140541",
         "status": "In use",
         "size": 240,
-        "type": "http://example.com/feature-types/1"
+        "type": "http://example.com/feature_types/1"
       }
     ],
-  "location": {
-    "@type": "Place",
-    "@id": "/places/1",
-    "address": {
-      "@type": "BS7666Address",
-      "paon": "1",
-      "street": "Acacia Avenue",
-      "locality": "Anytown",
-      "region": "Anyshire",
-      "postcode": "AB1 2CD"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "40.75",
-      "longitude": "73.98"
-    },
-    "uprn": "123456789012",
-    "usrn": "12345678"
-  }
+  "location": "http://example.com/sites/1"
 }
