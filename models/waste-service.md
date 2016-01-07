@@ -26,7 +26,7 @@ The Service model should have properties for:
 
 > To know upcoming dates of when upcoming collections will happen, when filtered by property. Also if any adjustments to the scheduled dates are made.
 
-**previous collections**
+**last collections**
 
 > To know when the last few collections have taken place, when filtered by property.
 
@@ -50,9 +50,9 @@ Term     | Mapping | Definition
 name | [schema:name](http://schema.org/name) | Name of the service.
 description | [schema:description](https://schema.org/description) | A short description of the service.
 frequency | Text | How often it runs, e.g. weekly.
-next collections | Date | List of dates of next collections.
-previous collections | Date | List of dates of previous collections.
-container types | [Container type](container-type.html) | The container types that are collected.
+next collections | [Task](task.html) | List of dates of next collections.
+last collections | [Task](task.html) | List of dates of previous collections.
+feature types | [Feature type](feature-type.html) | The [container types](container-type.html) that are collected.
 provider | [schema:provider](http://schema.org/provider) | The council providing the service.
 service area | [schema:serviceArea](http://schema.org/serviceArea) | The geographic area where the service is provided.
 service operator | [schema:serviceOperator](http://schema.org/serviceOperator) | The operator of the service, if different to the provider.
@@ -66,7 +66,10 @@ service operator | [schema:serviceOperator](http://schema.org/serviceOperator) |
 ## Codelists
 
 ### Freqency
-TBD
+
+* weekly
+* alternate weekly
+
 
 
 

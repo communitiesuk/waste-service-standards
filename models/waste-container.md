@@ -4,7 +4,7 @@ title: Waste container
 model: waste_container
 ---
 
-# WasteContainer
+# Waste container
 
 
 ## Types

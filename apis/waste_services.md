@@ -11,6 +11,11 @@ title:
 This API offers a core set of resources and operations for interacting with local council waste and recycling services.
 
 
+## Outstanding issues
+* A way to discover if a task has been moved from its regular timeslot and why.
+* Handling of non-property sites, e.g. where the bins are located separately from a building.
+
+
 ## ESD Standards
 The [ESD Standards](http://standards.esd.org.uk) define all the categories of services that local authorities typically provide. These will be referenced via URL from the Services API, to allow individual council instances of a service to be matched to common service definitions.
 
@@ -99,10 +104,9 @@ Name | Type | Description
   "feature_types": [
     {
       "color": "black",
-      "image": "/images/green_bin.png",
-      "shape": "wheelie bin",
+      "shape": "wheelie_bin",
       "materials": {
-        "@id": "/waste/material-streams/mixed-recycling",
+        "@id": "/waste/materials/mixed-recycling",
         "name": "Mixed recyclables"
       },
       "@type": "ContainerType",
@@ -112,11 +116,10 @@ Name | Type | Description
       "color": "brown",
       "shape": "caddy",
       "materials": {
-        "@id": "/waste/material-streams/food-waste",
+        "@id": "/waste/materials/food-waste",
         "name": "Food waste"
       },
-      "@type": "ContainerType",
-      "image": "/images/brown_caddy.png"
+      "@type": "ContainerType"
     }
   ],
   "name": "Mixed recycling",
@@ -130,19 +133,17 @@ Name | Type | Description
   },
   "@type": "WasteService",
   "next_collection": {
-    "date": "1 August 2014",
-    "changed_date_reason": "Bank holiday",
-    "changed_date": "2 August 2015",
+    "start_date": "2014-05-23T20:00Z",
     "features": [
       {
         "status": "in_service",
         "id": "2140541",
-        "type": "http://example.com/feature-types/2",
+        "type": "http://example.com/feature_types/2",
         "@type": "WasteContainer",
         "size": 240
       }
     ],
-    "@type": "WasteCollectionTask"
+    "@type": "EmptyBinTask"
   },
   "frequency": "weekly",
   "esd_url": "http://id.esd.org.uk/service/1130",
@@ -162,34 +163,17 @@ Name | Type | Description
     "@type": "ServiceChannel"
   },
   "last_collection": {
-    "date": "23 July 2015",
+    "start_date": "2014-05-23T20:00Z",
     "features": [
       {
         "status": "In use",
         "id": "2140541",
-        "type": "http://example.com/feature-types/1",
+        "type": "http://example.com/feature_types/1",
         "@type": "WasteContainer",
         "size": 240
       }
     ],
-    "events": [
-      {
-        "type": "Not presented",
-        "usrn": "123456789012",
-        "@id": "/api/events/1",
-        "image": "http://example.com/images/123.png",
-        "uprn": "123456789012",
-        "date_created": "1 August 2015",
-        "geo": {
-          "latitude": "40.75",
-          "@type": "GeoCoordinates",
-          "longitude": "73.98"
-        },
-        "@type": "WasteEvent",
-        "container_color": "black"
-      }
-    ],
-    "@type": "WasteCollectionTask"
+    "@type": "EmptyBinTask"
   },
   "id": 1,
   "description": "Please put your recycling wheelie bin on the street."
@@ -226,6 +210,80 @@ Name | Type | Description
 <tt>date_range</tt> | string | Limit results to those tasks that were started between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.
 
 
+
+
+
+
+
+
+
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
+
+<h2 id="Event types">Event types</h2>
+
+
+<hr/>
+<h4>Get a list of event types</h4>
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/event_types</span>
+</div>
+
+
+
+
+
+**Example response**
+{% highlight json %}
+[
+  {
+    "id": "1",
+    "@id": "http://localhost:4567/event_types/1",
+    "@type": "EventType",
+    "name": "NOT PRESENTED"
+  },
+  {
+    "id": "2",
+    "@id": "http://localhost:4567/event_types/2",
+    "@type": "EventType",
+    "name": "DAMAGED"
+  }
+]
+{% endhighlight %}
+
+
+
+
+
+
+
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
+
+
+<hr/>
+<h4>Get a single event type</h4>
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/event_types/{eventTypeId}</span>
+</div>
+
+
+
+
+
+**Example response**
+{% highlight json %}
+{
+  "id": "2",
+  "@id": "http://localhost:4567/event_types/2",
+  "@type": "EventType",
+  "name": "NOT PRESENTED"
+}
+{% endhighlight %}
 
 
 
@@ -529,11 +587,11 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 <hr/>
-<h4>Get a single site indexed by UPRN</h4>
+<h4>Get a single site indexed by UPRN, or another form of index if some sites do not have a UPRN. In that situation, the format of other IDs must not collide with UPRNs.</h4>
 
 <div class="api-call">
   <span class="rest-method get">get</span>
-  <span>/sites/{UPRN}</span>
+  <span>/sites/{ID}</span>
 </div>
 
 

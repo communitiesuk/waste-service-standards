@@ -9,12 +9,17 @@ documentation:
     content: |
       This API offers a core set of resources and operations for interacting with local council waste and recycling services.
 
+  - title: Outstanding issues
+    content: |
+      * A way to discover if a task has been moved from its regular timeslot and why.
+      * Handling of non-property sites, e.g. where the bins are located separately from a building.
+
   - title: ESD Standards
     content: |
       The [ESD Standards](http://standards.esd.org.uk) define all the categories of services that local authorities typically provide. These will be referenced via URL from the Services API, to allow individual council instances of a service to be matched to common service definitions.
 
-schemas:
-  - event: !include ../_includes/schemas/waste_event.schema.json
+# schemas:
+  # - event: !include ../_includes/schemas/waste_event.schema.json
     # events: !include ../schemas/events.json
 
 resourceTypes:
@@ -79,6 +84,26 @@ traits:
       date_range:
         type: string
         description: Limit results to those tasks that were started between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.
+
+/event_types:
+  displayName: Event types
+  type: collection
+  get:
+    description: Get a list of event types
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include ../_includes/examples/event_types.json
+
+  /{eventTypeId}:
+    get:
+      description: Get a single event type
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include ../_includes/examples/event_type.json
 
 /events:
   displayName: Events
@@ -180,9 +205,9 @@ traits:
         body:
           application/json:
             # example: !include ../_includes/examples/sites.json
-  /{UPRN}:
+  /{ID}:
     get:
-      description: Get a single site indexed by UPRN
+      description: Get a single site indexed by UPRN, or another form of index if some sites do not have a UPRN. In that situation, the format of other IDs must not collide with UPRNs.
       responses:
         200:
           body:

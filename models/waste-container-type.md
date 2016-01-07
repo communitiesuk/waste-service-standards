@@ -1,10 +1,10 @@
 ---
 layout: doc
-title: Container type
+title: Waste container type
 model: waste_container_type
 ---
 
-# Container type
+# Waste container type
 
 ## Use cases and requirements
 
@@ -61,4 +61,4 @@ sizes | list of integers | Available sizes of containers.
 
 ### Container shape
 
-
+See the [container types taxonomy](/taxonomies/container-types.html).

@@ -8,13 +8,12 @@
     {
       "@type": "ContainerType",
       "color": "black",
-      "shape": "wheelie bin",
+      "shape": "wheelie_bin",
       "lid_color": "green",
       "materials": {
         "name": "Mixed recyclables",
-        "@id": "/waste/material-streams/mixed-recycling"
-      },
-      "image": "/images/green_bin.png"
+        "@id": "/waste/materials/mixed-recycling"
+      }
     },
     {
       "@type": "ContainerType",
@@ -22,9 +21,8 @@
       "shape": "caddy",
       "materials": {
         "name": "Food waste",
-        "@id": "/waste/material-streams/food-waste"
-      },
-      "image": "/images/brown_caddy.png"
+        "@id": "/waste/materials/food-waste"
+      }
     }
   ],
   "description": "Please put your recycling wheelie bin on the street.",
@@ -39,24 +37,7 @@
         "id": "2140541",
         "status": "In use",
         "size": 240,
-        "type": "http://example.com/feature-types/1"
-      }
-    ],
-    "events": [
-      {
-        "@type": "WasteEvent",
-        "@id": "/api/events/1",
-        "type": "Not presented",
-        "date_created": "1 August 2015",
-        "uprn": "123456789012",
-        "usrn": "123456789012",
-        "image": "http://example.com/images/123.png",
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "40.75",
-          "longitude": "73.98"
-        },
-        "container_color": "black"
+        "type": "http://example.com/feature_types/1"
       }
     ]
   },
