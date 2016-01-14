@@ -228,7 +228,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 <div class="api-call">
   <span class="rest-method get">get</span>
-  <span>/event_types</span>
+  <span>/event-types</span>
 </div>
 
 
@@ -268,7 +268,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 <div class="api-call">
   <span class="rest-method get">get</span>
-  <span>/event_types/{eventTypeId}</span>
+  <span>/event-types/{eventTypeId}</span>
 </div>
 
 
