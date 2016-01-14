@@ -240,13 +240,13 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 [
   {
     "id": "1",
-    "@id": "http://localhost:4567/event_types/1",
+    "@id": "http://localhost:4567/event-types/1",
     "@type": "EventType",
     "name": "NOT PRESENTED"
   },
   {
     "id": "2",
-    "@id": "http://localhost:4567/event_types/2",
+    "@id": "http://localhost:4567/event-types/2",
     "@type": "EventType",
     "name": "DAMAGED"
   }

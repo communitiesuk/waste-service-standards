@@ -1,12 +1,12 @@
 [
   {
-    "@id": "http://localhost:4567/event_types/1",
+    "@id": "http://localhost:4567/event-types/1",
     "@type": "EventType",
     "id": "1",
     "name": "NOT PRESENTED"
   },
   {
-    "@id": "http://localhost:4567/event_types/2",
+    "@id": "http://localhost:4567/event-types/2",
     "@type": "EventType",
     "id": "2",
     "name": "DAMAGED"
