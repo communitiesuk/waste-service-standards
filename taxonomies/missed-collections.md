@@ -15,21 +15,19 @@ Many council classifications also divide event types by the service or container
 
 <table>
 <tr>
-  <!-- <th>ID</th> -->
   <th>Term</th>
   <th>Sub-term</th>
   <th>Description</th>
   <th>Apply to bin<sup>1</sup></th>
-  <!-- <th>Synonyms</th> -->
+  <th>Location type</th>
 </tr>
 {% for code in site.data.collection_event_types %}
 <tr>
-  <!-- <td></td> -->
   <td>{{ code.level_1 }}</td>
   <td>{{ code.level_2 }}</td>
   <td>{{ code.description }}</td>
   <td>{{ code['apply to bin'] }}</td>
-  <!-- <td>{{ code.synonyms }}</td> -->
+  <td>{{ code['location type'] }}</td>
 </tr>
 {% endfor %}
 </table>
