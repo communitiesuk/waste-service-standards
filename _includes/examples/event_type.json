@@ -1,5 +1,5 @@
 {
-  "@id": "http://localhost:4567/event_types/2",
+  "@id": "http://example.com/event-types/2",
   "@type": "EventType",
   "id": "2",
   "name": "NOT PRESENTED"

@@ -37,7 +37,7 @@
         "id": "2140541",
         "status": "In use",
         "size": 240,
-        "type": "http://example.com/feature_types/1"
+        "type": "http://example.com/feature-types/1"
       }
     ]
   },
@@ -50,7 +50,7 @@
         "id": "2140541",
         "status": "in_service",
         "size": 240,
-        "type": "http://example.com/feature_types/2"
+        "type": "http://example.com/feature-types/2"
       }
     ]
   },

@@ -1,6 +1,6 @@
 level_1,level_2,description,ui string,type,apply to bin,location type,synonyms,issues
 Not presented,,The bin was not presented on the street.,Not emptied: 23 November. Sorry we couldn't empty your bins – they weren't left out for us to empty.,data,yes,site,Non-Presentation,
-Wrongly presented,,There was a problem with the bin as presented.,Not emptied: 23 November. Sorry we didn't empty your bins – they were the wrong bins for this week's recycling collection.,data,yes,site,Wrong bin (wrong residual / recycling week),Is this for wrong bins?
+Wrong bin,,There was a problem with the type of bin presented.,Not emptied: 23 November. Sorry we didn't empty your bins – they were the wrong bins for this week's recycling collection.,data,yes,site,Wrong bin (wrong residual / recycling week),Is this for wrong bins?
 Too heavy,,The container was too heavy to empty.,Not emptied: 23 November. Sorry we couldn't empty your bins – the contents were too heavy.,data,yes,site,Overweight Bin / Bin too heavy (unsafe to lift),
 Excess waste,,There is too much waste to collect.,Not emptied: 23 November. Sorry we couldn't empty your bins – there was too much waste for us to collect.,data,yes,site,,
 ,Lid open,"The container was too full, the lid would not close properly.",Not emptied: 23 November. Sorry we didn't empty your bins – they were too full so the lid wouldn't close properly.,data,yes,site,Overflowing Bin / Lid up,
