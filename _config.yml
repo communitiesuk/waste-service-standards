@@ -8,11 +8,6 @@ twitter :
 github : https://github.com/communitiesuk/waste-service-standards
 author : Paul Mackay
 analytics : 
-year : 2015
+year : 2016
 exclude :
   - node_modules
-
-
-markdown: redcarpet
-redcarpet:
-  extensions: ["tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
