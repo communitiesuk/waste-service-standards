@@ -1,4 +1,5 @@
 {
+  "@id": "http://example.com/tasks/123",
   "@type": "EmptyBinTask",
   "name": "Empty Black 240L",
   "description": "Empty Black 240L",

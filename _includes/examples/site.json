@@ -16,6 +16,7 @@
   },
   "uprn": "123456789012",
   "usrn": "12345678",
+  "parent_uprn": "123456789012",
   "attributes": [
     {
       "name": "assisted collection",
