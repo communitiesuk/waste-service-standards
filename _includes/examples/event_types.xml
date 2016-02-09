@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root type="array">
+  <root>
+    <_id>http://example.com/event-types/1</_id>
+    <_type>EventType</_type>
+    <id>1</id>
+    <name>NOT PRESENTED</name>
+  </root>
+  <root>
+    <_id>http://example.com/event-types/2</_id>
+    <_type>EventType</_type>
+    <id>2</id>
+    <name>DAMAGED</name>
+  </root>
+</root>

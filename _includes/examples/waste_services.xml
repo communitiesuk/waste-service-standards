@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root type="array">
+  <root>
+    <_id>http://example.com/services/1</_id>
+    <name>Recycling service</name>
+    <frequency>weekly</frequency>
+    <description>Please put your recycling box on the street.</description>
+  </root>
+  <root>
+    <_id>http://example.com/services/2</_id>
+    <name>Refuse</name>
+    <frequency>weekly</frequency>
+    <description>Black bins.</description>
+  </root>
+</root>

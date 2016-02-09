@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <_type>WasteContainerType</_type>
+  <_id>http://example.com/container-types/1</_id>
+  <name>240L wheelie bin</name>
+  <description>240L wheelie bin</description>
+  <reusable type="boolean">true</reusable>
+  <sizes type="array">
+    <size type="integer">180</size>
+    <size type="integer">240</size>
+  </sizes>
+  <materials>
+    <name>paper</name>
+    <_id>/api/materials/paper</_id>
+  </materials>
+</root>

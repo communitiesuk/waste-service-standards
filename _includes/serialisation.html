@@ -3,14 +3,20 @@
 
   <!-- Nav tabs -->
   <ul class="tabs" data-tab>
-    <li class="tab-title active" role="presentation"><a href="#example" aria-controls="schema" role="tab" data-toggle="tab">JSON</a></li>
+    <li class="tab-title active" role="presentation"><a href="#example-json" aria-controls="schema" role="tab" data-toggle="tab">JSON</a></li>
+    <li class="tab-title" role="presentation"><a href="#example-xml" aria-controls="schema" role="tab" data-toggle="tab">XML</a></li>
     <li class="tab-title" role="presentation" class="active"><a href="#schema" aria-controls="json" role="tab" data-toggle="tab">JSON Schema</a></li>
   </ul>
 
   <div class="tabs-content">
-    <div class="content active" id="example">
+    <div class="content active" id="example-json">
   {% highlight json %}
   {% include examples/{{ page.model }}.json %}
+  {% endhighlight %}
+    </div>
+    <div class="content" id="example-xml">
+  {% highlight xml %}
+  {% include examples/{{ page.model }}.xml %}
   {% endhighlight %}
     </div>
     <div class="content" id="schema">

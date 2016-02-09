@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root type="array">
+  <root>
+    <_id>/api/materials/mixed-recyclables</_id>
+    <name>mixed recyclables</name>
+    <color>fd8812</color>
+    <image>http://example.com/images/mixed-recycling.png</image>
+  </root>
+  <root>
+    <_id>/api/materials/paper</_id>
+    <name>paper</name>
+    <color></color>
+    <image>http://example.com/images/paper.png</image>
+  </root>
+</root>

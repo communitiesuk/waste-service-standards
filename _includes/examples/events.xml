@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root type="array">
+  <root>
+    <event-type>Not presented</event-type>
+    <date-created>2014-05-23T20:00</date-created>
+    <uprn>123456789012</uprn>
+    <usrn>123456789012</usrn>
+    <image>http://example.com/images/123.png</image>
+    <geo>
+      <_type>GeoCoordinates</_type>
+      <latitude>40.75</latitude>
+      <longitude>73.98</longitude>
+    </geo>
+  </root>
+  <root>
+    <event-type>Too heavy</event-type>
+    <date-created>2014-05-23T20:00</date-created>
+    <uprn>123456789012</uprn>
+    <usrn>123456789012</usrn>
+    <image>http://example.com/images/123.png</image>
+    <geo>
+      <_type>GeoCoordinates</_type>
+      <latitude>45.75</latitude>
+      <longitude>53.98</longitude>
+    </geo>
+  </root>
+</root>

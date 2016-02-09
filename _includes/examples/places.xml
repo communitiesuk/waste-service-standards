@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root type="array">
+  <root>
+    <_type>Place</_type>
+    <_id>/places/1</_id>
+    <address>
+      <street-address>1 Acacia Avenue</street-address>
+      <locality>Anytown</locality>
+      <region>Anyshire</region>
+      <postcode>AB1 2CD</postcode>
+    </address>
+    <geo>
+      <_type>GeoCoordinates</_type>
+      <latitude>40.75</latitude>
+      <longitude>73.98</longitude>
+    </geo>
+    <uprn>123456789012</uprn>
+    <usrn>123456789012</usrn>
+  </root>
+</root>
