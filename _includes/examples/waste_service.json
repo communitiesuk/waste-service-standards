@@ -28,32 +28,36 @@
   "description": "Please put your recycling wheelie bin on the street.",
   "esd_url": "http://id.esd.org.uk/service/1130",
   
-  "last_collection": {
-    "@type": "EmptyBinTask",
-    "start_date": "2014-05-23T20:00Z",
-    "features": [
-      {
-        "@type": "WasteContainer",
-        "id": "2140541",
-        "status": "In use",
-        "size": 240,
-        "type": "http://example.com/feature-types/1"
-      }
-    ]
-  },
-  "next_collection": {
-    "@type": "EmptyBinTask",
-    "start_date": "2014-05-23T20:00Z",
-    "features": [
-      {
-        "@type": "WasteContainer",
-        "id": "2140541",
-        "status": "in_service",
-        "size": 240,
-        "type": "http://example.com/feature-types/2"
-      }
-    ]
-  },
+  "last_collections": [
+    {
+      "@type": "EmptyBinTask",
+      "start_date": "2014-05-23T20:00Z",
+      "features": [
+        {
+          "@type": "WasteContainer",
+          "id": "2140541",
+          "status": "In use",
+          "size": 240,
+          "type": "http://example.com/feature-types/1"
+        }
+      ]
+    }
+  ],
+  "next_collections": [
+    {
+      "@type": "EmptyBinTask",
+      "start_date": "2014-05-23T20:00Z",
+      "features": [
+        {
+          "@type": "WasteContainer",
+          "id": "2140541",
+          "status": "in_service",
+          "size": 240,
+          "type": "http://example.com/feature-types/2"
+        }
+      ]
+    }
+  ],
   "available_channel": {
     "@type": "ServiceChannel",
     "name": "Household waste and street maintenance",

@@ -123,28 +123,26 @@ Name | Type | Description
     }
   ],
   "name": "Mixed recycling",
-  "service_operator": {
-    "@type": "Organization",
-    "name": "Example Waste Operator Co"
-  },
+  "next_collections": [
+    {
+      "start_date": "2014-05-23T20:00Z",
+      "features": [
+        {
+          "status": "in_service",
+          "id": "2140541",
+          "type": "http://example.com/feature-types/2",
+          "@type": "WasteContainer",
+          "size": 240
+        }
+      ],
+      "@type": "EmptyBinTask"
+    }
+  ],
   "service_area": {
     "@type": "AdministrativeArea",
     "name": "Anytown"
   },
   "@type": "WasteService",
-  "next_collection": {
-    "start_date": "2014-05-23T20:00Z",
-    "features": [
-      {
-        "status": "in_service",
-        "id": "2140541",
-        "type": "http://example.com/feature_types/2",
-        "@type": "WasteContainer",
-        "size": 240
-      }
-    ],
-    "@type": "EmptyBinTask"
-  },
   "frequency": "weekly",
   "esd_url": "http://id.esd.org.uk/service/1130",
   "provider": {
@@ -162,18 +160,24 @@ Name | Type | Description
     "name": "Household waste and street maintenance",
     "@type": "ServiceChannel"
   },
-  "last_collection": {
-    "start_date": "2014-05-23T20:00Z",
-    "features": [
-      {
-        "status": "In use",
-        "id": "2140541",
-        "type": "http://example.com/feature_types/1",
-        "@type": "WasteContainer",
-        "size": 240
-      }
-    ],
-    "@type": "EmptyBinTask"
+  "last_collections": [
+    {
+      "start_date": "2014-05-23T20:00Z",
+      "features": [
+        {
+          "status": "In use",
+          "id": "2140541",
+          "type": "http://example.com/feature-types/1",
+          "@type": "WasteContainer",
+          "size": 240
+        }
+      ],
+      "@type": "EmptyBinTask"
+    }
+  ],
+  "service_operator": {
+    "@type": "Organization",
+    "name": "Example Waste Operator Co"
   },
   "id": 1,
   "description": "Please put your recycling wheelie bin on the street."
@@ -208,8 +212,75 @@ Name | Type | Description
 <tt>type</tt> | string | Limit results to a specific task type.
 <tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
 <tt>date_range</tt> | string | Limit results to those tasks that were started between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.
+<tt>include</tt> | string | Comma-separated labels of additional information to include. `related` includes all tasks for any parent sites and associated bin stores where possible, e.g. `include=related`.
+
+Only applicable when filtering by UPRN.
 
 
+
+
+
+
+**Example response**
+{% highlight json %}
+[
+  {
+    "@id": "http://example.com/tasks/123",
+    "@type": "EmptyBinTask",
+    "name": "Empty Black 240L"
+  },
+  {
+    "@id": "http://example.com/tasks/124",
+    "@type": "EmptyBinTask",
+    "name": "Empty Green 240L"
+  }
+]
+{% endhighlight %}
+
+
+
+
+
+
+
+<!-- Hacky check to see if this resource is a root item and ensure it isnt
+repeated for GET, POST, etc. It assumes there is always the GET method! -->
+
+
+<hr/>
+<h4>Get a single task</h4>
+
+<div class="api-call">
+  <span class="rest-method get">get</span>
+  <span>/tasks/{taskId}</span>
+</div>
+
+
+
+
+
+**Example response**
+{% highlight json %}
+{
+  "status": "not_started",
+  "features": [
+    {
+      "status": "In use",
+      "id": "2140541",
+      "type": "http://example.com/feature_types/1",
+      "@type": "WasteContainer",
+      "size": 240
+    }
+  ],
+  "name": "Empty Black 240L",
+  "scheduled_start_date": "2015-09-27T21:04:00.743",
+  "location": "http://example.com/sites/1",
+  "@type": "EmptyBinTask",
+  "@id": "http://example.com/tasks/123",
+  "start_date": "2015-09-27T21:04:00.743",
+  "description": "Empty Black 240L"
+}
+{% endhighlight %}
 
 
 
@@ -240,13 +311,13 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 [
   {
     "id": "1",
-    "@id": "http://localhost:4567/event-types/1",
+    "@id": "http://example.com/event-types/1",
     "@type": "EventType",
     "name": "NOT PRESENTED"
   },
   {
     "id": "2",
-    "@id": "http://localhost:4567/event-types/2",
+    "@id": "http://example.com/event-types/2",
     "@type": "EventType",
     "name": "DAMAGED"
   }
@@ -279,7 +350,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 {% highlight json %}
 {
   "id": "2",
-  "@id": "http://localhost:4567/event_types/2",
+  "@id": "http://example.com/event-types/2",
   "@type": "EventType",
   "name": "NOT PRESENTED"
 }
@@ -622,6 +693,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
       "value": "yes"
     }
   ],
+  "parent_uprn": "123456789012",
   "@id": "/sites/1",
   "@type": "Site"
 }

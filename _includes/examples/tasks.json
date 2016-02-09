@@ -1,0 +1,12 @@
+[
+  {
+    "@id": "http://example.com/tasks/123",
+    "@type": "EmptyBinTask",
+    "name": "Empty Black 240L"
+  },
+  {
+    "@id": "http://example.com/tasks/124",
+    "@type": "EmptyBinTask",
+    "name": "Empty Green 240L"
+  }
+]

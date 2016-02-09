@@ -84,6 +84,24 @@ traits:
       date_range:
         type: string
         description: Limit results to those tasks that were started between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.
+      include:
+        type: string
+        description: |
+          Comma-separated labels of additional information to include. `related` includes all tasks for any parent sites and associated bin stores where possible, e.g. `include=related`.
+          Only applicable when filtering by UPRN.
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include ../_includes/examples/tasks.json
+  /{taskId}:
+    get:
+      description: Get a single task
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include ../_includes/examples/task.json
 
 /event-types:
   displayName: Event types
