@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <id>123</id>
+  <type>
+    <name>240L wheelie bin</name>
+    <description>240L wheelie bin</description>
+    <reusable type="boolean">true</reusable>
+    <materials>
+      <name>paper</name>
+      <_id>/api/materials/paper</_id>
+    </materials>
+  </type>
+</root>
