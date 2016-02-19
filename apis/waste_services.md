@@ -49,8 +49,11 @@ Name | Type | Description
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 [
   {
@@ -67,6 +70,17 @@ Name | Type | Description
   }
 ]
 {% endhighlight %}
+
+
+HTTP code: 400
+
+{% highlight json %}
+{
+  "code": 400,
+  "userMessage": "The parameters were incorrect."
+}
+{% endhighlight %}
+
 
 
 
@@ -96,8 +110,11 @@ Name | Type | Description
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 {
   "@id": "http://example.com/services/1",
@@ -185,6 +202,17 @@ Name | Type | Description
 {% endhighlight %}
 
 
+HTTP code: 400
+
+{% highlight json %}
+{
+  "code": 400,
+  "userMessage": "The parameters were incorrect."
+}
+{% endhighlight %}
+
+
+
 
 
 
@@ -213,15 +241,17 @@ Name | Type | Description
 <tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
 <tt>date_range</tt> | string | Limit results to those tasks that were started between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.
 <tt>include</tt> | string | Comma-separated labels of additional information to include. `related` includes all tasks for any parent sites and associated bin stores where possible, e.g. `include=related`.
-
 Only applicable when filtering by UPRN.
 
 
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 [
   {
@@ -236,6 +266,17 @@ Only applicable when filtering by UPRN.
   }
 ]
 {% endhighlight %}
+
+
+HTTP code: 400
+
+{% highlight json %}
+{
+  "code": 400,
+  "userMessage": "The parameters were incorrect."
+}
+{% endhighlight %}
+
 
 
 
@@ -258,8 +299,11 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 {
   "status": "not_started",
@@ -267,20 +311,20 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
     {
       "status": "In use",
       "id": "2140541",
-      "type": "http://example.com/feature_types/1",
+      "type": "http://example.com/feature-types/1",
       "@type": "WasteContainer",
       "size": 240
     }
   ],
   "name": "Empty Black 240L",
-  "scheduled_start_date": "2015-09-27T21:04:00.743",
-  "location": "http://example.com/sites/1",
   "@type": "EmptyBinTask",
+  "location": "http://example.com/sites/1",
   "@id": "http://example.com/tasks/123",
   "start_date": "2015-09-27T21:04:00.743",
   "description": "Empty Black 240L"
 }
 {% endhighlight %}
+
 
 
 
@@ -305,8 +349,11 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 [
   {
@@ -330,6 +377,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
+
 <!-- Hacky check to see if this resource is a root item and ensure it isnt
 repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
@@ -345,8 +393,11 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 {
   "id": "2",
@@ -355,6 +406,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
   "name": "NOT PRESENTED"
 }
 {% endhighlight %}
+
 
 
 
@@ -388,8 +440,11 @@ Name | Type | Description
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 [
   {
@@ -425,6 +480,7 @@ Name | Type | Description
 
 
 
+
 <!-- Hacky check to see if this resource is a root item and ensure it isnt
 repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
@@ -440,8 +496,11 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 {
   "type": "Not presented",
@@ -471,6 +530,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
   "start_date": "2014-05-23T20:00Z"
 }
 {% endhighlight %}
+
 
 
 
@@ -523,8 +583,11 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 {
   "type": {
@@ -539,6 +602,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
   "id": "123"
 }
 {% endhighlight %}
+
 
 
 
@@ -590,8 +654,11 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 {
   "description": "240L wheelie bin",
@@ -609,6 +676,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
   "name": "240L wheelie bin"
 }
 {% endhighlight %}
+
 
 
 
@@ -641,11 +709,15 @@ Name | Type | Description
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 {}
 {% endhighlight %}
+
 
 
 
@@ -668,8 +740,11 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 {
   "usrn": "12345678",
@@ -705,6 +780,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
+
 <!-- Hacky check to see if this resource is a root item and ensure it isnt
 repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
@@ -731,11 +807,15 @@ Name | Type | Description
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 {}
 {% endhighlight %}
+
 
 
 
@@ -778,8 +858,11 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 {
   "customer": {
@@ -790,6 +873,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
   "id": "1"
 }
 {% endhighlight %}
+
 
 
 

@@ -55,6 +55,11 @@ traits:
         body:
           application/json:
             example: !include ../_includes/examples/waste_services.json
+      400:
+        body:
+          application/json:
+            example: !include ../_includes/examples/error.json
+
   /{serviceId}:
     get:
       description: Get a single service
@@ -67,6 +72,10 @@ traits:
           body:
             application/json:
               example: !include ../_includes/examples/waste_service.json
+        400:
+          body:
+            application/json:
+              example: !include ../_includes/examples/error.json
 
 /tasks:
   displayName: Tasks
@@ -94,6 +103,10 @@ traits:
         body:
           application/json:
             example: !include ../_includes/examples/tasks.json
+      400:
+        body:
+          application/json:
+            example: !include ../_includes/examples/error.json
   /{taskId}:
     get:
       description: Get a single task

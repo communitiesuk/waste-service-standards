@@ -38,11 +38,15 @@ Name | Type | Description
 {% endif %}
 
 {% if r.responses %}
+**Example responses**
+
 {% for response in r.responses %}
-**Example response**
+HTTP code: {{ response.code }}
+
 {{ '{% highlight json %}' }}
 {{ response.body[0].example | jsonify(indent=2, separators=(',', ': '), sort_keys=False) }}
 {{ '{% endhighlight %}' }}
+
 {% endfor %}
 {% endif %}
 
