@@ -43,6 +43,10 @@ Properties such as flats often have shared bin stores. A typical pattern to mode
 
 * The building has a UPRN
 * Each flat has a UPRN and a parent UPRN for the building
-* The shared bin store is a feature associated with the building
+* The shared bin store contains Features associated with the building
+
+This basic pattern is accounted for with the `include=related` parameter of the [Tasks endpoint]({{ site.baseurl }}/apis/waste_services.html#Tasks) and other endpoints.
 
 There are other kinds of patterns for recording these relationships, depending on how the council has modelled the information.
+
+See section 11.9, Grouped Properties in [NLPG Data Entry and Best Practice](https://www.geoplace.co.uk/helpdesk/library/-/asset_publisher/o9lOPMM3I6Wj/document/id/43301) for more information.

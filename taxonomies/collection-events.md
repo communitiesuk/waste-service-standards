@@ -1,9 +1,9 @@
 ---
 layout: doc
-title: 
+title: Collections events
 ---
 
-# Missed collections reasons
+# Collections events
 
 The table below lists a set of common possible events that can occur during a waste collection round.
 
@@ -32,6 +32,6 @@ Many council classifications also divide event types by the service or container
 {% endfor %}
 </table>
 
-1. Here "service" means an event type that is applied to a specific service, e.g. refuse, recycling, etc and often relates to the containers. "General" is for event types where the event is not specifically tied to a service but could affect any service.
+1. Some events may be applied to specific containers or bins, whereas others are general events.
 
 Also available as <a href="https://raw.githubusercontent.com/communitiesuk/waste-service-standards/master/_data/collection_event_types.csv" download="materials.csv">CSV</a>.

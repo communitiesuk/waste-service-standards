@@ -45,6 +45,10 @@ The Task model should have properties for:
 
 > When the task was planned to start.
 
+**features**
+
+> What features this task is acting on. Optional depending on whether system connects them.
+
 
 ## Types
 
@@ -68,10 +72,10 @@ name | [schema:name](http://schema.org/name) | Identifer for the Task.
 description | [schema:description](https://schema.org/description) | A short description of the Task.
 status | [schema:actionStatus](http://schema.org/actionStatus) | The status of the Task.
 location | [schema:location](http://schema.org/location) | Location information.
-start date | [schema:startDate] | Start date.
-end date | [schema:endDate] | End date.
-scheduled start date | [schema:startDate] | Planned start date.
-
+start date | [schema:startDate](https://schema.org/startDate) | Planned start date.
+end date | [schema:date](https://schema.org/Date) | End date.
+actual start date | [schema:date](https://schema.org/Date) | Actual start date.
+features | [Feature](/models/feature.html) | List of related features.
 
 ## Serialisation
 

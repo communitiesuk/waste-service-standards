@@ -4,7 +4,6 @@
   "name": "Empty Black 240L",
   "description": "Empty Black 240L",
   "start_date": "2015-09-27T21:04:00.743",
-  "scheduled_start_date": "2015-09-27T21:04:00.743",
   "status": "not_started",
   "features": [
       {
@@ -12,7 +11,7 @@
         "id": "2140541",
         "status": "In use",
         "size": 240,
-        "type": "http://example.com/feature_types/1"
+        "type": "http://example.com/feature-types/1"
       }
     ],
   "location": "http://example.com/sites/1"
