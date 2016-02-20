@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root>
-  <_type>WasteContainerType</_type>
-  <_id>http://example.com/container-types/1</_id>
+<feature-type>
+  <type>WasteContainerType</type>
+  <href>http://example.com/container-types/1</href>
   <name>240L wheelie bin</name>
   <description>240L wheelie bin</description>
   <reusable type="boolean">true</reusable>
@@ -11,6 +11,6 @@
   </sizes>
   <materials>
     <name>paper</name>
-    <_id>/api/materials/paper</_id>
+    <href>/api/materials/paper</href>
   </materials>
-</root>
+</feature-type>

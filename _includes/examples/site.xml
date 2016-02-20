@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root>
-  <_type>Site</_type>
-  <_id>/sites/1</_id>
+<site>
+  <type>Site</type>
+  <href>/sites/1</href>
   <address>
-    <_type>BS7666Address</_type>
+    <type>BS7666Address</type>
     <paon>1</paon>
     <street>Acacia Avenue</street>
     <locality>Anytown</locality>
@@ -11,7 +11,7 @@
     <postcode>AB1 2CD</postcode>
   </address>
   <geo>
-    <_type>GeoCoordinates</_type>
+    <type>GeoCoordinates</type>
     <latitude>40.75</latitude>
     <longitude>73.98</longitude>
   </geo>
@@ -24,4 +24,4 @@
       <value>yes</value>
     </attribute>
   </attributes>
-</root>
+</site>

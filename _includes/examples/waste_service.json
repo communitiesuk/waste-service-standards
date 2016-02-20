@@ -10,19 +10,23 @@
       "color": "black",
       "shape": "wheelie_bin",
       "lid_color": "green",
-      "materials": {
-        "name": "Mixed recyclables",
-        "@id": "/waste/materials/mixed-recycling"
-      }
+      "materials": [
+        {
+          "name": "Mixed recyclables",
+          "@id": "/waste/materials/mixed-recycling"
+        }
+      ]
     },
     {
       "@type": "ContainerType",
       "color": "brown",
       "shape": "caddy",
-      "materials": {
-        "name": "Food waste",
-        "@id": "/waste/materials/food-waste"
-      }
+      "materials": [
+        {
+          "name": "Food waste",
+          "@id": "/waste/materials/food-waste"
+        }
+      ]
     }
   ],
   "description": "Please put your recycling wheelie bin on the street.",
@@ -38,7 +42,7 @@
           "id": "2140541",
           "status": "In use",
           "size": 240,
-          "type": "http://example.com/feature-types/1"
+          "@id": "http://example.com/feature-types/1"
         }
       ]
     }
@@ -53,7 +57,7 @@
           "id": "2140541",
           "status": "in_service",
           "size": 240,
-          "type": "http://example.com/feature-types/2"
+          "@id": "http://example.com/feature-types/2"
         }
       ]
     }

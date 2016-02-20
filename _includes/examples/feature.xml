@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root>
+<feature>
   <id>123</id>
   <type>
     <name>240L wheelie bin</name>
@@ -7,7 +7,7 @@
     <reusable type="boolean">true</reusable>
     <materials>
       <name>paper</name>
-      <_id>/api/materials/paper</_id>
+      <href>/api/materials/paper</href>
     </materials>
   </type>
-</root>
+</feature>

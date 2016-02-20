@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root>
-  <_id>http://example.com/tasks/123</_id>
-  <_type>EmptyBinTask</_type>
+<task>
+  <href>http://example.com/tasks/123</href>
+  <type>EmptyBinTask</type>
   <name>Empty Black 240L</name>
   <description>Empty Black 240L</description>
   <start-date>2015-09-27T21:04:00.743</start-date>
@@ -9,12 +9,11 @@
   <status>not_started</status>
   <features type="array">
     <feature>
-      <_type>WasteContainer</_type>
+      <type>http://example.com/feature_types/1</type>
       <id>2140541</id>
       <status>In use</status>
       <size type="integer">240</size>
-      <type>http://example.com/feature_types/1</type>
     </feature>
   </features>
   <location>http://example.com/sites/1</location>
-</root>
+</task>

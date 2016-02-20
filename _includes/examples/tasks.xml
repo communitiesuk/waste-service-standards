@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root type="array">
-  <root>
-    <_id>http://example.com/tasks/123</_id>
-    <_type>EmptyBinTask</_type>
+<tasks type="array">
+  <task>
+    <href>http://example.com/tasks/123</href>
+    <type>EmptyBinTask</type>
     <name>Empty Black 240L</name>
-  </root>
-  <root>
-    <_id>http://example.com/tasks/124</_id>
-    <_type>EmptyBinTask</_type>
+  </task>
+  <task>
+    <href>http://example.com/tasks/124</href>
+    <type>EmptyBinTask</type>
     <name>Empty Green 240L</name>
-  </root>
-</root>
+  </task>
+</tasks>

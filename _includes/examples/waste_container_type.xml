@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root>
+<waste-container-type>
   <name>Green wheelie bin</name>
   <description>Garden refuse green wheelie bin</description>
   <reusable type="boolean">true</reusable>
@@ -10,6 +10,6 @@
   <shape>wheelie_bin</shape>
   <materials>
     <name>mixed recyclables</name>
-    <_id>/api/material-streams/mixed-recyclables</_id>
+    <href>/api/material-streams/mixed-recyclables</href>
   </materials>
-</root>
+</waste-container-type>
