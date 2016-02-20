@@ -46,10 +46,16 @@ traits:
     queryParameters:
       uprn:
         type: string
-        description: Limit results to those related to the property with this UPRN.
+        description: Dispalys services related to the property with this UPRN. This also includes basic completed and upcoming collection information and automatically includes related tasks if the property has a parent UPRN.
       full:
         type: boolean
         description: Return the full service information.
+      start_date:
+        type: date
+        description: Filter related tasks that occur after this date.
+      end_date:
+        type: date
+        description: Filter related tasks that start before this date.
     responses:
       200:
         body:
@@ -90,9 +96,12 @@ traits:
       uprn:
         type: string
         description: Limit results to those related to the property with this UPRN.
-      date_range:
-        type: string
-        description: Limit results to those tasks that were started between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.
+      start_date:
+        type: date
+        description: Filter tasks that occur after this date.
+      end_date:
+        type: date
+        description: Filter tasks that start before this date.
       include:
         type: string
         description: |

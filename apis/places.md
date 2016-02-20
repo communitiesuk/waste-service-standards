@@ -34,8 +34,11 @@ Name | Type | Description
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 [
   {
@@ -64,6 +67,7 @@ Name | Type | Description
 
 
 
+
 <!-- Hacky check to see if this resource is a root item and ensure it isnt
 repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
@@ -79,8 +83,11 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 
 
+**Example responses**
 
-**Example response**
+
+HTTP code: 200
+
 {% highlight json %}
 {
   "usrn": "12345678",
@@ -106,6 +113,7 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
   "@type": "Place"
 }
 {% endhighlight %}
+
 
 
 
