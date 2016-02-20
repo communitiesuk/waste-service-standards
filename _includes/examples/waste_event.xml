@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<waste-event>
+  <type>Not presented</type>
+  <href>/api/events/1</href>
+  <start-date>2014-05-23T20:00Z</start-date>
+  <uprn>123456789012</uprn>
+  <usrn>123456789012</usrn>
+  <image>http://example.com/images/123.png</image>
+  <geo>
+    <type>GeoCoordinates</type>
+    <latitude>40.75</latitude>
+    <longitude>73.98</longitude>
+  </geo>
+  <features type="array">
+    <feature>
+      <color>#fff</color>
+      <type>
+        <name>240L wheelie bin</name>
+        <reusable type="boolean">true</reusable>
+        <materials>
+          <name>paper</name>
+          <href>/api/materials/paper</href>
+        </materials>
+      </type>
+    </feature>
+  </features>
+</waste-event>

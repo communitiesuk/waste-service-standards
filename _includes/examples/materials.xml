@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<materials type="array">
+  <material>
+    <href>/api/materials/mixed-recyclables</href>
+    <name>mixed recyclables</name>
+    <color>fd8812</color>
+    <image>http://example.com/images/mixed-recycling.png</image>
+  </material>
+  <material>
+    <href>/api/materials/paper</href>
+    <name>paper</name>
+    <color></color>
+    <image>http://example.com/images/paper.png</image>
+  </material>
+</materials>

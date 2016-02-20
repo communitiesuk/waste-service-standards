@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<place>
+  <type>Place</type>
+  <href>/places/1</href>
+  <address>
+    <type>BS7666Address</type>
+    <paon>1</paon>
+    <street>Acacia Avenue</street>
+    <locality>Anytown</locality>
+    <region>Anyshire</region>
+    <postcode>AB1 2CD</postcode>
+  </address>
+  <geo>
+    <type>GeoCoordinates</type>
+    <latitude>40.75</latitude>
+    <longitude>73.98</longitude>
+  </geo>
+  <geo-osgb36>
+    <easting>1</easting>
+    <northing>2</northing>
+  </geo-osgb36>
+  <uprn>123456789012</uprn>
+  <usrn>12345678</usrn>
+</place>

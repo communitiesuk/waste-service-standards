@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<address>
+  <type>BS7666Address</type>
+  <paon>1</paon>
+  <street>Acacia Avenue</street>
+  <locality>Anytown</locality>
+  <postcode>AB1 2CD</postcode>
+</address>

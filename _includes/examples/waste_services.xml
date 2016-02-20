@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<waste-services type="array">
+  <waste-service>
+    <href>http://example.com/services/1</href>
+    <name>Recycling service</name>
+    <frequency>weekly</frequency>
+    <description>Please put your recycling box on the street.</description>
+  </waste-service>
+  <waste-service>
+    <href>http://example.com/services/2</href>
+    <name>Refuse</name>
+    <frequency>weekly</frequency>
+    <description>Black bins.</description>
+  </waste-service>
+</waste-services>

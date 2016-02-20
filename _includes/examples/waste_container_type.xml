@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<waste-container-type>
+  <name>Green wheelie bin</name>
+  <description>Garden refuse green wheelie bin</description>
+  <reusable type="boolean">true</reusable>
+  <color>green</color>
+  <sizes type="array">
+    <size type="integer">240</size>
+  </sizes>
+  <shape>wheelie_bin</shape>
+  <materials>
+    <name>mixed recyclables</name>
+    <href>/api/material-streams/mixed-recyclables</href>
+  </materials>
+</waste-container-type>

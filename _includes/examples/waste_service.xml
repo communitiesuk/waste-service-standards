@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<waste-service>
+  <type>WasteService</type>
+  <href>http://example.com/services/1</href>
+  <id type="integer">1</id>
+  <name>Mixed recycling</name>
+  <frequency>weekly</frequency>
+  <feature-types type="array">
+    <feature-type>
+      <type>ContainerType</type>
+      <color>black</color>
+      <shape>wheelie_bin</shape>
+      <lid-color>green</lid-color>
+      <materials type="array">
+        <material>
+          <name>Mixed recyclables</name>
+          <href>/waste/materials/mixed-recycling</href>
+        </material>
+      </materials>
+    </feature-type>
+    <feature-type>
+      <type>ContainerType</type>
+      <color>brown</color>
+      <shape>caddy</shape>
+      <materials type="array">
+        <material>
+          <name>Food waste</name>
+          <href>/waste/materials/food-waste</href>
+        </material>
+      </materials>
+    </feature-type>
+  </feature-types>
+  <description>Please put your recycling wheelie bin on the street.</description>
+  <esd-url>http://id.esd.org.uk/service/1130</esd-url>
+  <last-collections type="array">
+    <last-collection>
+      <type>EmptyBinTask</type>
+      <start-date>2014-05-23T20:00Z</start-date>
+      <features type="array">
+        <feature>
+          <type>WasteContainer</type>
+          <id>2140541</id>
+          <status>In use</status>
+          <size type="integer">240</size>
+          <href>http://example.com/feature-types/1</href>
+        </feature>
+      </features>
+    </last-collection>
+  </last-collections>
+  <next-collections type="array">
+    <next-collection>
+      <type>EmptyBinTask</type>
+      <start-date>2014-05-23T20:00Z</start-date>
+      <features type="array">
+        <feature>
+          <type>WasteContainer</type>
+          <id>2140541</id>
+          <status>in_service</status>
+          <size type="integer">240</size>
+          <href>http://example.com/feature-types/2</href>
+        </feature>
+      </features>
+    </next-collection>
+  </next-collections>
+  <available-channel>
+    <type>ServiceChannel</type>
+    <name>Household waste and street maintenance</name>
+    <service-phone>
+      <type>ContactPoint</type>
+      <telephone>0123456789</telephone>
+      <email>waste@example.gov.uk</email>
+    </service-phone>
+    <service-url>http://www.example.gov.uk/waste</service-url>
+  </available-channel>
+  <provider>
+    <type>Organization</type>
+    <name>Example Council</name>
+    <url>http://www.example.gov.uk</url>
+  </provider>
+  <service-area>
+    <type>AdministrativeArea</type>
+    <name>Anytown</name>
+  </service-area>
+  <service-operator>
+    <type>Organization</type>
+    <name>Example Waste Operator Co</name>
+  </service-operator>
+</waste-service>

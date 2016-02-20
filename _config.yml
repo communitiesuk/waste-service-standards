@@ -10,4 +10,5 @@ author : Paul Mackay
 analytics : 
 year : 2016
 exclude :
+  - lib
   - node_modules

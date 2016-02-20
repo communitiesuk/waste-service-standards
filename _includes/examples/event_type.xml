@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event-type>
+  <href>http://example.com/event-types/2</href>
+  <type>EventType</type>
+  <id>2</id>
+  <name>NOT PRESENTED</name>
+</event-type>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tasks type="array">
+  <task>
+    <href>http://example.com/tasks/123</href>
+    <type>EmptyBinTask</type>
+    <name>Empty Black 240L</name>
+  </task>
+  <task>
+    <href>http://example.com/tasks/124</href>
+    <type>EmptyBinTask</type>
+    <name>Empty Green 240L</name>
+  </task>
+</tasks>

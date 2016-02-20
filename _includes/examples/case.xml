@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<case>
+  <href>/cases/1</href>
+  <id>1</id>
+  <date-created>2014-05-23T20:00Z</date-created>
+  <customer>
+    <name>Bob Smith</name>
+  </customer>
+</case>

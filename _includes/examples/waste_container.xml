@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<waste-container>
+  <type>WasteContainer</type>
+  <uprn>123456789</uprn>
+  <serial-number>ABCD1234</serial-number>
+  <barcode>12345678890</barcode>
+</waste-container>
