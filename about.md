@@ -18,3 +18,8 @@ These technical specifications are used where relevant:
 * The APIs make use of [JSON-LD](http://json-ld.org/).
 * Object models use [JSON Schema](http://json-schema.org/).
 * [JSON Table Schema](http://dataprotocols.org/json-table-schema/) are used for table definitions.
+
+
+# Contact
+
+Please contact [Paul Mackay](mailto:paul@folklabs.com) if you have any questions about these specifications.
