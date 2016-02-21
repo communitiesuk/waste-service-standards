@@ -15,14 +15,14 @@ To find basic information about the waste services available to a property and w
 
 `/services?uprn=123456789`
 
-This will return a list of relevant services with basic metadata and at least one collection listed for last and next collections. See [Services](/apis/waste_services.html#Services) for more information. If collection information is needed covering a wider timespan, use `start_date` and `end_date` query parameters.
+This will return a list of relevant services with basic metadata and at least one collection listed for last and next collections. See [Services]({{ site.baseurl }}/apis/waste_services.html#Services) for more information. If collection information is needed covering a wider timespan, use `start_date` and `end_date` query parameters.
 
 
 ## Missed bins
 
 Citizens contacting the council to report a bin not emptied is a common problem. Often it is because of an error on the part of the citizen, for example it is contaminated.
 
-Events represent unexpected issues that arose during collections. Find events related to a property with the [events endpoint](/apis/waste_services.html#Events):
+Events represent unexpected issues that arose during collections. Find events related to a property with the [events endpoint]({{ site.baseurl }}/apis/waste_services.html#Events):
 
 `/events?uprn=123456789`
 
