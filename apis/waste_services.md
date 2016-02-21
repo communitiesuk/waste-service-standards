@@ -43,8 +43,10 @@ repeated for GET, POST, etc. It assumes there is always the GET method! -->
 
 Name | Type | Description
 -----|------|------------
-<tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
+<tt>uprn</tt> | string | Dispalys services related to the property with this UPRN. This also includes basic completed and upcoming collection information and automatically includes related tasks if the property has a parent UPRN.
 <tt>full</tt> | boolean | Return the full service information.
+<tt>start_date</tt> | date | Filter related tasks that occur after this date.
+<tt>end_date</tt> | date | Filter related tasks that start before this date.
 
 
 
@@ -122,20 +124,24 @@ HTTP code: 200
     {
       "color": "black",
       "shape": "wheelie_bin",
-      "materials": {
-        "@id": "/waste/materials/mixed-recycling",
-        "name": "Mixed recyclables"
-      },
+      "materials": [
+        {
+          "@id": "/waste/materials/mixed-recycling",
+          "name": "Mixed recyclables"
+        }
+      ],
       "@type": "ContainerType",
       "lid_color": "green"
     },
     {
       "color": "brown",
       "shape": "caddy",
-      "materials": {
-        "@id": "/waste/materials/food-waste",
-        "name": "Food waste"
-      },
+      "materials": [
+        {
+          "@id": "/waste/materials/food-waste",
+          "name": "Food waste"
+        }
+      ],
       "@type": "ContainerType"
     }
   ],
@@ -147,7 +153,7 @@ HTTP code: 200
         {
           "status": "in_service",
           "id": "2140541",
-          "type": "http://example.com/feature-types/2",
+          "@id": "http://example.com/feature-types/2",
           "@type": "WasteContainer",
           "size": 240
         }
@@ -184,7 +190,7 @@ HTTP code: 200
         {
           "status": "In use",
           "id": "2140541",
-          "type": "http://example.com/feature-types/1",
+          "@id": "http://example.com/feature-types/1",
           "@type": "WasteContainer",
           "size": 240
         }
@@ -239,10 +245,9 @@ Name | Type | Description
 -----|------|------------
 <tt>type</tt> | string | Limit results to a specific task type.
 <tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
-<tt>date_range</tt> | string | Limit results to those tasks that were started between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.
-<tt>include</tt> | string | Comma-separated labels of additional information to include. `related` includes all tasks for any parent sites and associated bin stores where possible, e.g. `include=related`.
-Only applicable when filtering by UPRN.
-
+<tt>start_date</tt> | date | Filter tasks that occur after this date.
+<tt>end_date</tt> | date | Filter tasks that start before this date.
+<tt>include</tt> | string | Comma-separated labels of additional information to include. `related` includes all tasks for any parent sites and associated bin stores where possible, e.g. `include=related`. Only applicable when filtering by UPRN.
 
 
 
@@ -435,7 +440,8 @@ Name | Type | Description
 -----|------|------------
 <tt>uprn</tt> | string | Limit results to those related to the property with this UPRN.
 <tt>usrn</tt> | string | Limit results to those related to the street with this USRN.
-<tt>date_range</tt> | string | Limit results to those events that occurred between the given comma-separated date range. Dates should be in xs:dateTime format, e.g. date_range=2015-06-01,2015-08-01.
+<tt>start_date</tt> | date | Filter events that occurred after this date.
+<tt>end_date</tt> | date | Filter events that occurred before this date.
 
 
 
