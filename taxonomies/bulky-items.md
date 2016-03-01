@@ -7,15 +7,14 @@ title: Bulky items
 
 A common list of items that can typically be collected by bulky collection schemes.
 
-**These will need further refinement.**
 
 <table>
 <tr>
-  <th>Item</th>
-  <th>Qualifier</th>
-  <th>Category</th>
-  <th>Is electrical</th>
-  <th>Description</th>
+  <th>item</th>
+  <th>qualifier</th>
+  <th>category</th>
+  <th>electrical</th>
+  <th>description</th>
 </tr>
 {% for item in site.data.bulky_items %}
 <tr>

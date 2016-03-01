@@ -8,9 +8,9 @@ title:
 Taxonomy | Description
 ---------|------------
 [Bulky items](bulky-items.html) | Common items authorities can collect.
+[Collection events](collection-events.html) | Definitions of events that can happen during collection rounds.
 [Container types](container-types.html) | They come in all shapes and sizes.
 [Materials](materials.html) | Material categories and the items that can be included.
-[Collection events](collection-events.html) | Definitions of events that can happen during collection rounds.
 
 
 ## Guidelines

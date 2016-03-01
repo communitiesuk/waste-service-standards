@@ -11,10 +11,13 @@ This gives an overview of the data model entities:
 
 Model | Description
 ------|------------
+[Bulky item](bulky-item.html) | A bulky item for collection.
 [Case](case.html) | A customer interaction record.
+[Event type](event-type.html) | A type of event that can occur during provison of the service.
 [Feature type](feature-type.html) | A type of item related to a service.
 [Feature](feature.html) | An item related to a service.
 [Material](material.html) | The types of materials that can be collected.
+[Site](site.html) | A place or location that relates to a service.
 [Task](task.html) | A unit of work as part of scheduled rounds or resulting from ad-hoc requests.
 [Waste container type](waste-container-type.html) | What kinds of containers are used for waste.
 [Waste container](waste-container.html) | Where materials are stored for collection.
