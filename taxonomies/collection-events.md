@@ -1,9 +1,9 @@
 ---
 layout: doc
-title: Collections events
+title: Missed collection events
 ---
 
-# Collections events
+# Missed collection events
 
 The table below lists a set of common possible events that can occur during a waste collection round.
 
