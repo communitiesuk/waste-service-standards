@@ -5,7 +5,7 @@ title: Data formats
 
 # Data formats
 
-Data files are typically exchanged when a council starts a new contract with a supplier. Here are common formats that can be used.
+Data files are typically exchanged when a council starts a new contract with a supplier. Here are common formats that make this process easier.
 
 
 ## Rounds
@@ -15,10 +15,10 @@ Rounds data should be formatted into a CSV file matching the format defined by t
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Type</th>
-    <th>Required</th>
-    <th>Description</th>
+    <th>name</th>
+    <th>type</th>
+    <th>required</th>
+    <th>description</th>
   </tr>
   {% for f in site.data.table_schemas.rounds_tableschema.fields %}
   <tr>
@@ -30,8 +30,4 @@ Rounds data should be formatted into a CSV file matching the format defined by t
   {% endfor %}
 </table>
 
-
-## Technical notes
-
-Tabular data formats are defined as [JSON Table Schema](http://dataprotocols.org/json-table-schema/).
-
+The table definition is also available as a <a href="https://raw.githubusercontent.com/communitiesuk/waste-service-standards/gh-pages/_data/table_schemas/rounds_tableschema.json" download="rounds_tableschema.json">JSON Table schema</a>.
