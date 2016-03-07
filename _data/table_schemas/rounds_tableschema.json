@@ -46,10 +46,10 @@
       }
     },
     {
-      "name": "container_type",
-      "title": "Container type",
+      "name": "container",
+      "title": "Container",
       "type": "string",
-      "description": "The type of container at the property or place.",
+      "description": "The containers assigned to the property or place.",
       "constraints": {
         "required": false
       }

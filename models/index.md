@@ -17,6 +17,7 @@ Model | Description
 [Feature type](feature-type.html) | A type of item related to a service.
 [Feature](feature.html) | An item related to a service.
 [Material](material.html) | The types of materials that can be collected.
+[Round](round.html) | One or more services delivered on a route according to a repeating schedule.
 [Site](site.html) | A place or location that relates to a service.
 [Task](task.html) | A unit of work as part of scheduled rounds or resulting from ad-hoc requests.
 [Waste container type](waste-container-type.html) | What kinds of containers are used for waste.
