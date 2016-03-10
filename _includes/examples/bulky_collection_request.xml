@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bulky-collection-request>
+  <href>/cases/1</href>
+  <type>BulkyCollectionRequest</type>
+  <id>1</id>
+  <date-created>2014-05-23T20:00Z</date-created>
+  <customer>
+    <name>Bob Smith</name>
+    <address>42 Acacia Avenue</address>
+    <telephone>123456789</telephone>
+    <email>bob@smith.com</email>
+  </customer>
+</bulky-collection-request>

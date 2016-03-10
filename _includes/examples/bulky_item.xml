@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bulky-item>
+  <name>Sofa</name>
+  <description>3 person seater, quite rough condition.</description>
+  <is-working type="boolean">true</is-working>
 </bulky-item>

@@ -5,11 +5,10 @@
   <name>Empty Black 240L</name>
   <description>Empty Black 240L</description>
   <start-date>2015-09-27T21:04:00.743</start-date>
-  <scheduled-start-date>2015-09-27T21:04:00.743</scheduled-start-date>
   <status>not_started</status>
   <features type="array">
     <feature>
-      <type>http://example.com/feature_types/1</type>
+      <type>http://example.com/feature-types/1</type>
       <id>2140541</id>
       <status>In use</status>
       <size type="integer">240</size>

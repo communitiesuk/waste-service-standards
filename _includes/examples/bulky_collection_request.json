@@ -1,0 +1,12 @@
+{
+  "@id": "/cases/1",
+  "@type": "BulkyCollectionRequest",
+  "id": "1",
+  "date_created": "2014-05-23T20:00Z",
+  "customer": {
+    "name": "Bob Smith",
+    "address": "42 Acacia Avenue",
+    "telephone": "123456789",
+    "email": "bob@smith.com"
+  }
+}

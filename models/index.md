@@ -12,6 +12,7 @@ This gives an overview of the data model entities:
 Model | Description
 ------|------------
 [Bulky item](bulky-item.html) | A bulky item for collection.
+[Bulky item collection request](bulky-collection-request.html) | A bulky items collection request.
 [Case](case.html) | A customer interaction record.
 [Event type](event-type.html) | A type of event that can occur during provison of the service.
 [Feature type](feature-type.html) | A type of item related to a service.

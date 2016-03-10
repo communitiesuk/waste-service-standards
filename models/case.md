@@ -44,8 +44,8 @@ Just as Action and other common types have a number of sub-types, here are speci
 
 * AdditionalBinRequest
 * AssistedCollectionRequest
-* BulkyCollection
-* ChargeableBulkyCollection
+* [BulkyCollectionRequest](bulky-collection-request.html)
+* ChargeableBulkyCollectionRequest
 * ClinicalOneTimeCollection
 * ClinicalCollection
 * ReportDamage
@@ -61,8 +61,8 @@ Just as Action and other common types have a number of sub-types, here are speci
 Term     | Mapping | Definition
 ---------|---------|-----------
 subject | [schema:name](http://schema.org/name) | Subject of the case.
-status |  | Current status, e.g. active, closed.
-customer | [schema:person](http://schema.org/Person) | Customer of the case.
+status | Text | Current status, e.g. active, closed.
+customer | [schema:person](http://schema.org/Person) | Customer of the case. Should include name, address, telephone, email.
 date_created | [schema:dateCreated](https://schema.org/dateCreated) | When the case was created.
 
 
