@@ -14,7 +14,7 @@ There are several additional software projects or repositories related to the Wa
     <th>Description</th>
   </thead>
   <tr>
-    <td><a href="https://github.com/folklabs/waste-demo-api" target="_blank">waste-demo-api</a></td>
+    <td><a href="https://github.com/communitiesuk/waste-demo-api" target="_blank">waste-demo-api</a></td>
     <td>An implementation of the Waste API that adapts to two underlying systems.</td>
   </tr>
   <tr>
