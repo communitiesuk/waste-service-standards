@@ -2,8 +2,8 @@
 layout: doc_notoc
 title: Waste Service Standards
 description: Technical specifications for local waste and recycling services
-keywords: github pages, Jekyll, foundation 5
 ---
+
 # Introduction
 
 This site defines the technical specifications developed by the [Local Waste Service Standards Project](http://www.localdirect.gov.uk/product/local-waste-service-standards-project/).
