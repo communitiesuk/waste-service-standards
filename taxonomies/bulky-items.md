@@ -28,5 +28,5 @@ A common list of items that can typically be collected by bulky collection schem
 {% endfor %}
 </table>
 
-Also available as <a href="https://raw.githubusercontent.com/communitiesuk/waste-service-standards/master/_data/bulky_items.csv" download="bulky_items.csv">CSV</a>.
+Also available as <a href="https://github.com/communitiesuk/waste-service-standards/blob/gh-pages/_data/bulky_items.csv" download="bulky_items.csv">CSV</a>.
 

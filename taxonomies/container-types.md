@@ -18,7 +18,7 @@ name | reference name  | machine name | description | image
 
 **Notes:**
 
-* This material has been reproduced from the website [www.partners.wrap.org.uk](http://www.partners.wrap.org.uk) of The Waste and Resources Action Programme.
+* This material has been reproduced from the website [The Waste and Resources Action Programme](http://www.wrap.org.uk).
 * Often a wheelie bin may simply be called a "bin" as they are the most common form of bins.
 
-Also available as <a href="https://raw.githubusercontent.com/communitiesuk/waste-service-standards/master/_data/container_types.csv" download="container_types.csv">CSV</a>.
+Also available as <a href="https://github.com/communitiesuk/waste-service-standards/blob/gh-pages/_data/container_types.csv" download="container_types.csv">CSV</a>.

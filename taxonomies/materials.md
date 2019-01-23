@@ -26,5 +26,5 @@ This is a standard list of materials as used by [WRAP](http://www.wrap.org.uk/) 
 {% endfor %}
 </table>
 
-Also available as <a href="https://raw.githubusercontent.com/communitiesuk/waste-service-standards/master/_data/materials.csv" download="materials.csv">CSV</a>.
+Also available as <a href="https://github.com/communitiesuk/waste-service-standards/blob/gh-pages/_data/materials.csv" download="materials.csv">CSV</a>.
 

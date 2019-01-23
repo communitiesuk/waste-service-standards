@@ -17,7 +17,7 @@ These technical specifications are used where relevant:
 * The API is documented using [RAML](http://raml.org/).
 * The APIs make use of [JSON-LD](http://json-ld.org/).
 * Object models use [JSON Schema](http://json-schema.org/).
-* [JSON Table Schema](http://dataprotocols.org/json-table-schema/) are used for table definitions.
+* [JSON Table Schema](https://frictionlessdata.io/specs/table-schema/) are used for table definitions.
 
 
 # Contact
