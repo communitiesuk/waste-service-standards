@@ -34,4 +34,4 @@ Many council classifications also divide event types by the service or container
 
 1. Some events may be applied to specific containers or bins, whereas others are general events.
 
-Also available as <a href="https://raw.githubusercontent.com/communitiesuk/waste-service-standards/master/_data/collection_event_types.csv" download="materials.csv">CSV</a>.
+Also available as <a href="https://github.com/communitiesuk/waste-service-standards/blob/master/_data/collection_event_types.csv" download="materials.csv">CSV</a>.

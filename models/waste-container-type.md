@@ -61,4 +61,4 @@ sizes | list of integers | Available sizes of containers.
 
 ### Container shape
 
-See the [container types taxonomy](/taxonomies/container-types.html).
+See the [container types taxonomy]({{ site.baseurl }}/taxonomies/container-types.html).

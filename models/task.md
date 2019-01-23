@@ -75,7 +75,7 @@ location | [schema:location](http://schema.org/location) | Location information.
 start date | [schema:startDate](https://schema.org/startDate) | Planned start date.
 end date | [schema:date](https://schema.org/Date) | End date.
 actual start date | [schema:date](https://schema.org/Date) | Actual start date.
-features | [Feature](/models/feature.html) | List of related features.
+features | [Feature](feature.html) | List of related features.
 
 ## Serialisation
 

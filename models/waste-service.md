@@ -52,7 +52,7 @@ description | [schema:description](https://schema.org/description) | A short des
 frequency | Text | How often it runs, e.g. weekly.
 next collections | [Task](task.html) | List of dates of next collections.
 last collections | [Task](task.html) | List of dates of previous collections.
-feature types | [Feature type](feature-type.html) | The [container types](container-type.html) that are collected.
+feature types | [Feature type](feature-type.html) | The [container types](waste-container-type.html) that are collected.
 provider | [schema:provider](http://schema.org/provider) | The council providing the service.
 service area | [schema:serviceArea](http://schema.org/serviceArea) | The geographic area where the service is provided.
 service operator | [schema:serviceOperator](http://schema.org/serviceOperator) | The operator of the service, if different to the provider.

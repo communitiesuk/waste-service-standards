@@ -39,6 +39,6 @@ service | List of [WasteService](waste-service.html) | Name of the services prov
 
 ## Serialisation
 
-Currently there is not an identified need to define a round in a serialisation format, as it is not supported in the API. However this model feeds into the [round data format definition](/data/data-formats.html#rounds).
+Currently there is not an identified need to define a round in a serialisation format, as it is not supported in the API. However this model feeds into the [round data format definition]({{ site.baseurl }}/data/data-formats.html#rounds).
 
 
